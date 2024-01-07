@@ -1,6 +1,7 @@
 'use client'
 
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
+import { StaticImageData } from 'next/image'
 import {
   ButtonBack,
   ButtonNext,
@@ -104,7 +105,7 @@ const SolutionsCarousel = ({
     id: number
     title: string
     description: string
-    imageUrl: string
+    imageUrl: StaticImageData
   }[]
 }) => {
   const totalSlides = solutions.length
@@ -141,7 +142,7 @@ const SolutionsCarousel = ({
             id: number
             title: string
             description: string
-            imageUrl: string
+            imageUrl:  StaticImageData
           }) => (
             <a
               href={`/solutions/${solution.id}-${encodeURIComponent(
@@ -156,7 +157,7 @@ const SolutionsCarousel = ({
                 >
                   <div
                     className="flex h-[90%] w-[90%] items-end justify-center self-center overflow-hidden bg-cover bg-center bg-no-repeat shadow-md dark:shadow-none"
-                    style={{ backgroundImage: `url(${solution.imageUrl})` }}
+                    style={{ backgroundImage: `url(${solution.imageUrl.src})` }}
                   >
                     <div className="mx-auto flex h-1/3 w-full flex-col items-start justify-center bg-white/50 p-4 backdrop-blur-sm backdrop-hue-rotate-180 dark:bg-black/50">
                       <div className="text-xl font-bold">{solution.title}</div>
