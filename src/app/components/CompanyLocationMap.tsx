@@ -4,6 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import { Icon, LatLngExpression } from 'leaflet'
 import Link from 'next/link'
+import MarkerIcon from '@/app/assets/icons/map-pointer.svg'
 
 // eslint-disable-next-line unicorn/numeric-separators-style
 const position: LatLngExpression = [37.99805, 23.77473] // Hypercliq Office
@@ -24,7 +25,7 @@ export default function CompanyLocationMap() {
         position={position}
         icon={
           new Icon({
-            iconUrl: '/map-pointer.svg',
+            iconUrl: MarkerIcon.src,
             iconSize: [50, 50],
             iconAnchor: [25, 50],
           })
