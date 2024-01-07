@@ -8,16 +8,16 @@ import LogoSVG, { LogoMode } from '@/app/components/LogoSVG'
 
 const links = [
   {
-    text: 'Solutions',
-    href: '/solutions',
-    description: 'Explore our solutions',
-  },
-  {
     text: 'Domains',
     href: '/domains',
     description: 'Discover our domains',
   },
   { text: 'Services', href: '/services', description: 'View our services' },
+  {
+    text: 'Solutions',
+    href: '/solutions',
+    description: 'Explore our solutions',
+  },
   { text: 'About', href: '/about', description: 'Learn more about us' },
   { text: 'Careers', href: '/careers', description: 'Join our team' },
   { text: 'Contact', href: '/contact', description: 'Get in touch with us' },
