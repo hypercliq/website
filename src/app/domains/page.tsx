@@ -31,7 +31,7 @@ const Domains = () => {
           <p className="">
             At Hypercliq, we believe in the limitless possibilities that data
             offers. Our team brings together diverse expertise in AI, Machine
-            Learning and Data Analysis. We don't just provide solutions; we
+            Learning and Data Analysis. We don&apos;t just provide solutions; we
             architect the future. Our passion for innovation fuels our
             exploration of new frontiers, ensuring that we remain at the
             forefront of cutting-edge technologies.
@@ -46,8 +46,8 @@ const Domains = () => {
             Our mission is clear: to empower businesses across all domains to
             make informed decisions and drive exponential growth. No matter your
             industry or specialization, if you have a data challenge, we have
-            the solution. We're not just problem-solvers; we're your strategic
-            partners on the journey towards a data-powered future.
+            the solution. We&apos;re not just problem-solvers; we&apos;re your
+            strategic partners on the journey towards a data-powered future.
           </p>
         </section>
 
@@ -57,9 +57,9 @@ const Domains = () => {
             <li>
               <strong>Expertise Beyond Boundaries:</strong> Bringing together a
               fusion of talent, we specialize in transcending traditional domain
-              barriers. Whether you're in healthcare, finance, education, or any
-              other field, our team thrives on challenges and excels in finding
-              data-driven solutions.
+              barriers. Whether you&apos;re in healthcare, finance, education,
+              or any other field, our team thrives on challenges and excels in
+              finding data-driven solutions.
             </li>
             <li>
               <strong>Collaboration at its Core:</strong> We believe in the
@@ -69,10 +69,10 @@ const Domains = () => {
               for your unique challenges.
             </li>
             <li>
-              <strong>Innovation in Every Pixel:</strong> In a world that's
-              constantly evolving, innovation is not just a choice; it's a
+              <strong>Innovation in Every Pixel:</strong> In a world that&apos;s
+              constantly evolving, innovation is not just a choice; it&apos;s a
               necessity. We are committed to exploring new possibilities,
-              pushing the boundaries of what's achievable, and delivering
+              pushing the boundaries of what&apos;s achievable, and delivering
               impactful solutions that transform entire industries.
             </li>
           </ul>
@@ -97,10 +97,10 @@ const Domains = () => {
               ensuring seamless integration into your existing systems.
             </li>
             <li>
-              <strong>Continuous Innovation:</strong> Our commitment doesn't end
-              with the solution. We stay ahead of the curve, continuously
-              innovating to keep your strategies aligned with the dynamic
-              landscape of data and technology.
+              <strong>Continuous Innovation:</strong> Our commitment
+              doesn&apos;t end with the solution. We stay ahead of the curve,
+              continuously innovating to keep your strategies aligned with the
+              dynamic landscape of data and technology.
             </li>
           </ol>
         </section>
@@ -113,7 +113,8 @@ const Domains = () => {
             Are you ready to revolutionize your approach to data challenges?
             Join us on this exciting journey towards a future where data is not
             just a tool but a driving force. Regardless of your domain, your
-            challenges are our opportunities. Let's shape the future together.
+            challenges are our opportunities. Let&apos;s shape the future
+            together.
           </p>
           <Link
             aria-label="Contact us to start innovating with our data-driven solutions"

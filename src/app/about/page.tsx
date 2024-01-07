@@ -61,7 +61,7 @@ const AboutPage = () => {
                 The second founder, boasting over two decades of expertise in
                 AI, contributes a deep understanding of complex systems. Their
                 proficiency in analysis and programming has been a cornerstone
-                of Hypercliq's technical capabilities, ensuring a strategic
+                of Hypercliq&apos;s technical capabilities, ensuring a strategic
                 position in the dynamic field of AI.
               </p>
             </div>
@@ -75,7 +75,7 @@ const AboutPage = () => {
               <p className="text-foreground/75">
                 The third founder, a physicist and Ph.D. holder in Robotic
                 Vision and Flexible Automation, brings a unique perspective to
-                Hypercliq's leadership. With extensive experience in
+                Hypercliq&apos;s leadership. With extensive experience in
                 coordinating large European research projects, they provide
                 crucial insights into the industrial IT landscape, guiding the
                 company toward innovative solutions.
@@ -93,9 +93,9 @@ const AboutPage = () => {
             Beyond its founders, Hypercliq leverages a network of affiliated IT
             experts across European countries. Chosen for their expertise, these
             collaborators have played integral roles in demanding projects,
-            contributing to the company's success. This collaborative approach
-            enhances Hypercliq's capabilities and ensures adaptability to
-            various challenges.
+            contributing to the company&apos;s success. This collaborative
+            approach enhances Hypercliq&apos;s capabilities and ensures
+            adaptability to various challenges.
           </p>
         </section>
 
@@ -105,11 +105,11 @@ const AboutPage = () => {
             Our European Presence and Key Partnerships
           </h2>
           <p>
-            Hypercliq's influence extends beyond its technical capabilities.
-            Leveraging our extensive newtwork we are well-recognized in the
-            European IT, R&D and Industrial sector. Our key partnerships with
-            reputable organizations throughout Europe further solidify our
-            standing in delivering innovative IT solutions.
+            Hypercliq&apos;s influence extends beyond its technical
+            capabilities. Leveraging our extensive newtwork we are
+            well-recognized in the European IT, R&D and Industrial sector. Our
+            key partnerships with reputable organizations throughout Europe
+            further solidify our standing in delivering innovative IT solutions.
           </p>
         </section>
 
