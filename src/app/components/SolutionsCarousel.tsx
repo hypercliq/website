@@ -71,7 +71,7 @@ function Dots({ totalSlides = 0 }) {
     <div className="relative bottom-8 flex justify-center">
       <div
         ref={stretchDotRef}
-        className="absolute bottom-0 m-1 h-2 w-2 rounded-full bg-accent dark:bg-darkAccent"
+        className="dark:bg-darkAccent absolute bottom-0 m-1 h-2 w-2 rounded-full bg-accent"
         style={{ transition: 'left 0.3s, width 0.3s' }}
       />
       {Array.from({ length: totalSlides }).map((_, index) => (
@@ -89,8 +89,8 @@ function Dots({ totalSlides = 0 }) {
             }}
             className={`${
               index === currentDot
-                ? 'bg-accent dark:bg-darkAccent'
-                : 'bg-accent/30 dark:bg-darkAccent/30'
+                ? 'dark:bg-darkAccent bg-accent'
+                : 'dark:bg-darkAccent/30 bg-accent/30'
             } m-1 h-2 w-2 rounded-full`}
           />
         </div>
@@ -171,10 +171,10 @@ const SolutionsCarousel = ({
         )}
       </Slider>
       <ButtonBack>
-        <ChevronLeftIcon className="absolute bottom-1/2 left-0 h-12 w-12 text-accent dark:text-darkAccent" />
+        <ChevronLeftIcon className="dark:text-darkAccent absolute bottom-1/2 left-0 h-12 w-12 text-accent" />
       </ButtonBack>
       <ButtonNext>
-        <ChevronRightIcon className="absolute bottom-1/2 right-0 h-12 w-12 text-accent dark:text-darkAccent" />
+        <ChevronRightIcon className="dark:text-darkAccent absolute bottom-1/2 right-0 h-12 w-12 text-accent" />
       </ButtonNext>
       <Dots totalSlides={totalSlides} />
     </CarouselProvider>

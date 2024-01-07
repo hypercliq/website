@@ -48,10 +48,10 @@ export default function Header() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <Link href="#" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">hypercliq</span>
             <div className="h-8 w-auto">
-              <LogoSVG 
+              <LogoSVG
                 mode={width > 640 ? LogoMode.FullLogo : LogoMode.GraphicOnly}
               />
             </div>

@@ -8,7 +8,6 @@ import LinkedInIcon from './components/LinkedInIcon'
 import GitHubIcon from './components/GitHubIcon'
 import YouTubeIcon from './components/YouTubeIcon'
 
-
 const impact = [
   { text: 'Solutions', href: '/solutions' },
   { text: 'Collaborations', href: '/collaborations' },
@@ -68,36 +67,28 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <XIcon
-                  className="h-6 w-6 fill-foreground/60 hover:fill-foreground"
-                />
+                <XIcon className="h-6 w-6 fill-foreground/60 hover:fill-foreground" />
               </Link>
               <Link
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <LinkedInIcon
-                  className="h-6 w-6 fill-foreground/60 hover:fill-foreground"
-                />
+                <LinkedInIcon className="h-6 w-6 fill-foreground/60 hover:fill-foreground" />
               </Link>
               <Link
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <GitHubIcon
-                  className="h-6 w-6 fill-foreground/60 hover:fill-foreground"
-                />
+                <GitHubIcon className="h-6 w-6 fill-foreground/60 hover:fill-foreground" />
               </Link>
               <Link
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <YouTubeIcon
-                  className="h-6 w-6 fill-foreground/60 hover:fill-foreground"
-                />
+                <YouTubeIcon className="h-6 w-6 fill-foreground/60 hover:fill-foreground" />
               </Link>
             </div>
           </div>
