@@ -8,7 +8,6 @@ import EasyImp from '@/app/assets/images/easy-imp_1.jpg'
 import AdidasConsulting from '@/app/assets/images/adidas-consulting_1.jpg'
 import Hydac from '@/app/assets/images/hydac_1.jpg'
 
-
 const sentences = [
   { id: 1, text: 'Specializing in delivering data-driven solutions.' },
   { id: 2, text: 'Empowering businesses to unlock their full potential.' },

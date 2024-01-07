@@ -142,7 +142,7 @@ const SolutionsCarousel = ({
             id: number
             title: string
             description: string
-            imageUrl:  StaticImageData
+            imageUrl: StaticImageData
           }) => (
             <a
               href={`/solutions/${solution.id}-${encodeURIComponent(
