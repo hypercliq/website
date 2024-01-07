@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { EmailSVG } from '../components/EmailSVG'
 
 const TermsPage: React.FC = () => {
@@ -27,8 +28,8 @@ const TermsPage: React.FC = () => {
           <span className="font-bold">Changes to Terms:</span> We reserve the
           right to change or modify these Terms at any time and in our sole
           discretion. If we make changes to these Terms, we will provide notice
-          of such changes, such as by updating the "Last Updated" date at the
-          end of these Terms.
+          of such changes, such as by updating the &quot;Last Updated&quot; date
+          at the end of these Terms.
         </li>
         <li className="mb-2">
           <span className="font-bold">User Obligations:</span> You agree to
@@ -38,12 +39,9 @@ const TermsPage: React.FC = () => {
         <li className="mb-2">
           <span className="font-bold">Privacy and Data Protection:</span> We are
           committed to protecting your privacy. Our Privacy Policy, available{' '}
-          <a
-            href="[Privacy Policy Link]"
-            className="text-accent dark:text-darkAccent"
-          >
+          <Link href="/privacy" className="text-accent">
             here
-          </a>
+          </Link>
           {''}, outlines how we collect, use, and disclose your personal
           information while browsing our website.
         </li>
@@ -65,13 +63,10 @@ const TermsPage: React.FC = () => {
 
       <p className="mb-4">
         If you have any questions regarding the use of our website or these
-        Terms, please contact us at{' '}
-        <EmailSVG
-          email="info@hypercliq.com"
-        />.
+        Terms, please contact us at <EmailSVG email="info@hypercliq.com" />.
       </p>
 
-      <p className="mb-4">
+      <p className="mb-8">
         Your continued use of our website will confirm your acceptance of the
         revised Terms. We encourage you to frequently review the Terms to ensure
         you understand the terms and conditions that apply to your use of the
@@ -80,9 +75,15 @@ const TermsPage: React.FC = () => {
 
       <p className="mb-4 font-bold">Hypercliq</p>
 
-      <p className="mb-4">Prantouna 57, 11525 Athens, Greece</p>
+      <address className="mb-4">
+        Prantouna 57,
+        <br />
+        11525 Athens,
+        <br />
+        Greece
+      </address>
 
-      <p className="mb-4">Last Updated: 05 Jan 2024</p>
+      <p className="mb-4 text-right text-sm">Last Updated: 05 Jan 2024</p>
     </main>
   )
 }
