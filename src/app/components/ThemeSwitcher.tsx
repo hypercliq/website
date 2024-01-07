@@ -43,8 +43,8 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({
     <IconComponent
       className={`h-6 w-6 ${
         currentTheme === theme
-          ? 'dark:stroke-darkAccent stroke-accent'
-          : 'dark:stroke-darkForeground/60 hover:dark:stroke-darkForeground stroke-foreground/60 hover:stroke-foreground'
+          ? 'stroke-accent'
+          : 'stroke-foreground/60 hover:stroke-foreground'
       }`}
     />
   </button>
@@ -75,10 +75,10 @@ const ThemeSwitcher = () => {
   }, [theme])
 
   return (
-    <div className="dark:border-darkSurface mb-4 max-w-max rounded-full border-2 border-surface p-1">
+    <div className="mb-4 max-w-max rounded-full border-2 border-surface p-1">
       <div className="relative h-9 w-[6.75rem]">
         <div
-          className={`absolute ${switchPosition} dark:bg-darkSurface h-full w-1/3 rounded-full bg-surface transition-all`}
+          className={`absolute ${switchPosition} h-full w-1/3 rounded-full bg-surface transition-all`}
         ></div>
         <div className="block h-full w-full">
           <ThemeButton

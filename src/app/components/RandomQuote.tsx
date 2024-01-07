@@ -112,7 +112,7 @@ const RandomQuote = () => {
   return (
     <blockquote
       ref={refCallback}
-      className="quote dark:border-darkForeground/60 dark:bg-darkSurface dark:text-darkForeground/60 mt-8 border-l-4 border-foreground/60 bg-surface p-4 italic text-foreground/60"
+      className="quote mt-8 border-l-4 border-foreground/60 bg-surface p-4 italic text-foreground/60"
     >
       <p className="mb-2  text-lg">“{quote.quote}”</p>
       <cite className="block text-right">- {quote.author}</cite>

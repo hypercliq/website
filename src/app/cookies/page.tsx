@@ -16,9 +16,9 @@ const CookiePolicy = () => {
 
       <p className="mb-2 font-bold">What Are Cookies</p>
       <p className="mb-4">
-        Cookies are small pieces of data stored on your device's browser. They
-        are commonly used to enhance your browsing experience, remember your
-        preferences, and provide personalized content.
+        Cookies are small pieces of data stored on your device&apos;s browser.
+        They are commonly used to enhance your browsing experience, remember
+        your preferences, and provide personalized content.
       </p>
 
       <p className="mb-2 font-bold">Our Use of Cookies</p>
