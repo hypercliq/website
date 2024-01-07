@@ -101,7 +101,7 @@ const Footer = () => {
                 {/* Dark/Light Mode Switch */}
                 <ThemeSwitcher />
                 {/* Language Dropdown */}
-                <LanguageSelector />
+                {/* <LanguageSelector /> */}
               </div>
             </div>
           </div>
