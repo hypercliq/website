@@ -16,7 +16,6 @@
   --color-accent: 175 33 246;
   --color-on-accent: 255 255 255;
 
-
   --stroke-dashoffset: 0;
   --stroke-dasharray: 0;
   --fill-color: transparent;
@@ -25,13 +24,13 @@
 }
 
 .dark * {
-    --color-foreground: 255 255 255;
-    --color-background: 22 22 29;
-    --color-surface: 31 31 38;
+  --color-foreground: 255 255 255;
+  --color-background: 22 22 29;
+  --color-surface: 31 31 38;
 
-    --color-inverted-foreground: 22 22 29;
-    --color-accent: 33 246 175;
-    --color-on-accent: 22 22 29;
+  --color-inverted-foreground: 22 22 29;
+  --color-accent: 33 246 175;
+  --color-on-accent: 22 22 29;
 }
 
 /* @media (prefers-color-scheme: dark) {

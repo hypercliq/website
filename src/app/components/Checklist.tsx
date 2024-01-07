@@ -32,8 +32,8 @@ export default function CheckList({ sentences }: Readonly<CheckListProps>) {
           <CheckIcon
             className={`ease-[cubic-bezier(0.36, 0, 0.66, -0.56)] mr-2 h-10 w-10 flex-shrink-0 stroke-[2.5] ${
               isVisible
-                ? 'text-accent dark:text-darkAccent'
-                : 'text-surface dark:text-darkSurface'
+                ? 'dark:text-darkAccent text-accent'
+                : 'dark:text-darkSurface text-surface'
             } transition-colors duration-1000`}
           />
           <span>{sentence.text}</span>

@@ -1,28 +1,28 @@
-import { FC } from "react";
+import { FC } from 'react'
 
 type PathClasses = {
-  b1?: string;
-  b2?: string;
-  b3?: string;
-  b4?: string;
-  b5?: string;
-  b6?: string;
-  h?: string;
-  y?: string;
-  p?: string;
-  e?: string;
-  r?: string;
-  c?: string;
-  l?: string;
-  i?: string;
-  q?: string;
-  dot?: string;
-};
+  b1?: string
+  b2?: string
+  b3?: string
+  b4?: string
+  b5?: string
+  b6?: string
+  h?: string
+  y?: string
+  p?: string
+  e?: string
+  r?: string
+  c?: string
+  l?: string
+  i?: string
+  q?: string
+  dot?: string
+}
 
 interface SvgComponentProps {
-  mode?: LogoMode;
-  animate?: boolean;
-  pathClasses?: PathClasses;
+  mode?: LogoMode
+  animate?: boolean
+  pathClasses?: PathClasses
 }
 
 export enum LogoMode {
@@ -35,8 +35,7 @@ const viewBoxes: { [key in LogoMode]: string } = {
   [LogoMode.FullLogo]: '0 0 1616 284',
   [LogoMode.TextOnly]: '371 20 1245 264',
   [LogoMode.GraphicOnly]: '0 0 289 284',
-};
-
+}
 
 const graphicPaths = {
   b1: 'M77.24 270.06a44.99 44.99 0 0 1-63.56-3.18 45 45 0 1 1 66.74-60.38 44.98 44.98 0 0 1-3.18 63.56Z',
@@ -60,27 +59,34 @@ const textPaths = {
   dot: 'M1407.05 61a24.35 24.35 90 0 0 7.29 1.04 27.45 27.45 90 0 0 3.75-.24 19.66 19.66 90 0 0 11.73-5.76q5.87-6.01 5.87-14.82a22.19 22.19 90 0 0-.02-.89 17.71 17.71 90 0 0-5.98-12.85 20.2 20.2 90 0 0-8.31-4.57 26.18 26.18 90 0 0-7.04-.9 27.81 27.81 90 0 0-3.15.17 20.5 20.5 90 0 0-12.2 5.57 19.17 19.17 90 0 0-4.41 6.21 19.94 19.94 90 0 0-1.6 8.06 19.75 19.75 90 0 0 1.07 6.56 19.59 19.59 90 0 0 4.94 7.59 19.84 19.84 90 0 0 8.06 4.83',
 }
 
-const renderPaths = (paths: Record<string,string>, animate: boolean, pathClasses: PathClasses) => (
+const renderPaths = (
+  paths: Record<string, string>,
+  animate: boolean,
+  pathClasses: PathClasses,
+) => (
   <>
-    {
-      Object.keys(paths).map((key) => (
-        key !== 'b1' && key !== 'dot' ? (
-          <path 
-            key={key}
-            id={key}
-            className={`${pathClasses[key as keyof PathClasses] ?? 'fill-foreground dark:fill-darkForeground stroke-foreground dark:stroke-darkForeground'} ${animate ? 'animate-logo' : ''}`}
-            d={paths[key as keyof PathClasses]}
-          />
-        ) : (
-          <path 
-            key={key}
-            id={key}
-            className={`${pathClasses[key] ?? 'fill-primary stroke-primary'} ${animate ? 'animate-logo' : ''}`}
-            d={paths[key]}
-          />
-        )
-      ))        
-    }
+    {Object.keys(paths).map((key) =>
+      key !== 'b1' && key !== 'dot' ? (
+        <path
+          key={key}
+          id={key}
+          className={`${
+            pathClasses[key as keyof PathClasses] ??
+            'dark:fill-darkForeground dark:stroke-darkForeground fill-foreground stroke-foreground'
+          } ${animate ? 'animate-logo' : ''}`}
+          d={paths[key as keyof PathClasses]}
+        />
+      ) : (
+        <path
+          key={key}
+          id={key}
+          className={`${pathClasses[key] ?? 'fill-primary stroke-primary'} ${
+            animate ? 'animate-logo' : ''
+          }`}
+          d={paths[key]}
+        />
+      ),
+    )}
     {/* <path id="b1" className={`${pathClasses.b1 ?? 'fill-primary stroke-primary'} ${animate ? 'svg-elem' : ''}`} d="M77.24 270.06a44.99 44.99 0 0 1-63.56-3.18 45 45 0 1 1 66.74-60.38 44.98 44.98 0 0 1-3.18 63.56Z" />
     <path id="b2" className={`${pathClasses.b2 ?? 'fill-foreground dark:fill-darkForeground stroke-foreground dark:stroke-darkForeground'} ${animate ? 'svg-elem' : ''}`} d="M139.98 71.67a40 40 0 1 1-53.67-59.32 40 40 0 1 1 53.67 59.32Z" />
     <path id="b3" className={`${pathClasses.b3 ?? 'fill-foreground dark:fill-darkForeground stroke-foreground dark:stroke-darkForeground'} ${animate ? 'svg-elem' : ''}`} d="M106.78 169.13a40 40 0 1 1-53.68-59.32 40 40 0 0 1 53.68 59.32Z" />
@@ -88,28 +94,28 @@ const renderPaths = (paths: Record<string,string>, animate: boolean, pathClasses
     <path id="b5" className={`${pathClasses.b5 ?? 'fill-foreground dark:fill-darkForeground stroke-foreground dark:stroke-darkForeground'} ${animate ? 'svg-elem' : ''}`} d="M207.07 145.83a40 40 0 1 1-53.67-59.32 40 40 0 0 1 53.67 59.32Z" />
     <path id="b6" className={`${pathClasses.b6 ?? 'fill-foreground dark:fill-darkForeground stroke-foreground dark:stroke-darkForeground'} ${animate ? 'svg-elem' : ''}`} d="M274.16 219.98a40 40 0 1 1-53.68-59.31 40 40 0 0 1 53.68 59.31Z" /> */}
   </>
-);
+)
 
 // const renderTextPaths = (animate: boolean, pathClasses: PathClasses) => (
 //   <>
 //   {
 //       Object.keys(paths).map((key) => (
 //         key !== 'dot' ? (
-//           <path 
+//           <path
 //             key={key}
 //             id={key}
 //             className={`${pathClasses[key as keyof PathClasses] ?? 'fill-foreground dark:fill-darkForeground stroke-foreground dark:stroke-darkForeground'} ${animate ? 'svg-elem' : ''}`}
 //             d={paths[key as keyof PathClasses]}
 //           />
 //         ) : (
-//           <path 
+//           <path
 //             key={key}
 //             id={key}
 //             className={`${pathClasses[key] ?? 'fill-primary stroke-primary'} ${animate ? 'svg-elem' : ''}`}
 //             d={paths[key]}
 //           />
 //         )
-//       ))        
+//       ))
 //     }
 //     {/* <path id="h" className={`${pathClasses.h ?? 'fill-foreground dark:fill-darkForeground stroke-foreground dark:stroke-darkForeground'} ${animate ? 'svg-elem' : ''}`} d="M514.01 146.39v81.68h-33.36v-77.41a64.09 64.09 90 0 0-.79-10.4q-.92-5.57-2.91-9.99a27.8 27.8 90 0 0-5.25-7.9 29.27 29.27 90 0 0-14.78-8.24 44.19 44.19 90 0 0-10.17-1.1 48.95 48.95 90 0 0-11.41 1.28 39.81 39.81 90 0 0-9.41 3.52q-9.08 4.81-14.02 14.28-4.23 8.14-4.84 19.91a78.25 78.25 90 0 0-.09 3.98v72.07h-33.37V30.01h33.37v93.96l-7.21-11.74q7.47-13.62 21.75-20.96 14.28-7.34 32.97-7.34a75.12 75.12 90 0 1 17.13 1.89 61.91 61.91 90 0 1 13.43 4.79q13.48 6.67 21.22 20.42a55.49 55.49 90 0 1 5.49 14.34q1.55 6.44 2.03 13.96a110.16 110.16 90 0 1 .22 7.06Z" />
 //     <path id="y" className={`${pathClasses.y ?? 'fill-foreground dark:fill-darkForeground stroke-foreground dark:stroke-darkForeground'} ${animate ? 'svg-elem' : ''}`} d="m617.58 208.58-22.69 24.56-64.33-147.61h34.7l52.32 123.05Zm-90.22 60.06 13.34-24.55q5.07 4.53 11.48 7.2t13.08 2.67a29.57 29.57 90 0 0 6.29-.63q4.25-.92 7.46-3.2a18.2 18.2 90 0 0 .93-.71 25.18 25.18 90 0 0 3.76-3.84q3.39-4.23 6.45-10.93a83.2 83.2 90 0 0 .2-.44l8.28-18.69 2.66-4 53.92-125.99h32.03l-66.73 154.02q-5.11 12.26-11.08 20.61a62.88 62.88 90 0 1-3.73 4.74 51.09 51.09 90 0 1-8.57 7.92 40.55 40.55 90 0 1-9.58 5.16 59.43 59.43 90 0 1-15.42 3.45 72.16 72.16 90 0 1-6.6.29 65.47 65.47 90 0 1-20.74-3.44 72.51 72.51 90 0 1-.08-.03q-10.41-3.47-17.35-9.61Z" />
@@ -124,14 +130,21 @@ const renderPaths = (paths: Record<string,string>, animate: boolean, pathClasses
 //   </>
 // );
 
-
-const LogoSVG: FC<SvgComponentProps> = ({ mode = LogoMode.FullLogo, animate = false, pathClasses = {} }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox={viewBoxes[mode]} className="h-full w-full">
+const LogoSVG: FC<SvgComponentProps> = ({
+  mode = LogoMode.FullLogo,
+  animate = false,
+  pathClasses = {},
+}) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox={viewBoxes[mode]}
+    className="h-full w-full"
+  >
     <g strokeWidth="2" fill="none">
-      {(mode !== 'textOnly') && renderPaths(graphicPaths, animate, pathClasses)}
-      {(mode !== 'graphicOnly') && renderPaths(textPaths, animate, pathClasses)}
+      {mode !== 'textOnly' && renderPaths(graphicPaths, animate, pathClasses)}
+      {mode !== 'graphicOnly' && renderPaths(textPaths, animate, pathClasses)}
     </g>
   </svg>
-);
+)
 
-export default LogoSVG;
+export default LogoSVG

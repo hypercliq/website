@@ -55,10 +55,7 @@ export default function Services() {
 
       <div className="mt-8 grid grid-cols-1 gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 md:px-8 lg:grid-cols-3">
         {services.map((service) => (
-          <div
-            key={service.title}
-            className="bg-surface p-4 shadow-md"
-          >
+          <div key={service.title} className="bg-surface p-4 shadow-md">
             <div className="flex items-center justify-center">
               {service.icon}
             </div>

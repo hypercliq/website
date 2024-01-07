@@ -22,11 +22,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body
-        className={
-          montserrat.className 
-        }
-      >
+      <body className={montserrat.className}>
         <ThemeProvider>
           <Header />
           {children}
