@@ -228,7 +228,7 @@ const Solutions = () => {
                 Dynamic Semantic Digital Twins of construction sites.
               </p>
               <p className="mb-4">
-                Developed under the EU's HumanTech initiative, our project
+                Developed under the EU&apos;s HumanTech initiative, our project
                 disrupts traditional construction. From safety wearables to
                 robots driving the green transition, we create a digital, safe,
                 and efficient construction environment.

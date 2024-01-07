@@ -28,12 +28,12 @@ const Services = () => {
         <section className="mt-8">
           <h2 className="mb-4 text-2xl font-bold">Data-Driven Solutions</h2>
           <p className="">
-            Experience the seamless orchestration of your data with Hypercliq's
-            adaptable and efficient data structuring systems. Whether it's
-            analysis, visualization, organization, or extraction, our
-            proficiency in AI, ML, and statistical analysis ensures that your
-            data becomes a strategic asset. Unlock the full potential of your
-            data and revolutionize the way you make decisions.
+            Experience the seamless orchestration of your data with
+            Hypercliq&apos;s adaptable and efficient data structuring systems.
+            Whether it&apos;s analysis, visualization, organization, or
+            extraction, our proficiency in AI, ML, and statistical analysis
+            ensures that your data becomes a strategic asset. Unlock the full
+            potential of your data and revolutionize the way you make decisions.
           </p>
         </section>
 
@@ -57,11 +57,11 @@ const Services = () => {
           </h2>
           <p className="">
             Navigate the ever-evolving landscape of technology with confidence.
-            Hypercliq's professional IT consulting services provide strategic
-            guidance and hands-on support. Whether you're embarking on a digital
-            transformation or seeking optimization, our consulting team is your
-            trusted partner. Let's shape the future of your IT landscape
-            together.
+            Hypercliq&apos;s professional IT consulting services provide
+            strategic guidance and hands-on support. Whether you&apos;re
+            embarking on a digital transformation or seeking optimization, our
+            consulting team is your trusted partner. Let&apos;s shape the future
+            of your IT landscape together.
           </p>
         </section>
 
