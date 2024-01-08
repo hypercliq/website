@@ -10,7 +10,8 @@ const expertNames = [
 ]
 
 export const metadata: Metadata = {
-  title: 'About Hypercliq - AI Experts and IT Services',
+  title:
+    'Driving Change Through Expertise - About Hypercliq - AI Experts and IT Services',
   description:
     'Founded in 2011, Hypercliq is an established entity in the IT landscape, rooted in a partnership of seasoned Artificial Intelligence experts. Learn about our founders and the collaborative network that drives our success.',
 }
@@ -21,7 +22,7 @@ const AboutPage = () => {
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div className="text-center">
           <h1 className="mb-6 text-4xl font-bold text-primary">
-            Empowering Through Expertise
+            Driving Change Through Expertise
           </h1>
           <p className="text-lg">
             Founded in 2011, Hypercliq is an established entity in the IT
