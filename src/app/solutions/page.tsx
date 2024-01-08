@@ -1,7 +1,16 @@
 // SolutionsPage.tsx (updated section)
 import Link from 'next/link'
 
+import AdidasConsulting from '@/app/assets/images/adidas-consulting_1.jpg'
+import Bionic from '@/app/assets/images/bionic_1.jpg'
+import EasyIMP from '@/app/assets/images/easy-imp_1.jpg'
+import EurofitApp from '@/app/assets/images/eurofit-app_1.jpg'
+import HumanTech from '@/app/assets/images/human-tech_1.jpg'
+import Hydac from '@/app/assets/images/hydac_1.jpg'
+import SportInfinity from '@/app/assets/images/sport-infinity_1.jpg'
+
 import { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Data-Driven Solutions Showcase - AI, ML, Data Analysis - Hypercliq',
@@ -34,10 +43,16 @@ const Solutions = () => {
           <div className="flex flex-col md:flex-row-reverse">
             {/* Project Image */}
             <div className="mb-4 max-h-72 w-full overflow-hidden rounded-lg shadow-md md:mb-0 md:h-auto md:w-1/2">
-              <img
+              {/* <img
                 className="h-full w-full object-cover"
                 src="https://via.placeholder.com/1200x600"
                 alt="Anthropometric 3D Shape Analysis"
+              /> */}
+              <Image
+                src={EurofitApp}
+                alt="Anthropometric 3D Shape Analysis"
+                layout="responsive"
+                objectFit="cover"
               />
             </div>
             {/* Project Summary */}
@@ -85,10 +100,16 @@ const Solutions = () => {
           <div className="flex flex-col md:flex-row">
             {/* Project Image */}
             <div className="mb-4 max-h-72 w-full overflow-hidden rounded-lg shadow-md md:mb-0 md:h-auto md:w-1/2">
-              <img
+              {/* <img
                 className="h-full w-full object-cover"
                 src="https://via.placeholder.com/1200x600"
                 alt="Product Configuration Engine"
+              /> */}
+              <Image
+                src={EasyIMP}
+                alt="Product Configuration Engine"
+                layout="responsive"
+                objectFit="cover"
               />
             </div>
             {/* Project Summary */}
@@ -130,10 +151,16 @@ const Solutions = () => {
           <div className="flex flex-col md:flex-row-reverse">
             {/* Project Image */}
             <div className="mb-4 max-h-72 w-full overflow-hidden rounded-lg shadow-md md:mb-0 md:h-auto md:w-1/2">
-              <img
+              {/* <img
                 className="h-full w-full object-cover"
                 src="https://via.placeholder.com/1200x600"
                 alt="Sustainable Design Data Management Platform"
+              /> */}
+              <Image
+                src={SportInfinity}
+                alt="Sustainable Design Data Management Platform"
+                layout="responsive"
+                objectFit="cover"
               />
             </div>
             {/* Project Summary */}
@@ -173,10 +200,16 @@ const Solutions = () => {
           <div className="flex flex-col md:flex-row">
             {/* Project Image */}
             <div className="mb-4 max-h-72 w-full overflow-hidden rounded-lg shadow-md md:mb-0 md:h-auto md:w-1/2">
-              <img
+              {/* <img
                 className="h-full w-full object-cover"
                 src="https://via.placeholder.com/1200x600"
                 alt="3D Motion Tracking for Ergonomic Movement Assessment"
+              /> */}
+              <Image
+                src={Bionic}
+                alt="3D Motion Tracking for Ergonomic Movement Assessment"
+                layout="responsive"
+                objectFit="cover"
               />
             </div>
             {/* Project Summary */}
@@ -243,10 +276,16 @@ const Solutions = () => {
             </div>
             {/* Project Image */}
             <div className="mb-4 max-h-72 w-full overflow-hidden rounded-lg shadow-md md:mb-0 md:h-auto md:w-1/2">
-              <img
+              {/* <img
                 className="h-full w-full object-cover"
                 src="https://via.placeholder.com/1200x600"
                 alt="System Architecture Design for Construction Automation"
+              /> */}
+              <Image
+                src={HumanTech}
+                alt="System Architecture Design for Construction Automation"
+                layout="responsive"
+                objectFit="cover"
               />
             </div>
           </div>
@@ -263,10 +302,16 @@ const Solutions = () => {
           <div className="flex flex-col md:flex-row">
             {/* Placeholder Image */}
             <div className="mb-4 max-h-72 w-full overflow-hidden rounded-lg shadow-md md:mb-0 md:h-auto md:w-1/2">
-              <img
+              {/* <img
                 className="h-full w-full object-cover"
                 src="https://via.placeholder.com/1200x600"
                 alt="Innovation Concept Consulting"
+              /> */}
+              <Image
+                src={AdidasConsulting}
+                alt="Innovation Concept Consulting"
+                layout="responsive"
+                objectFit="cover"
               />
             </div>
             {/* Project Summary */}
@@ -336,10 +381,16 @@ const Solutions = () => {
             </div>
             {/* Placeholder Image */}
             <div className="mb-4 max-h-72 w-full overflow-hidden rounded-lg shadow-md md:mb-0 md:h-auto md:w-1/2">
-              <img
+              {/* <img
                 className="h-full w-full object-cover"
                 src="https://via.placeholder.com/1200x600"
                 alt="Agricultural R&D Innovation"
+              /> */}
+              <Image
+                src={Hydac}
+                alt="Agricultural R&D Innovation"
+                layout="responsive"
+                objectFit="cover"
               />
             </div>
           </div>
