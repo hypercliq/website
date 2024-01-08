@@ -34,114 +34,6 @@ const Solutions = () => {
           </p>
         </div>
 
-        {/* Anthropometric 3D Shape Analysis Section */}
-        <section className="mt-16">
-          <h2 className="mb-4 text-2xl font-bold">
-            Anthropometric 3D Shape Analysis
-          </h2>
-          {/* Alternating layout */}
-          <div className="flex flex-col md:flex-row-reverse">
-            {/* Project Image */}
-            <div className="mb-4 max-h-72 w-full overflow-hidden rounded-lg shadow-md md:mb-0 md:h-auto md:w-1/2">
-              {/* <img
-                className="h-full w-full object-cover"
-                src="https://via.placeholder.com/1200x600"
-                alt="Anthropometric 3D Shape Analysis"
-              /> */}
-              <Image
-                src={EurofitApp}
-                alt="Anthropometric 3D Shape Analysis"
-                layout="responsive"
-                objectFit="cover"
-              />
-            </div>
-            {/* Project Summary */}
-            <div className="md:w-1/2 md:pr-8">
-              <p className="mb-4">
-                Cutting-edge 3D shape analysis tools revolutionizing product
-                development processes. Unlocking the potential of 3D human body
-                surface data, these tools set a new standard for precision and
-                efficiency in design. Developed in collaboration with EUROFIT,
-                an intensive R&D project funded by the European Commission.
-              </p>
-              <ul className="mb-4 list-disc pl-6">
-                <li>
-                  Designers and industrialists draw useful shape information and
-                  use it in their product development processes.
-                </li>
-                <li>
-                  Database owners pool data they already hold and obtain
-                  revenues from its exploitation.
-                </li>
-                <li>
-                  Third-party IT companies develop new services to reuse pooled
-                  data in unforeseen ways.
-                </li>
-              </ul>
-              {/* Link to the dedicated page */}
-              <Link
-                href="/anthropometric-3d-shape-analysis"
-                className="text-md inline-block font-semibold text-accent"
-              >
-                Explore More
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        <div className="mx-auto my-8 h-2 w-1/2 border-t-2 border-dashed border-foreground/60 md:my-16"></div>
-
-        {/* Product Configuration Engine Section */}
-        <section className="mt-16">
-          <h2 className="mb-4 text-2xl font-bold">
-            Product Configuration Engine
-          </h2>
-          {/* Alternating layout */}
-          <div className="flex flex-col md:flex-row">
-            {/* Project Image */}
-            <div className="mb-4 max-h-72 w-full overflow-hidden rounded-lg shadow-md md:mb-0 md:h-auto md:w-1/2">
-              {/* <img
-                className="h-full w-full object-cover"
-                src="https://via.placeholder.com/1200x600"
-                alt="Product Configuration Engine"
-              /> */}
-              <Image
-                src={EasyIMP}
-                alt="Product Configuration Engine"
-                layout="responsive"
-                objectFit="cover"
-              />
-            </div>
-            {/* Project Summary */}
-            <div className="md:w-1/2 md:pl-8">
-              <p className="mb-4">
-                Online data mining services automate wearable electronics
-                configurations based on intelligent consumer profiling.
-                Developed under the EASY-IMP framework by the European
-                Commission, the project simplifies decision-making by suggesting
-                personalized product configurations. The framework provides
-                guidelines for designing smart garments with wearable
-                intelligent sensors.
-              </p>
-              <ul className="mb-4 list-disc pl-6">
-                <li>Outdoor video game</li>
-                <li>Personal training</li>
-                <li>Functional rehabilitation</li>
-                <li>Assisted living for the elderly and handicapped</li>
-              </ul>
-              {/* Link to the dedicated page */}
-              <Link
-                href="/product-configuration-engine"
-                className="text-md inline-block font-semibold text-accent"
-              >
-                Explore More
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        <div className="mx-auto my-8 h-2 w-1/2 border-t-2 border-dashed border-foreground/60 md:my-16"></div>
-
         {/* Sustainable Design Data Management Platform Section */}
         <section className="mt-16">
           <h2 className="mb-4 text-2xl font-bold">
@@ -180,7 +72,7 @@ const Solutions = () => {
               </p>
               {/* Link to the dedicated page */}
               <Link
-                href="/sustainable-design-data-management"
+                href="/solutions/sustainable-design-data-management"
                 className="text-md inline-block font-semibold text-accent"
               >
                 Explore More
@@ -234,7 +126,115 @@ const Solutions = () => {
               </ul>
               {/* Link to the dedicated page */}
               <Link
-                href="/3d-motion-tracking-for-ergonomic-assessment"
+                href="/solutions/3d-motion-tracking-for-ergonomic-assessment"
+                className="text-md inline-block font-semibold text-accent"
+              >
+                Explore More
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <div className="mx-auto my-8 h-2 w-1/2 border-t-2 border-dashed border-foreground/60 md:my-16"></div>
+
+        {/* Anthropometric 3D Shape Analysis Section */}
+        <section className="mt-16">
+          <h2 className="mb-4 text-2xl font-bold">
+            Anthropometric 3D Shape Analysis
+          </h2>
+          {/* Alternating layout */}
+          <div className="flex flex-col md:flex-row-reverse">
+            {/* Project Image */}
+            <div className="mb-4 max-h-72 w-full overflow-hidden rounded-lg shadow-md md:mb-0 md:h-auto md:w-1/2">
+              {/* <img
+                className="h-full w-full object-cover"
+                src="https://via.placeholder.com/1200x600"
+                alt="Anthropometric 3D Shape Analysis"
+              /> */}
+              <Image
+                src={EurofitApp}
+                alt="Anthropometric 3D Shape Analysis"
+                layout="responsive"
+                objectFit="cover"
+              />
+            </div>
+            {/* Project Summary */}
+            <div className="md:w-1/2 md:pr-8">
+              <p className="mb-4">
+                Cutting-edge 3D shape analysis tools revolutionizing product
+                development processes. Unlocking the potential of 3D human body
+                surface data, these tools set a new standard for precision and
+                efficiency in design. Developed in collaboration with EUROFIT,
+                an intensive R&D project funded by the European Commission.
+              </p>
+              <ul className="mb-4 list-disc pl-6">
+                <li>
+                  Designers and industrialists draw useful shape information and
+                  use it in their product development processes.
+                </li>
+                <li>
+                  Database owners pool data they already hold and obtain
+                  revenues from its exploitation.
+                </li>
+                <li>
+                  Third-party IT companies develop new services to reuse pooled
+                  data in unforeseen ways.
+                </li>
+              </ul>
+              {/* Link to the dedicated page */}
+              <Link
+                href="/solutions/anthropometric-3d-shape-analysis"
+                className="text-md inline-block font-semibold text-accent"
+              >
+                Explore More
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <div className="mx-auto my-8 h-2 w-1/2 border-t-2 border-dashed border-foreground/60 md:my-16"></div>
+
+        {/* Product Configuration Engine Section */}
+        <section className="mt-16">
+          <h2 className="mb-4 text-2xl font-bold">
+            Product Configuration Engine
+          </h2>
+          {/* Alternating layout */}
+          <div className="flex flex-col md:flex-row">
+            {/* Project Image */}
+            <div className="mb-4 max-h-72 w-full overflow-hidden rounded-lg shadow-md md:mb-0 md:h-auto md:w-1/2">
+              {/* <img
+                className="h-full w-full object-cover"
+                src="https://via.placeholder.com/1200x600"
+                alt="Product Configuration Engine"
+              /> */}
+              <Image
+                src={EasyIMP}
+                alt="Product Configuration Engine"
+                layout="responsive"
+                objectFit="cover"
+              />
+            </div>
+            {/* Project Summary */}
+            <div className="md:w-1/2 md:pl-8">
+              <p className="mb-4">
+                Online data mining services automate wearable electronics
+                configurations based on intelligent consumer profiling.
+                Developed under the EASY-IMP framework by the European
+                Commission, the project simplifies decision-making by suggesting
+                personalized product configurations. The framework provides
+                guidelines for designing smart garments with wearable
+                intelligent sensors.
+              </p>
+              <ul className="mb-4 list-disc pl-6">
+                <li>Outdoor video game</li>
+                <li>Personal training</li>
+                <li>Functional rehabilitation</li>
+                <li>Assisted living for the elderly and handicapped</li>
+              </ul>
+              {/* Link to the dedicated page */}
+              <Link
+                href="/solutions/product-configuration-engine"
                 className="text-md inline-block font-semibold text-accent"
               >
                 Explore More
@@ -268,7 +268,7 @@ const Solutions = () => {
               </p>
               {/* Link to the dedicated page */}
               <Link
-                href="/system-architecture-for-construction-automation"
+                href="/solutions/system-architecture-for-construction-automation"
                 className="text-md inline-block font-semibold text-accent"
               >
                 Explore More
@@ -344,7 +344,7 @@ const Solutions = () => {
               </ul>
               {/* Link to the dedicated page */}
               <Link
-                href="/innovation-concept-consulting"
+                href="/solutions/innovation-concept-consulting"
                 className="text-md inline-block font-semibold text-accent"
               >
                 Explore More
@@ -373,7 +373,7 @@ const Solutions = () => {
               </p>
               {/* Link to the dedicated page */}
               <Link
-                href="/agricultural-rnd-innovation"
+                href="/solutions/agricultural-rnd-innovation"
                 className="text-md inline-block font-semibold text-accent"
               >
                 Explore More
