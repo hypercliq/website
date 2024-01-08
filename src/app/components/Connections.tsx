@@ -2,14 +2,14 @@
 
 import { useEffect, useRef } from 'react'
 
-let nodes: Node[] = []
-let edges: Edge[] = []
-// let counter: number = 0
 let cutoff: number = 0
 
 const GRAYSCALE = Math.round(0.299 * 22 + 0.587 * 22 + 0.114 * 29)
 
 const sketch = (p: any) => {
+  let nodes: Node[] = []
+  let edges: Edge[] = []
+  // let counter: number = 0
   p.setup = () => {
     const renderer = p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL)
     const canvas = renderer.canvas
@@ -105,91 +105,12 @@ const sketch = (p: any) => {
     p.resizeCanvas(p.windowWidth, p.windowHeight)
     cutoff = p.dist(p.windowWidth, p.windowHeight, 200, 0, 0, 0) * 0.08
   }
+
+  p.remove = () => {
+    nodes = []
+    edges = []
+  }
 }
-
-// class Node {
-//   [key: string]: any
-//   offset: { x: number; y: number; z: number }
-//   size: number
-//   color: number
-//   id: string
-//   lifespan: number
-//   age: number = 0
-//   fadeStart: number
-//   opacity: number = 0
-
-//   constructor(x: number, y: number, z: number, p: any) {
-//     this.x = x
-//     this.y = y
-//     this.z = z
-//     this.speedX = 0
-//     this.speedY = 0
-//     this.speedZ = 0
-//     this.p = p
-//     this.offset = { x: p.random(1000), y: p.random(1000), z: p.random(1000) }
-
-//     this.size = this.p.map(this.z, -100, 100, 1, 5)
-//     this.color = this.p.map(this.z, -100, 100, 150, Math.round(0.299*22 + 0.587*22 + 0.114*29))
-
-//     // Generate a unique id
-//     this.id = Math.random().toString(36).slice(2)
-
-//     // Set a lifespan for the node
-//     this.lifespan = this.p.random(60 * 5, 60 * 60)
-//     this.fadeStart = this.lifespan * 0.9
-//   }
-
-//   move() {
-//     const speedScale = this.p.map(Math.abs(this.z), 0, 100, 0.5, 2)
-
-//     ;['x', 'y', 'z'].forEach((axis) => {
-//       const key = axis as keyof Node['offset']
-//       ;(this as Node)[`speed${key.toUpperCase()}`] = this.p.map(
-//         this.p.noise(this.offset[key]),
-//         0,
-//         1,
-//         -0.3,
-//         0.3,
-//       )
-//       this.offset[key] += 0.01
-//     })
-
-//     // Use the precalculated speedScale
-//     this.x += this.speedX * speedScale
-//     this.y += this.speedY * speedScale
-//     this.z += this.speedZ
-//   }
-
-//   display() {
-//     // let opacity = 255
-//     if (this.age > this.fadeStart) {
-//       const fadeProgress =
-//         (this.age - this.fadeStart) / (this.lifespan - this.fadeStart)
-//       this.opacity = this.p.map(fadeProgress, 0, 1, 1, 0)
-//     }
-//     else {
-//       this.opacity = this.p.min(this.opacity + 0.01, 1)
-//     }
-
-//     this.size = this.p.map(this.z, -100, 100, 1, 5)
-//     this.color = this.p.map(this.z, -100, 100, 150, GRAYSCALE)
-
-//     // Use the precalculated size and color
-//     this.p.fill(this.color, this.opacity * 255)
-//     this.p.noStroke()
-
-//     this.p.push()
-//     this.p.translate(this.x, this.y, this.z)
-//     this.p.sphere(this.size)
-//     this.p.pop()
-
-//     this.age++
-//   }
-
-//   isDead() {
-//     return this.age >= this.lifespan
-//   }
-// }
 
 class Node {
   [key: string]: any
@@ -361,6 +282,7 @@ const P5Sketch: React.FC<P5SketchProps> = ({ className }) => {
 
     return () => {
       sketchInstance.current?.remove()
+      sketchInstance.current = undefined
     }
   }, [])
 
