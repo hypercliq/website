@@ -3,7 +3,15 @@
 import EuroFit from '@/app/assets/images/eurofit-app_1.jpg'
 import EuroFit2 from '@/app/assets/images/eurofit-app_2.jpg'
 import ImagePopper from '@/app/components/ImagePopper'
+import { Metadata } from 'next'
 import Link from 'next/link'
+
+// create metadata for this page
+export const metadata: Metadata = {
+  title: 'Anthropometric 3D Shape Analysis',
+  description:
+    'Revolutionizing Product Development through Advanced 3D Shape Analysis',
+}
 
 // Header Section
 const AnthropometricCaseStudy = () => {

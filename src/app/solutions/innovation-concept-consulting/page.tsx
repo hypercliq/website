@@ -4,6 +4,14 @@ import ImagePopper from '@/app/components/ImagePopper'
 import Link from 'next/link'
 
 import AdidasConsulting1 from '@/app/assets/images/adidas-consulting_1.jpg'
+import { Metadata } from 'next'
+
+// create metadata for this page
+export const metadata: Metadata = {
+  title: 'Innovation Concept Consulting and Funding Application Support',
+  description:
+    'Catalyzing Innovation Through Strategic Consulting and Funding Application Support',
+}
 
 // Header Section
 const InnovationConsultingCaseStudy = () => {

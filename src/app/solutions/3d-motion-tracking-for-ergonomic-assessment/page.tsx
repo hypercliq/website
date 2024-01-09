@@ -6,6 +6,14 @@ import Link from 'next/link'
 import Bionic1 from '@/app/assets/images/bionic_1.jpg'
 import Bionic2 from '@/app/assets/images/bionic_2.jpg'
 import Bionic3 from '@/app/assets/images/bionic_3.jpg'
+import { Metadata } from 'next'
+
+// create metadata for this page
+export const metadata: Metadata = {
+  title: '3D Motion Tracking for Ergonomic Movement Assessment',
+  description:
+    'Enhancing Workplace Efficiency through Cloud-Based Ergonomic Assessments',
+}
 
 // Header Section
 const MotionTrackingCaseStudy = () => {

@@ -7,6 +7,13 @@ import SportInfinity1 from '@/app/assets/images/sport-infinity_1.jpg'
 import SportInfinity2 from '@/app/assets/images/sport-infinity_2.jpg'
 import SportInfinity3 from '@/app/assets/images/sport-infinity_3.jpg'
 import SportInfinity4 from '@/app/assets/images/sport-infinity_4.jpg'
+import { Metadata } from 'next'
+
+// create metadata for this page
+export const metadata: Metadata = {
+  title: 'Sustainable Design Data Management Platform',
+  description: 'Revolutionizing Product Innovation through Sustainable Design',
+}
 
 // Header Section
 const SustainableDesignCaseStudy = () => {

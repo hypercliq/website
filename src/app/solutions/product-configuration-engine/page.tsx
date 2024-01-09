@@ -5,6 +5,14 @@ import EasyIMP1 from '@/app/assets/images/easy-imp_1.jpg'
 import EasyIMP2 from '@/app/assets/images/easy-imp_2.jpg'
 import EasyIMP3 from '@/app/assets/images/easy-imp_3.jpg'
 import ImagePopper from '@/app/components/ImagePopper'
+import { Metadata } from 'next'
+
+// create metadata for this page
+export const metadata: Metadata = {
+  title: 'Product Configuration Engine based on Intelligent Consumer Profiling',
+  description:
+    'Transforming Wearable Electronics Marketplace through Personalized Recommendations',
+}
 
 // Header Section
 const ProductConfigCaseStudy = () => {

@@ -5,6 +5,14 @@ import Link from 'next/link'
 
 import Hydac1 from '@/app/assets/images/hydac_1.jpg'
 import Hydac2 from '@/app/assets/images/hydac_2.jpg'
+import { Metadata } from 'next'
+
+// create metadata for this page
+export const metadata: Metadata = {
+  title: 'Visual Repository for Agricultural R&D Innovation',
+  description:
+    'Empowering Agricultural Research through Web-Based Visual Data Management',
+}
 
 // Header Section
 const AgriculturalInnovationCaseStudy = () => {

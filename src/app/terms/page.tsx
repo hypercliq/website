@@ -1,5 +1,12 @@
 import Link from 'next/link'
 import { EmailSVG } from '../components/EmailSVG'
+import { Metadata } from 'next'
+
+// create metadata for this page
+export const metadata: Metadata = {
+  title: 'Terms of Service',
+  description: 'Terms of Service for Hypercliq',
+}
 
 const TermsPage: React.FC = () => {
   return (

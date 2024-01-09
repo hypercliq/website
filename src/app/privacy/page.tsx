@@ -1,4 +1,11 @@
+import { Metadata } from 'next'
 import { EmailSVG } from '../components/EmailSVG'
+
+// create metadata for this page
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  description: 'Privacy Policy for Hypercliq',
+}
 
 const PrivacyPolicy = () => {
   return (
