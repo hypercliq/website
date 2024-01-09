@@ -24,6 +24,7 @@ const solutions = [
     title: 'Sustainable Design Data Management platform',
     description:
       'Cloud-based platform to streamline the design of sustainable products. This innovative platform seamlessly gathers and provides access to a wealth of knowledge encompassing new product samples, materials, engineering properties, manufacturing processes, and their correlations with desired product characteristics, including vital Sustainability Parameters like environmental footprint and recyclability.',
+    url: '/solutions/sustainable-design-data-management-platform',
     imageUrl: SportInfinity,
   },
   {
@@ -32,6 +33,7 @@ const solutions = [
       '3D motion tracking for ergonomic movement assessment in real work conditions',
     description:
       'Cloud-based platform designed to seamlessly collect, manage, and visualize kinetic and kinematic data sourced from wearable sensors. Our primary goal is to offer a comprehensive ergonomic movement assessment for enhanced workplace efficiency.',
+    url: '/solutions/3d-motion-tracking-for-ergonomic-movement-assessment',
     imageUrl: Bionic,
   },
   {
@@ -39,6 +41,7 @@ const solutions = [
     title: 'System architecture design for construction automation',
     description:
       'System architecture design for an automation solution targeting the construction industry. Our design harmonizes breakthrough technologies, including wearables for worker safety and support, vision-empowered robots, scanning devices, and AI-based software, enabling a new breed of Dynamic Semantic Digital Twins (DSDTs) of construction sites.',
+    url: '/solutions/system-architecture-design-for-construction-automation',
     imageUrl: HumanTech,
   },
   {
@@ -46,6 +49,7 @@ const solutions = [
     title: 'Anthropometric 3D Shape Analysis',
     description:
       'Cutting-edge 3D shape analysis and visualization tools. These tools empower designers and engineers to effortlessly capture and visualize detailed shape data for the entire human body or specific body parts in real time.',
+    url: '/solutions/anthropometric-3d-shape-analysis',
     imageUrl: EurofitApp,
   },
   {
@@ -54,6 +58,7 @@ const solutions = [
       'Product configuration engine based on intelligent consumer profiling',
     description:
       'Online data mining services specialized in consumer profiling and recommendation of product configurations leveraged by a wearable electronics marketplace.',
+    url: '/solutions/product-configuration-engine',
     imageUrl: EasyImp,
   },
   {
@@ -61,6 +66,7 @@ const solutions = [
     title: 'Innovation concept consulting and funding application support',
     description:
       'Consulting services for the formulation of several innovative project concepts and support for application aiming to secure EU funding for the development of the projects Our comprehensive support extended to researching existing technologies and their application to propel the design and manufacturing of innovative products.',
+    url: '/solutions/innovation-concept-consulting',
     imageUrl: AdidasConsulting,
   },
   {
@@ -68,6 +74,7 @@ const solutions = [
     title: 'Visual repository for Agricultural R&D Innovation',
     description:
       'Web-based data management platform designed for the storage and processing of visual data within an ambitious R&D initiative in the field of Agriculture. This platform offers customized views and user access tailored to different roles, supporting the entire research pipeline—from agricultural fields to the creation of datasets for Deep Learning.',
+    url: '/solutions/agricultural-rnd-innovation',
     imageUrl: Hydac,
   },
 ]
