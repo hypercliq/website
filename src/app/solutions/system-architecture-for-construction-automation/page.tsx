@@ -5,7 +5,15 @@ import Link from 'next/link'
 
 import HumanTech1 from '@/app/assets/images/human-tech_1.jpg'
 import HumanTech2 from '@/app/assets/images/human-tech_2.jpg'
+import { Metadata } from 'next'
 // import HumanTech3 from '@/app/assets/images/human-tech_3.jpg'
+
+// create metadata for this page
+export const metadata: Metadata = {
+  title: 'System Architecture Design for Construction Automation',
+  description:
+    'Revolutionizing Construction with Advanced Automation Technologies',
+}
 
 // Header Section
 const ConstructionAutomationCaseStudy = () => {

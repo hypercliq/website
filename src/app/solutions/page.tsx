@@ -251,7 +251,21 @@ const Solutions = () => {
             System Architecture Design for Construction Automation
           </h2>
           {/* Alternating layout */}
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row-reverse">
+            {/* Project Image */}
+            <div className="mb-4 max-h-72 w-full overflow-hidden rounded-lg shadow-md md:mb-0 md:h-auto md:w-1/2">
+              {/* <img
+                className="h-full w-full object-cover"
+                src="https://via.placeholder.com/1200x600"
+                alt="System Architecture Design for Construction Automation"
+              /> */}
+              <Image
+                src={HumanTech}
+                alt="System Architecture Design for Construction Automation"
+                layout="responsive"
+                objectFit="cover"
+              />
+            </div>
             {/* Project Summary */}
             <div className="md:w-1/2 md:pr-8">
               <p className="mb-4">
@@ -273,20 +287,6 @@ const Solutions = () => {
               >
                 Explore More
               </Link>
-            </div>
-            {/* Project Image */}
-            <div className="mb-4 max-h-72 w-full overflow-hidden rounded-lg shadow-md md:mb-0 md:h-auto md:w-1/2">
-              {/* <img
-                className="h-full w-full object-cover"
-                src="https://via.placeholder.com/1200x600"
-                alt="System Architecture Design for Construction Automation"
-              /> */}
-              <Image
-                src={HumanTech}
-                alt="System Architecture Design for Construction Automation"
-                layout="responsive"
-                objectFit="cover"
-              />
             </div>
           </div>
         </section>
@@ -361,7 +361,21 @@ const Solutions = () => {
             Visual Repository for Agricultural R&D Innovation
           </h2>
           {/* Alternating layout */}
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row-reverse">
+            {/* Placeholder Image */}
+            <div className="mb-4 max-h-72 w-full overflow-hidden rounded-lg shadow-md md:mb-0 md:h-auto md:w-1/2">
+              {/* <img
+                className="h-full w-full object-cover"
+                src="https://via.placeholder.com/1200x600"
+                alt="Agricultural R&D Innovation"
+              /> */}
+              <Image
+                src={Hydac}
+                alt="Agricultural R&D Innovation"
+                layout="responsive"
+                objectFit="cover"
+              />
+            </div>
             {/* Project Summary */}
             <div className="md:w-1/2 md:pr-8">
               <p className="mb-4">
@@ -378,20 +392,6 @@ const Solutions = () => {
               >
                 Explore More
               </Link>
-            </div>
-            {/* Placeholder Image */}
-            <div className="mb-4 max-h-72 w-full overflow-hidden rounded-lg shadow-md md:mb-0 md:h-auto md:w-1/2">
-              {/* <img
-                className="h-full w-full object-cover"
-                src="https://via.placeholder.com/1200x600"
-                alt="Agricultural R&D Innovation"
-              /> */}
-              <Image
-                src={Hydac}
-                alt="Agricultural R&D Innovation"
-                layout="responsive"
-                objectFit="cover"
-              />
             </div>
           </div>
         </section>

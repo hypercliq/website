@@ -2,6 +2,12 @@
 
 import Link from 'next/link'
 import { EmailSVG } from '../components/EmailSVG'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Join Our Team',
+  description: 'Explore Opportunities for Bright Minds and Innovators - Join Our Team',
+}
 
 const CareersPage = () => {
   return (
@@ -13,7 +19,7 @@ const CareersPage = () => {
             Join Our Team
           </h1>
           <p className="text-lg text-foreground/75">
-            Explore Opportunities for Bright Minds
+            Explore Opportunities for Bright Minds and Innovators
           </p>
         </div>
 
