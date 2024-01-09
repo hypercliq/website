@@ -2,6 +2,7 @@
 
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 import { StaticImageData } from 'next/image'
+import Link from 'next/link'
 import {
   ButtonBack,
   ButtonNext,
@@ -105,6 +106,7 @@ const SolutionsCarousel = ({
     id: number
     title: string
     description: string
+    url: string
     imageUrl: StaticImageData
   }[]
 }) => {
@@ -143,13 +145,9 @@ const SolutionsCarousel = ({
             title: string
             description: string
             imageUrl: StaticImageData
+            url: string
           }) => (
-            <a
-              href={`/solutions/${solution.id}-${encodeURIComponent(
-                solution.title.toLowerCase().replaceAll(' ', '-'),
-              )}`}
-              key={solution.id}
-            >
+            <Link href={solution.url} key={solution.id}>
               <Slide index={solution.id}>
                 <div
                   className="flex h-full w-full items-center justify-center"
@@ -165,7 +163,7 @@ const SolutionsCarousel = ({
                   </div>
                 </div>
               </Slide>
-            </a>
+            </Link>
           ),
         )}
       </Slider>

@@ -72,7 +72,7 @@ const Solutions = () => {
               </p>
               {/* Link to the dedicated page */}
               <Link
-                href="/solutions/sustainable-design-data-management"
+                href="/solutions/sustainable-design-data-management-platform"
                 className="text-md inline-block font-semibold text-accent"
               >
                 Explore More
