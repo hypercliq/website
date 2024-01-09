@@ -2,14 +2,23 @@
 
 import { useEffect, useRef } from 'react'
 
-let cutoff: number = 0
-
 const GRAYSCALE = Math.round(0.299 * 22 + 0.587 * 22 + 0.114 * 29)
 
+const distanceSquare = (
+  x1: number,
+  y1: number,
+  z1: number,
+  x2: number,
+  y2: number,
+  z2: number,
+) => {
+  return Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2) + Math.pow(z1 - z2, 2)
+}
+
 const sketch = (p: any) => {
-  let nodes: Node[] = []
-  let edges: Edge[] = []
-  // let counter: number = 0
+  let nodes = new Map<number, Node>()
+  let cutoff: number = 0
+
   p.setup = () => {
     const renderer = p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL)
     const canvas = renderer.canvas
@@ -19,27 +28,19 @@ const sketch = (p: any) => {
       if (context) renderer.drawingContext = context
     }
 
-    // Create nodes with random x, y, and z values
+    // cutoff is the distance between nodes that determines whether an edge should be created
+    cutoff = distanceSquare(p.windowWidth, p.windowHeight, 200, 0, 0, 0)
+
     for (let i = 0; i < 100; i++) {
-      nodes.push(createNewNode())
-    }
+      nodes.set(i, createNewNode(i))
 
-    // Create edges between nodes that are within a certain distance of each other
-    // the distance should be proportional to the canvas size (x, y, z)
-    cutoff = p.dist(p.windowWidth, p.windowHeight, 200, 0, 0, 0) * 0.1
-
-    for (let i = 0; i < nodes.length; i++) {
-      for (let j = i + 1; j < nodes.length; j++) {
-        const distance = p.dist(
-          nodes[i].x,
-          nodes[i].y,
-          nodes[i].z,
-          nodes[j].x,
-          nodes[j].y,
-          nodes[j].z,
-        )
-        if (distance < cutoff) {
-          edges.push(new Edge(nodes[i], nodes[j], p))
+      // Create edges between nodes within cutoff distance. Avoid creating an edge between a node and itself
+      for (const node of nodes.values()) {
+        // do not connect a node to itself
+        if (node.id === i) continue
+        if (shouldCreateEdge(nodes.get(i)!, node)) {
+          const edge = new Edge(p)
+          nodes.get(i)!.adjacencyList.set(node.id, edge)
         }
       }
     }
@@ -48,52 +49,47 @@ const sketch = (p: any) => {
   p.draw = () => {
     p.background(10)
 
-    // Draw edges
-    for (const edge of edges) {
-      edge.display()
-    }
-
     // Draw nodes
-    for (const node of nodes) {
+    for (const node of nodes.values()) {
       if (p.frameCount % 60 === 0 && node.isDead()) {
         handleDeadNode(node)
       }
 
       node.move()
+
+      // Draw edges
+      for (const [id, edge] of node.adjacencyList) {
+        edge.display(node, nodes.get(id)!)
+      }
+
       node.display()
     }
   }
 
   function handleDeadNode(node: Node) {
-    // Remove the node
-    const nodeIndex = nodes.findIndex((n) => n.id === node.id)
-    if (nodeIndex !== -1) {
-      nodes.splice(nodeIndex, 1)
+    // Reset the node
+    node.reset()
+
+    // remove the node from the adjacency list of other nodes
+    for (const otherNode of nodes.values()) {
+      if (otherNode.id === node.id) continue
+      otherNode.adjacencyList.delete(node.id)
     }
 
-    // Remove any edges connected to the node
-    let i = edges.length
-    while (i--) {
-      if (edges[i].node1.id === node.id || edges[i].node2.id === node.id) {
-        edges.splice(i, 1)
-      }
-    }
-
-    const newNode = createNewNode()
-    // Create a new node
-    nodes.push(newNode)
-
-    // Create edges between newNode and nodes within cutoff distance
-    for (const n of nodes) {
-      const distance = p.dist(newNode.x, newNode.y, newNode.z, n.x, n.y, n.z)
-      if (distance < cutoff) {
-        edges.push(new Edge(newNode, n, p))
+    // Create edges between the new node and other nodes within cutoff distance
+    for (const otherNode of nodes.values()) {
+      if (otherNode.id === node.id) continue
+      if (shouldCreateEdge(node, otherNode)) {
+        const edge = new Edge(p)
+        node.adjacencyList.set(otherNode.id, edge)
       }
     }
   }
 
-  function createNewNode() {
+  // Create nodes with random id, x, y, and z values
+  function createNewNode(id: number) {
     return new Node(
+      id,
       p.random(-p.width / 2, p.width / 2),
       p.random(-p.height / 2 + 100, p.height / 2),
       p.random(-100, 100),
@@ -101,85 +97,101 @@ const sketch = (p: any) => {
     )
   }
 
+  // Create edges between nodes that are within a certain distance of each other
+  function shouldCreateEdge(node1: Node, node2: Node) {
+    return (
+      distanceSquare(node1.x, node1.y, node1.z, node2.x, node2.y, node2.z) <
+      cutoff * 0.0075
+    )
+  }
+
   p.windowResized = () => {
     p.resizeCanvas(p.windowWidth, p.windowHeight)
-    cutoff = p.dist(p.windowWidth, p.windowHeight, 200, 0, 0, 0) * 0.08
+    cutoff = distanceSquare(p.windowWidth, p.windowHeight, 200, 0, 0, 0)
   }
 
   p.remove = () => {
-    nodes = []
-    edges = []
+    nodes = new Map()
+    // edges = new Map()
   }
 }
 
 class Node {
-  [key: string]: any
+  adjacencyList: Map<number, Edge> = new Map()
   offset: { x: number; y: number; z: number }
   size: number = 0
   color: number = 0
-  id: string
   lifespan: number
   age: number = 0
   fadeStart: number
   opacity: number = 0
   speed: { x: number; y: number; z: number } = { x: 0, y: 0, z: 0 }
   speedScale: number = 0
+  updateTime = Math.floor(Math.random() * 30) + 30
 
-  constructor(x: number, y: number, z: number, p: any) {
-    this.x = x
-    this.y = y
-    this.z = z
-    this.p = p
+  constructor(
+    public id: number,
+    public x: number,
+    public y: number,
+    public z: number,
+    private p: any,
+  ) {
     this.offset = { x: p.random(1000), y: p.random(1000), z: p.random(1000) }
 
     this.updateZDependentProperties()
-
-    // Generate a unique id
-    this.id = Math.random().toString(36).slice(2)
 
     // Set a lifespan for the node
     this.lifespan = this.p.random(60 * 5, 60 * 60)
     this.fadeStart = this.lifespan * 0.9
   }
 
+  reset() {
+    this.age = 0
+    this.opacity = 0
+    this.x = this.p.random(-this.p.width / 2, this.p.width / 2)
+    this.y = this.p.random(-this.p.height / 2 + 100, this.p.height / 2)
+    this.z = this.p.random(-100, 100)
+    this.offset = {
+      x: this.p.random(1000),
+      y: this.p.random(1000),
+      z: this.p.random(1000),
+    }
+    this.speed = { x: 0, y: 0, z: 0 }
+    this.speedScale = 0
+    this.size = 0
+    this.color = 0
+    this.updateZDependentProperties()
+    this.lifespan = this.p.random(60 * 5, 60 * 60)
+    this.fadeStart = this.lifespan * 0.9
+    this.adjacencyList = new Map()
+  }
+
   updateZDependentProperties() {
     this.size = this.p.map(this.z, -100, 100, 1, 5)
-    this.color = this.p.map(
-      this.z,
-      -100,
-      100,
-      150,
-      Math.round(0.299 * 22 + 0.587 * 22 + 0.114 * 29),
-    )
+    this.color = this.p.map(this.z, -100, 100, 150, GRAYSCALE)
     this.speed.z = this.p.map(Math.abs(this.z), 0, 100, 0.5, 2)
 
     this.speedScale = this.p.map(Math.abs(this.z), 0, 100, 0.5, 2)
   }
 
   move() {
-    // if(this.p.frameCount % 1 === 0) {
     for (const axis of ['x', 'y', 'z']) {
-      const key = axis as keyof Node['offset']
-      this.speed[key] = this.p.map(
-        this.p.noise(this.offset[key]),
+      this.speed[axis as keyof Node['speed']] = this.p.map(
+        this.p.noise(this.offset[axis as keyof Node['offset']]),
         0,
         1,
         -0.3,
         0.3,
       )
-      this.offset[key] += 0.01
+      this.offset[axis as keyof Node['offset']] += 0.01
     }
-
-    // }
 
     this.x += this.speed.x * this.speedScale
     this.y += this.speed.y * this.speedScale
     this.z += this.speed.z
 
-    if (this.p.frameCount % 30 === 0) {
-      // if (this.z !== this.previousZ) {
+    if (this.p.frameCount % this.updateTime === 0) {
       this.updateZDependentProperties()
-      // }
     }
   }
 
@@ -211,37 +223,33 @@ class Node {
 class Edge {
   opacity: number = 0
 
-  constructor(
-    public node1: Node,
-    public node2: Node,
-    private p: any,
-  ) {}
+  constructor(private p: any) {}
 
-  display() {
+  display(node1: Node, node2: Node) {
     const distance = this.p.dist(
-      this.node1.x,
-      this.node1.y,
-      this.node1.z,
-      this.node2.x,
-      this.node2.y,
-      this.node2.z,
+      node1.x,
+      node1.y,
+      node1.z,
+      node2.x,
+      node2.y,
+      node2.z,
     )
 
     this.opacity =
-      distance > cutoff
+      distance > this.p.cutoff
         ? this.p.max(this.opacity - 0.01, 0)
         : this.p.min(this.opacity + 0.01, 1)
 
     if (this.opacity < 0.1) return
 
-    // Calculate the minimum opacity of the two nodes connected by the edge
-    const minNodeOpacity = Math.min(this.node1.opacity, this.node2.opacity)
-
     // Use the minimum node opacity as the edge's opacity
-    this.opacity = Math.min(this.opacity, minNodeOpacity)
+    this.opacity = Math.min(
+      this.opacity,
+      Math.min(node1.opacity, node2.opacity),
+    )
 
     // Calculate the average z value of the two nodes connected by the edge
-    const avgZ = (this.node1.z + this.node2.z) / 2
+    const avgZ = (node1.z + node2.z) / 2
 
     // Map the average z value to a stroke weight
     const strokeWeight = this.p.map(avgZ, -100, 100, 1, 5)
@@ -254,14 +262,7 @@ class Edge {
     this.p.strokeWeight(strokeWeight)
 
     // Draw the edge in 3D space
-    this.p.line(
-      this.node1.x,
-      this.node1.y,
-      this.node1.z,
-      this.node2.x,
-      this.node2.y,
-      this.node2.z,
-    )
+    this.p.line(node1.x, node1.y, node1.z, node2.x, node2.y, node2.z)
   }
 }
 
