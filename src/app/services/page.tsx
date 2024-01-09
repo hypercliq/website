@@ -7,6 +7,7 @@ import {
   CogIcon,
   CpuChipIcon,
 } from '@heroicons/react/24/outline'
+import HighlightSpan from '../components/HighlightSpan'
 
 const services = [
   {
@@ -40,31 +41,36 @@ export const metadata: Metadata = {
 const Services = () => {
   return (
     <div className="bg-surface py-8 md:py-16">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 md:grid-cols-2 md:px-8">
-        <div className="md:col-span-2">
-          <h1 className="mb-6 text-4xl font-bold text-primary">
+      <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:items-start">
+          <h1 className="mb-6 text-4xl font-bold md:w-1/2">
             Igniting Innovation with Hypercliq Services
           </h1>
-          <p className="text-lg">
-            Welcome to a realm where data becomes a catalyst for innovation.
-            Hypercliq offers a comprehensive suite of data-driven solutions and
-            expert IT consulting services, transforming businesses with
-            cutting-edge technologies. Explore our dynamic range of services,
-            each meticulously crafted to elevate your domain to new heights.
+          <p className="text-lg md:w-1/2">
+            Welcome to a realm where data becomes a{' '}
+            <HighlightSpan>catalyst for innovation</HighlightSpan>. Hypercliq
+            offers a <HighlightSpan>comprehensive suite</HighlightSpan> of
+            data-driven solutions and expert IT consulting services,
+            transforming businesses with{' '}
+            <HighlightSpan>cutting-edge technologies</HighlightSpan>. Explore
+            our dynamic range of services, each meticulously crafted to{' '}
+            <HighlightSpan>elevate your domain</HighlightSpan> to new heights.
           </p>
         </div>
 
-        {services.map((service, index) => (
-          <section key={index} className="bg-background p-4">
-            <div className="mb-4 flex items-center">
-              {service.icon}
-              <h2 className="ml-4 text-xl font-bold">{service.title}</h2>
-            </div>
-            <p className="">{service.text}</p>
-          </section>
-        ))}
+        <div className="mx-auto mt-8 grid max-w-7xl grid-cols-1 gap-4 md:grid-cols-2">
+          {services.map((service, index) => (
+            <section key={index} className="bg-background p-4">
+              <div className="mb-4 flex items-center">
+                {service.icon}
+                <h2 className="ml-4 text-xl font-bold">{service.title}</h2>
+              </div>
+              <p className="">{service.text}</p>
+            </section>
+          ))}
+        </div>
 
-        <div className="md:col-span-2">
+        <div className="mt-8">
           {/* Additional Text */}
           <section>
             <p className="text-lg">
@@ -76,16 +82,16 @@ const Services = () => {
             </p>
           </section>
         </div>
-      </div>
 
-      <section className="mt-8 flex items-center justify-center">
-        <Link
-          className="text-md rounded-md bg-accent px-3.5 py-2.5 font-semibold text-onAccent shadow-sm hover:brightness-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-          href="/contact"
-        >
-          Transform Now
-        </Link>
-      </section>
+        <section className="mt-8 flex items-center justify-center">
+          <Link
+            className="text-md rounded-md bg-accent px-3.5 py-2.5 font-semibold text-onAccent shadow-sm hover:brightness-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            href="/contact"
+          >
+            Transform Now
+          </Link>
+        </section>
+      </div>
     </div>
   )
 }
