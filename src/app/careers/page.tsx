@@ -6,7 +6,8 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Join Our Team',
-  description: 'Explore Opportunities for Bright Minds and Innovators - Join Our Team',
+  description:
+    'Explore Opportunities for Bright Minds and Innovators - Join Our Team',
 }
 
 const CareersPage = () => {

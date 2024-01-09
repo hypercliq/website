@@ -10,9 +10,9 @@ import YouTubeIcon from './components/YouTubeIcon'
 
 const impact = [
   { text: 'Solutions', href: '/solutions' },
-  { text: 'Collaborations', href: '/collaborations' },
+  // { text: 'Collaborations', href: '/collaborations' },
   { text: 'Domains', href: '/domains' },
-  { text: 'Research & Development', href: '/research-development' },
+  // { text: 'Research & Development', href: '/research-development' },
 ]
 
 const company = [
@@ -63,28 +63,28 @@ const Footer = () => {
             <RandomQuote />
             <div className="mt-8 flex space-x-4">
               <Link
-                href="https://x.com"
+                href="https://x.com/hypercliq"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <XIcon className="h-6 w-6 fill-foreground/60 hover:fill-foreground" />
               </Link>
               <Link
-                href="https://linkedin.com"
+                href="https://linkedin.com/company/hypercliq"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <LinkedInIcon className="h-6 w-6 fill-foreground/60 hover:fill-foreground" />
               </Link>
               <Link
-                href="https://github.com"
+                href="https://github.com/hypercliq"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <GitHubIcon className="h-6 w-6 fill-foreground/60 hover:fill-foreground" />
               </Link>
               <Link
-                href="https://youtube.com"
+                href="https://youtube.com/@hypercliq/videos"
                 target="_blank"
                 rel="noopener noreferrer"
               >
