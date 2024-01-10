@@ -74,7 +74,7 @@ const solutions = [
     title: 'Visual repository for Agricultural R&D Innovation',
     description:
       'Web-based data management platform designed for the storage and processing of visual data within an ambitious R&D initiative in the field of Agriculture. This platform offers customized views and user access tailored to different roles, supporting the entire research pipeline—from agricultural fields to the creation of datasets for Deep Learning.',
-    url: '/solutions/agricultural-rnd-innovation',
+    url: '/solutions/visual-repository-for-agricultural-rd-innovation',
     imageUrl: Hydac,
   },
 ]

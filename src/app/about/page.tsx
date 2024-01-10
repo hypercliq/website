@@ -4,7 +4,8 @@ import Link from 'next/link'
 
 import Fokker1 from '@/app/assets/images/Florendia_r.png'
 import Fokker2 from '@/app/assets/images/Mirco_r.png'
-import Fokker3 from '@/app/assets/images/George_r.png'
+import Fokker3 from '@/app/assets/images/George.jpeg'
+import LinkedInIcon from '../components/LinkedInIcon'
 
 // Replace with the real names of the experts
 const founders = [
@@ -13,18 +14,21 @@ const founders = [
     urlImage: Fokker1.src,
     description:
       'One of the founding experts at Hypercliq brings a wealth of professional and research experience in the development of innovative AI applications. With a dedication to staying at the forefront of technology, this expert plays a crucial role in steering Hypercliq towards impactful AI solutions.',
+    linkedin: 'https://www.linkedin.com/in/florendia',
   },
   {
     name: 'Mirco Sanguineti',
     urlImage: Fokker2.src,
     description:
       "The second founder, boasting over two decades of expertise in AI, contributes a deep understanding of complex systems. His proficiency in analysis and programming has been a cornerstone of Hypercliq's technical capabilities, ensuring a strategic position in the dynamic field of AI.",
+    linkedin: 'https://www.linkedin.com/in/mirco-sanguineti',
   },
   {
     name: 'George Kartsounis',
     urlImage: Fokker3.src,
     description:
       "The third founder, a physicist and Ph.D. holder in Robotic Vision and Flexible Automation, brings a unique perspective to Hypercliq's leadership. With extensive experience in coordinating large European research projects, he provides crucial insights into the industrial IT landscape, guiding the company toward innovative solutions.",
+    linkedin: 'https://www.linkedin.com/in/george-kartsounis-0954422a/',
   },
 ]
 
@@ -39,6 +43,7 @@ interface Founder {
   urlImage: string
   name: string
   description: string
+  linkedin: string
 }
 
 interface FounderCardProps {
@@ -46,9 +51,9 @@ interface FounderCardProps {
 }
 
 const FounderCard: React.FC<FounderCardProps> = ({ founder }) => (
-  <div className="mb-8 items-center justify-between md:flex">
+  <li className="mt-12 first:mt-8 items-center justify-between md:flex">
     <div
-      className="mx-auto h-28 w-28 flex-shrink-0 rounded-full bg-cover bg-center md:mx-0 md:h-40 md:w-40"
+      className="mx-auto h-28 w-28 flex-shrink-0 rounded-full bg-cover bg-center md:mx-0 md:h-40 md:w-40 brightness-90 contrast-[1.1]"
       style={{ backgroundImage: `url(${founder.urlImage})` }}
     />
     <div className="mt-4 flex-grow md:ml-4 md:mt-0">
@@ -58,8 +63,13 @@ const FounderCard: React.FC<FounderCardProps> = ({ founder }) => (
       <p className="mt-2 text-center text-foreground/75 md:text-left">
         {founder.description}
       </p>
+      <div className="mt-4 flex justify-center md:justify-start">
+        <Link href={founder.linkedin} target="_blank" rel="noopener noreferrer">
+          <LinkedInIcon className="h-6 w-6 fill-foreground/60 hover:fill-foreground" />
+        </Link>
+      </div>
     </div>
-  </div>
+  </li>
 )
 
 const AboutPage = () => {
@@ -86,9 +96,11 @@ const AboutPage = () => {
             Meet Our Founders
           </h2>
 
+          <ul>
           {founders.map((founder, index) => (
-            <FounderCard key={founder.name} founder={founder} />
+            <FounderCard key={index} founder={founder} />
           ))}
+          </ul>
         </section>
 
         {/* Collaborative Network Section */}
