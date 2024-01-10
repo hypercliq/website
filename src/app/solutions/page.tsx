@@ -121,7 +121,7 @@ const Solutions = () => {
             'Incorporates Machine Learning-based analytics for proactive optimization.',
           ]}
           imageSrc={Bionic}
-          link="/solutions/3d-motion-tracking-for-ergonomic-assessment"
+          link="/solutions/3d-motion-tracking-for-ergonomic-movement-assessment"
         />
 
         <div className="mx-auto my-8 h-2 w-1/2 border-t-2 border-dashed border-foreground/60 md:my-16"></div>
@@ -170,7 +170,7 @@ const Solutions = () => {
             "Developed under the EU's HumanTech initiative, our project disrupts traditional construction. From safety wearables to robots driving the green transition, we create a digital, safe, and efficient construction environment.",
           ]}
           imageSrc={HumanTech}
-          link="/solutions/system-architecture-for-construction-automation"
+          link="/solutions/system-architecture-design-for-construction-automation"
           reverse={true}
         />
 
@@ -201,7 +201,7 @@ const Solutions = () => {
             'Revolutionizing agricultural research, our web-based data management platform serves as a visual repository within a cutting-edge R&D initiative. Tailored for diverse roles, it supports the entire research pipeline—from the fields to creating datasets for Deep Learning.',
           ]}
           imageSrc={Hydac}
-          link="/solutions/agricultural-rnd-innovation"
+          link="/solutions/visual-repository-for-agricultural-rd-innovation"
           reverse={true}
         />
       </div>
