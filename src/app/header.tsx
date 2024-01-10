@@ -5,6 +5,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import LogoSVG, { LogoMode } from '@/app/components/LogoSVG'
+import { usePathname } from 'next/navigation'
 
 const links = [
   {
@@ -24,6 +25,8 @@ const links = [
 ]
 
 export default function Header() {
+  const pathname = usePathname()
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   // get the width of the window using useEffect hook
@@ -72,7 +75,10 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-semibold leading-6"
+              className={`${
+                pathname === link.href ? 'text-primary' : 'text-foreground/75'
+              } text-sm font-semibold leading-6
+              transition-colors duration-200 hover:text-primary`}
             >
               {link.text}
             </Link>

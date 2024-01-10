@@ -51,9 +51,9 @@ interface FounderCardProps {
 }
 
 const FounderCard: React.FC<FounderCardProps> = ({ founder }) => (
-  <li className="mt-12 first:mt-8 items-center justify-between md:flex">
+  <li className="mt-12 items-center justify-between first:mt-8 md:flex">
     <div
-      className="mx-auto h-28 w-28 flex-shrink-0 rounded-full bg-cover bg-center md:mx-0 md:h-40 md:w-40 brightness-90 contrast-[1.1]"
+      className="mx-auto h-28 w-28 flex-shrink-0 rounded-full bg-cover bg-center brightness-90 contrast-[1.1] md:mx-0 md:h-40 md:w-40"
       style={{ backgroundImage: `url(${founder.urlImage})` }}
     />
     <div className="mt-4 flex-grow md:ml-4 md:mt-0">
@@ -97,9 +97,12 @@ const AboutPage = () => {
           </h2>
 
           <ul>
-          {founders.map((founder, index) => (
-            <FounderCard key={index} founder={founder} />
-          ))}
+            {founders.map((founder) => (
+              <FounderCard
+                key={founder.name.replace(' ', '-')}
+                founder={founder}
+              />
+            ))}
           </ul>
         </section>
 
