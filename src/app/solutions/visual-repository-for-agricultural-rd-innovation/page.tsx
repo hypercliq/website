@@ -3,8 +3,8 @@
 import ImagePopper from '@/app/components/ImagePopper'
 import Link from 'next/link'
 
-import Hydac1 from '@/app/assets/images/hydac_1.jpg'
-import Hydac2 from '@/app/assets/images/hydac_2.jpg'
+import Hydac1 from '@/app/assets/images/hydac_1.avif'
+import Hydac2 from '@/app/assets/images/hydac_2.avif'
 import { Metadata } from 'next'
 
 // create metadata for this page

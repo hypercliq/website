@@ -3,9 +3,9 @@
 import ImagePopper from '@/app/components/ImagePopper'
 import Link from 'next/link'
 
-import Bionic1 from '@/app/assets/images/bionic_1.jpg'
-import Bionic2 from '@/app/assets/images/bionic_2.jpg'
-import Bionic3 from '@/app/assets/images/bionic_3.jpg'
+import Bionic1 from '@/app/assets/images/bionic_1.avif'
+import Bionic2 from '@/app/assets/images/bionic_2.avif'
+import Bionic3 from '@/app/assets/images/bionic_3.avif'
 import { Metadata } from 'next'
 
 // create metadata for this page

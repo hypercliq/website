@@ -3,10 +3,10 @@
 import ImagePopper from '@/app/components/ImagePopper'
 import Link from 'next/link'
 
-import HumanTech1 from '@/app/assets/images/human-tech_1.jpg'
-import HumanTech2 from '@/app/assets/images/human-tech_2.jpg'
+import HumanTech1 from '@/app/assets/images/human-tech_1.avif'
+import HumanTech2 from '@/app/assets/images/human-tech_2.avif'
 import { Metadata } from 'next'
-// import HumanTech3 from '@/app/assets/images/human-tech_3.jpg'
+// import HumanTech3 from '@/app/assets/images/human-tech_3.avif'
 
 // create metadata for this page
 export const metadata: Metadata = {

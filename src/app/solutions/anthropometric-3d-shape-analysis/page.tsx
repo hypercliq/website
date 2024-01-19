@@ -1,7 +1,7 @@
 // AnthropometricCaseStudy.tsx
 
-import EuroFit from '@/app/assets/images/eurofit-app_1.jpg'
-import EuroFit2 from '@/app/assets/images/eurofit-app_2.jpg'
+import EuroFit from '@/app/assets/images/eurofit-app_1.avif'
+import EuroFit2 from '@/app/assets/images/eurofit-app_2.avif'
 import ImagePopper from '@/app/components/ImagePopper'
 import { Metadata } from 'next'
 import Link from 'next/link'

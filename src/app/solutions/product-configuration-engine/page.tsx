@@ -1,9 +1,9 @@
 // ProductConfigCaseStudy.tsx
 
 import Link from 'next/link'
-import EasyIMP1 from '@/app/assets/images/easy-imp_1.jpg'
-import EasyIMP2 from '@/app/assets/images/easy-imp_2.jpg'
-import EasyIMP3 from '@/app/assets/images/easy-imp_3.jpg'
+import EasyIMP1 from '@/app/assets/images/easy-imp_1.avif'
+import EasyIMP2 from '@/app/assets/images/easy-imp_2.avif'
+import EasyIMP3 from '@/app/assets/images/easy-imp_3.avif'
 import ImagePopper from '@/app/components/ImagePopper'
 import { Metadata } from 'next'
 

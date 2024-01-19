@@ -3,10 +3,10 @@
 import ImagePopper from '@/app/components/ImagePopper'
 import Link from 'next/link'
 
-import SportInfinity1 from '@/app/assets/images/sport-infinity_1.jpg'
-import SportInfinity2 from '@/app/assets/images/sport-infinity_2.jpg'
-import SportInfinity3 from '@/app/assets/images/sport-infinity_3.jpg'
-import SportInfinity4 from '@/app/assets/images/sport-infinity_4.jpg'
+import SportInfinity1 from '@/app/assets/images/sport-infinity_1.avif'
+import SportInfinity2 from '@/app/assets/images/sport-infinity_2.avif'
+import SportInfinity3 from '@/app/assets/images/sport-infinity_3.avif'
+import SportInfinity4 from '@/app/assets/images/sport-infinity_4.avif'
 import { Metadata } from 'next'
 
 // create metadata for this page

@@ -2,30 +2,30 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 
-import Fokker1 from '@/app/assets/images/Florendia_r.png'
-import Fokker2 from '@/app/assets/images/Mirco_r.png'
-import Fokker3 from '@/app/assets/images/George.jpeg'
+import Florendia from '@/app/assets/images/Florendia_r.avif'
+import Mirco from '@/app/assets/images/Mirco_r.avif'
+import George from '@/app/assets/images/George.avif'
 import LinkedInIcon from '../components/LinkedInIcon'
 
 // Replace with the real names of the experts
 const founders = [
   {
-    name: 'Florendia Fourlì',
-    urlImage: Fokker1.src,
+    name: 'Florendia Fourlì - CEO',
+    urlImage: Florendia.src,
     description:
       'One of the founding experts at Hypercliq brings a wealth of professional and research experience in the development of innovative AI applications. With a dedication to staying at the forefront of technology, this expert plays a crucial role in steering Hypercliq towards impactful AI solutions.',
     linkedin: 'https://www.linkedin.com/in/florendia',
   },
   {
-    name: 'Mirco Sanguineti',
-    urlImage: Fokker2.src,
+    name: 'Mirco Sanguineti - CTO',
+    urlImage: Mirco.src,
     description:
       "The second founder, boasting over two decades of expertise in AI, contributes a deep understanding of complex systems. His proficiency in analysis and programming has been a cornerstone of Hypercliq's technical capabilities, ensuring a strategic position in the dynamic field of AI.",
     linkedin: 'https://www.linkedin.com/in/mirco-sanguineti',
   },
   {
-    name: 'George Kartsounis',
-    urlImage: Fokker3.src,
+    name: 'George Kartsounis - CIO',
+    urlImage: George.src,
     description:
       "The third founder, a physicist and Ph.D. holder in Robotic Vision and Flexible Automation, brings a unique perspective to Hypercliq's leadership. With extensive experience in coordinating large European research projects, he provides crucial insights into the industrial IT landscape, guiding the company toward innovative solutions.",
     linkedin: 'https://www.linkedin.com/in/george-kartsounis-0954422a/',
