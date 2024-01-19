@@ -60,11 +60,13 @@ body {
 }
 
 @keyframes animate-svg-stroke {
-  0% {
+  0%,
+  40% {
     stroke-dashoffset: var(--stroke-dashoffset);
     stroke-dasharray: var(--stroke-dasharray);
   }
 
+  90%,
   100% {
     stroke-dashoffset: 0;
     stroke-dasharray: var(--stroke-dasharray);
@@ -72,10 +74,12 @@ body {
 }
 
 @keyframes animate-svg-fill {
-  0% {
+  0%,
+  40% {
     fill: transparent;
   }
 
+  90%,
   100% {
     fill: var(--fill-color);
   }
@@ -83,10 +87,12 @@ body {
 
 .animate-logo {
   animation:
-    animate-svg-stroke 1s cubic-bezier(1, 0, 0, 1) var(--animation-delay-stroke)
-      both,
-    animate-svg-fill 1s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    animate-svg-stroke 2.5s cubic-bezier(1, 0, 0, 1)
+      var(--animation-delay-stroke) both,
+    animate-svg-fill 2.5s cubic-bezier(0.785, 0.135, 0.15, 0.86)
       var(--animation-delay-fill) both;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 
 .animate-logo#b1 {
