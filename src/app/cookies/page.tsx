@@ -24,8 +24,10 @@ const CookiePolicy = () => {
       content: (
         <>
           Currently, we do not use any cookies on our website. However, in the
-          future, we may use our own cookies to improve site functionalities.
-          These cookies will not be used for ads or any intrusive purposes.
+          future, we may introduce our own cookies to improve site
+          functionalities. These cookies will not be used for ads or any
+          intrusive purposes. We will update this policy accordingly if there
+          are changes to our use of cookies.
         </>
       ),
     },
@@ -34,7 +36,8 @@ const CookiePolicy = () => {
       content: (
         <>
           You have the option to disable cookies in your browser settings.
-          Please note that this may affect the functionality of our website.
+          However, please note that disabling cookies may affect the
+          functionality of our website.
         </>
       ),
     },

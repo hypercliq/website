@@ -9,10 +9,11 @@ const TermsPage: React.FC = () => {
         <>
           By accessing or using our website, you acknowledge that you have read,
           understood, and agree to be bound by these Terms. If you do not agree
-          to all of these Terms, do not use our website. Your continued use of
-          our website will confirm your acceptance of the revised Terms. We
-          encourage you to frequently review the Terms to ensure you understand
-          the terms and conditions that apply to your use of the website.
+          to all of these Terms, please do not use our website. Your continued
+          use of our website will confirm your acceptance of the revised Terms.
+          We encourage you to frequently review the Terms to ensure you
+          understand the terms and conditions that apply to your use of the
+          website.
         </>
       ),
     },
@@ -22,8 +23,8 @@ const TermsPage: React.FC = () => {
         <>
           We reserve the right to change or modify these Terms at any time and
           in our sole discretion. If we make changes to these Terms, we will
-          provide notice of such changes, such as by updating the &quot;Last
-          Updated&quot; date at the end of these Terms.
+          provide notice of such changes, such as by updating the &ldquot;Last
+          Updated&rdquot; date at the end of these Terms.
         </>
       ),
     },
@@ -31,8 +32,8 @@ const TermsPage: React.FC = () => {
       title: 'User Obligations',
       content: (
         <>
-          You agree to comply with all applicable laws and regulations regarding
-          your use of our website, with Greek law taking precedence.
+          By using our website, you agree to comply with all applicable laws and
+          regulations, with Greek law taking precedence.
         </>
       ),
     },
@@ -40,13 +41,12 @@ const TermsPage: React.FC = () => {
       title: 'Privacy and Data Protection',
       content: (
         <>
-          We are committed to protecting your privacy. Our Privacy Policy,
-          available{' '}
+          We are committed to protecting your privacy. Our{' '}
           <Link href="/privacy" className="text-accent">
-            here
-          </Link>
-          {''}, outlines how we collect, use, and disclose your personal
-          information while browsing our website.
+            Privacy Policy
+          </Link>{' '}
+          outlines how we collect, use, and disclose your personal information
+          while browsing our website.
         </>
       ),
     },
@@ -62,7 +62,7 @@ const TermsPage: React.FC = () => {
       ),
     },
     {
-      title: 'Governing Law',
+      title: 'Governing Law and Jurisdiction',
       content: (
         <>
           These Terms are governed by the laws of Greece. Any disputes arising
