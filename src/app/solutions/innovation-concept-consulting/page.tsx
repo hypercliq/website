@@ -3,7 +3,7 @@
 import ImagePopper from '@/app/components/ImagePopper'
 import Link from 'next/link'
 
-import AdidasConsulting1 from '@/app/assets/images/adidas-consulting_1.jpg'
+import AdidasConsulting1 from '@/app/assets/images/adidas-consulting_1.avif'
 import { Metadata } from 'next'
 
 // create metadata for this page

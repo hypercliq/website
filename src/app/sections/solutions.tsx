@@ -1,12 +1,12 @@
 import CheckList from '@/app/components/Checklist'
 import SolutionsCarousel from '@/app/components/SolutionsCarousel'
-import SportInfinity from '@/app/assets/images/sport-infinity_1.jpg'
-import Bionic from '@/app/assets/images/bionic_1.jpg'
-import HumanTech from '@/app/assets/images/human-tech_1.jpg'
-import EurofitApp from '@/app/assets/images/eurofit-app_1.jpg'
-import EasyImp from '@/app/assets/images/easy-imp_1.jpg'
-import AdidasConsulting from '@/app/assets/images/adidas-consulting_1.jpg'
-import Hydac from '@/app/assets/images/hydac_1.jpg'
+import SportInfinity from '@/app/assets/images/sport-infinity_1.avif'
+import Bionic from '@/app/assets/images/bionic_1.avif'
+import HumanTech from '@/app/assets/images/human-tech_1.avif'
+import EurofitApp from '@/app/assets/images/eurofit-app_1.avif'
+import EasyImp from '@/app/assets/images/easy-imp_1.avif'
+import AdidasConsulting from '@/app/assets/images/adidas-consulting_1.avif'
+import Hydac from '@/app/assets/images/hydac_1.avif'
 
 const sentences = [
   { id: 1, text: 'Specializing in delivering data-driven solutions.' },
