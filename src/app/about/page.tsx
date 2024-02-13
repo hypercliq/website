@@ -6,6 +6,7 @@ import Florendia from '@/app/assets/images/Florendia_r.avif'
 import Mirco from '@/app/assets/images/Mirco_r.avif'
 import George from '@/app/assets/images/George.avif'
 import LinkedInIcon from '../components/LinkedInIcon'
+import MainContainer from '../components/Container'
 
 // Replace with the real names of the experts
 const founders = [
@@ -74,69 +75,68 @@ const FounderCard: React.FC<FounderCardProps> = ({ founder }) => (
 
 const AboutPage = () => {
   return (
-    <div className="bg-surface py-8 md:py-16">
-      <div className="mx-auto max-w-7xl px-4 md:px-8">
-        <div className="text-center">
-          <h1 className="mb-6 text-4xl font-bold text-primary">
-            Driving Change Through Expertise
-          </h1>
-          <p className="text-lg">
-            Founded in 2011, Hypercliq is an established entity in the IT
-            landscape, rooted in a partnership of seasoned Artificial
-            Intelligence (AI) experts. Specializing in comprehensive IT
-            services, the company excels in designing and implementing data
-            management platforms and crafting data analysis solutions for a
-            diverse range of business and industrial applications.
-          </p>
-        </div>
+    <MainContainer>
+      <div className="text-center">
+        <h1 className="mb-6 text-4xl font-bold text-primary">
+          Driving Change Through Expertise
+        </h1>
+        <p className="text-lg">
+          Founded in 2011, Hypercliq is an established entity in the IT
+          landscape, rooted in a partnership of seasoned Artificial Intelligence
+          (AI) experts. Specializing in comprehensive IT services, the company
+          excels in designing and implementing data management platforms and
+          crafting data analysis solutions for a diverse range of business and
+          industrial applications.
+        </p>
+      </div>
 
-        {/* About Our Founders Section */}
-        <section className="mt-8">
-          <h2 className="mb-4 text-2xl font-bold text-primary">
-            Meet Our Founders
-          </h2>
+      {/* About Our Founders Section */}
+      <section className="mt-8">
+        <h2 className="mb-4 text-2xl font-bold text-primary">
+          Meet Our Founders
+        </h2>
 
-          <ul>
-            {founders.map((founder) => (
-              <FounderCard
-                key={founder.name.replace(' ', '-')}
-                founder={founder}
-              />
-            ))}
-          </ul>
-        </section>
+        <ul>
+          {founders.map((founder) => (
+            <FounderCard
+              key={founder.name.replace(' ', '-')}
+              founder={founder}
+            />
+          ))}
+        </ul>
+      </section>
 
-        {/* Collaborative Network Section */}
-        <section className="mt-8">
-          <h2 className="mb-4 text-2xl font-bold text-primary">
-            Collaborative Network of Experts
-          </h2>
-          <p>
-            Beyond its founders, Hypercliq leverages a network of affiliated IT
-            experts across European countries. Chosen for their expertise, these
-            collaborators have played integral roles in demanding projects,
-            contributing to the company&apos;s success. This collaborative
-            approach enhances Hypercliq&apos;s capabilities and ensures
-            adaptability to various challenges.
-          </p>
-        </section>
+      {/* Collaborative Network Section */}
+      <section className="mt-8">
+        <h2 className="mb-4 text-2xl font-bold text-primary">
+          Collaborative Network of Experts
+        </h2>
+        <p>
+          Beyond its founders, Hypercliq leverages a network of affiliated IT
+          experts across European countries. Chosen for their expertise, these
+          collaborators have played integral roles in demanding projects,
+          contributing to the company&apos;s success. This collaborative
+          approach enhances Hypercliq&apos;s capabilities and ensures
+          adaptability to various challenges.
+        </p>
+      </section>
 
-        {/* European Presence and Key Partnerships Section */}
-        <section className="mt-8">
-          <h2 className="mb-4 text-2xl font-bold text-primary">
-            Our European Presence and Key Partnerships
-          </h2>
-          <p>
-            Hypercliq&apos;s influence extends beyond its technical
-            capabilities. Leveraging our extensive newtwork we are
-            well-recognized in the European IT, R&D and Industrial sector. Our
-            key partnerships with reputable organizations throughout Europe
-            further solidify our standing in delivering innovative IT solutions.
-          </p>
-        </section>
+      {/* European Presence and Key Partnerships Section */}
+      <section className="mt-8">
+        <h2 className="mb-4 text-2xl font-bold text-primary">
+          Our European Presence and Key Partnerships
+        </h2>
+        <p>
+          Hypercliq&apos;s influence extends beyond its technical capabilities.
+          Leveraging our extensive network we are well-recognized in the
+          European IT, R&D and Industrial sectors. Our key partnerships with
+          reputable organizations throughout Europe further solidify our
+          standing in delivering innovative IT solutions.
+        </p>
+      </section>
 
-        {/* R&D Page Link */}
-        {/* <div className="mt-8 text-center">
+      {/* R&D Page Link */}
+      {/* <div className="mt-8 text-center">
           <Link
             href="/reserach-development"
             className="text-lg font-semibold text-accent"
@@ -144,8 +144,7 @@ const AboutPage = () => {
             Explore Our R&D Involvements
           </Link>
         </div> */}
-      </div>
-    </div>
+    </MainContainer>
   )
 }
 
