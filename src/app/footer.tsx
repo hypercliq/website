@@ -1,11 +1,10 @@
-import Link from 'next/link'
-import LanguageSelector from '@/app/components/LanguageSelector'
 import LogoSVG, { LogoMode } from '@/app/components/LogoSVG'
-import ThemeSwitcher from '@/app/components/ThemeSwitcher'
 import RandomQuote from '@/app/components/RandomQuote'
-import XIcon from './components/XIcon'
-import LinkedInIcon from './components/LinkedInIcon'
+import ThemeSwitcher from '@/app/components/ThemeSwitcher'
+import Link from 'next/link'
 import GitHubIcon from './components/GitHubIcon'
+import LinkedInIcon from './components/LinkedInIcon'
+import XIcon from './components/XIcon'
 import YouTubeIcon from './components/YouTubeIcon'
 
 const impact = [

@@ -8,18 +8,14 @@ const useCSSVariable = (variableName: string) => {
   useEffect(() => {
     const fetchCSSVariable = () => {
       const style = getComputedStyle(document.body)
-      console.log('🚀 ~ fetchCSSVariable ~ style:', style.backgroundColor)
       const value = style.getPropertyValue(variableName).trim()
-      console.log('🚀 ~ fetchCSSVariable ~ value:', value)
-      // Assuming the CSS variable contains RGB values, e.g., "255 255 255"
-      // Convert it to a hex value or use it directly in Three.js as needed
       setValue(value)
     }
 
     // Initial fetch
     fetchCSSVariable()
 
-    // Set up a mutation observer to detect class changes on the body element
+    // Set up a mutation observer to detect class changes on the html element
     const observer = new MutationObserver((mutations) => {
       for (const mutation of mutations) {
         if (mutation.attributeName === 'class') {
