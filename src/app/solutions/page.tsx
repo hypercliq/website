@@ -47,8 +47,8 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({
         <Image
           src={imageSrc}
           alt={title}
-          layout="responsive"
-          objectFit="cover"
+          // layout="responsive"
+          className="object-cover"
         />
       </div>
       <div className={`md:w-1/2 ${reverse ? 'md:pr-8' : 'md:pl-8'}`}>

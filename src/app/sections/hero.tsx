@@ -1,60 +1,29 @@
 'use client'
 
 import Link from 'next/link'
-import P5Sketch from '../components/Connections'
-import Connections from '../components/NewConnections'
-import { useEffect, useState } from 'react'
-
-function getFeatureFlagFromURL(paramName: string) {
-  const urlParams = new URLSearchParams(window.location.search)
-  const param = urlParams.get(paramName)
-  return param ? param === 'true' : undefined
-}
-
-function determineFeatureFlag(paramName: string, storageKey: string) {
-  // Check if the flag is overridden by URL parameters
-  const urlOverride = getFeatureFlagFromURL(paramName)
-
-  return urlOverride ?? false
-}
+import Connections from '../components/Connections'
+// import { useFeatureFlag } from '../hooks/useFeatureFlag'
 
 export default function Hero() {
-  const [isFeatureEnabled, setIsFeatureEnabled] = useState(false)
-
-  useEffect(() => {
-    setIsFeatureEnabled(determineFeatureFlag('connections', 'connections'))
-  }, [])
+  // const isFeatureEnabled = useFeatureFlag('connections')
 
   return (
     <section
       id="hero"
       className="relative -top-20 -mb-20 h-max overflow-hidden bg-surface"
     >
-      {isFeatureEnabled ? (
-        <Connections
-          style={{
-            position: 'absolute',
-            left: 0,
-            top: 0,
-            width: '100%',
-            height: '100%',
-          }}
-        />
-      ) : (
-        <>
-          <P5Sketch
-            className="absolute left-0 top-0 h-full w-full  object-cover"
-            // sketch={P5Sketch}
-          />
-          <div
-            id="filter"
-            className="absolute left-0 top-0 h-full w-full backdrop-grayscale backdrop-invert dark:backdrop-invert-0"
-          ></div>
-        </>
-      )}
+      <Connections
+        style={{
+          position: 'absolute',
+          left: 0,
+          top: 0,
+          width: '100%',
+          height: '100%',
+        }}
+      />
       <div className="relative m-auto flex min-h-screen max-w-7xl flex-col items-center justify-center pt-24 md:flex-row">
         <div className="flex w-full flex-col justify-center pl-4 md:pl-8 lg:w-1/2">
-          <p className="text-2xl font-semibold uppercase tracking-widest text-foreground/60 sm:text-3xl">
+          <p className="text-2xl font-semibold uppercase tracking-widest  sm:text-3xl">
             Hello
           </p>
           <h1 className="text-7xl font-light tracking-tight md:text-8xl lg:text-9xl">
