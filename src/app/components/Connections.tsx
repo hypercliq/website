@@ -101,9 +101,12 @@ const handleLifecycle = (
     colorRef.current = Math.random() > 0.05 ? '#8b8b8e' : '#f6b221'
     mesh.material = getMaterial(0, colorRef.current)
   } else if (age.current <= 1) {
-    mesh.material = getMaterial(age.current, colorRef.current)
+    mesh.material = getMaterial(quantizeOpacity(age.current), colorRef.current)
   } else if (age.current > lifeSpanRef.current - 1) {
-    mesh.material = getMaterial(mesh.material.opacity - delta, colorRef.current)
+    mesh.material = getMaterial(
+      quantizeOpacity(mesh.material.opacity - delta),
+      colorRef.current,
+    )
   }
 }
 
