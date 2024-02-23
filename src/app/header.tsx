@@ -1,11 +1,11 @@
 'use client'
 
-import { Dialog } from '@headlessui/react'
+import LogoSVG, { LogoMode } from '@/app/components/LogoSVG'
+import { Dialog, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
-import LogoSVG, { LogoMode } from '@/app/components/LogoSVG'
 import { usePathname } from 'next/navigation'
+import { forwardRef, useEffect, useState } from 'react'
 
 const links = [
   {
@@ -23,6 +23,17 @@ const links = [
   { text: 'Careers', href: '/careers', description: 'Join our team' },
   { text: 'Contact', href: '/contact', description: 'Get in touch with us' },
 ]
+
+// eslint-disable-next-line react/display-name
+let MyDialogPanel = forwardRef<HTMLDivElement, any>(function (props, ref) {
+  return (
+    <Dialog.Panel
+      className="fixed inset-y-0 right-0 z-[1000] w-full overflow-y-auto bg-surface px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-foreground"
+      ref={ref}
+      {...props}
+    />
+  )
+})
 
 export default function Header() {
   const pathname = usePathname()
@@ -87,16 +98,37 @@ export default function Header() {
           ))}
         </div>
       </nav>
-      <Dialog
-        as="div"
+      <Transition
+        as={Dialog}
         className="lg:hidden"
-        open={mobileMenuOpen}
+        show={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-surface px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-foreground">
+        <Transition.Child
+          enter="transition-opacity ease-linear duration-75"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition-opacity ease-linear duration-75"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <div className="fixed inset-0 z-[900] backdrop-brightness-[.25]" />
+        </Transition.Child>
+        <Transition.Child
+          as={MyDialogPanel}
+          enter="transition ease-in-out duration-300 transform"
+          enterFrom="translate-x-full"
+          enterTo="translate-x-0"
+          leave="transition ease-in-out duration-300 transform"
+          leaveFrom="translate-x-0"
+          leaveTo="translate-x-full"
+        >
           <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5">
+            <Link
+              href="/"
+              className="-m-1.5 p-1.5"
+              onClick={() => setMobileMenuOpen(false)}
+            >
               <span className="sr-only">Hypercliq</span>
               <div className="h-8 w-auto">
                 <LogoSVG mode={LogoMode.GraphicOnly} />
@@ -118,6 +150,7 @@ export default function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
                     className={`${
                       pathname === link.href
                         ? 'cursor-default text-primary'
@@ -131,8 +164,8 @@ export default function Header() {
               </div>
             </div>
           </div>
-        </Dialog.Panel>
-      </Dialog>
+        </Transition.Child>
+      </Transition>
     </header>
   )
 }

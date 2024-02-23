@@ -1,6 +1,6 @@
 {
   "name": "hypercliq-website",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "private": true,
   "engines": {
     "node": ">=20.0.0 <22.0.0"
@@ -15,7 +15,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
-    "@react-three/drei": "^9.97.6",
+    "@react-three/drei": "^9.99.1",
     "@react-three/fiber": "^8.15.16",
     "@uidotdev/usehooks": "^2.4.1",
     "leaflet": "^1.9.4",
@@ -26,7 +26,6 @@
     "react": "^18",
     "react-dom": "^18",
     "react-leaflet": "^4.2.1",
-    "react-spring": "^9.7.3",
     "sharp": "^0.33.2",
     "three": "^0.161.0"
   },
@@ -34,7 +33,6 @@
     "@tailwindcss/forms": "^0.5.7",
     "@types/leaflet": "^1.9.8",
     "@types/node": "^20",
-    "@types/p5": "^1.7.6",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/three": "^0.161.2",
