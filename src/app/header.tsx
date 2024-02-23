@@ -24,6 +24,7 @@ const links = [
   { text: 'Contact', href: '/contact', description: 'Get in touch with us' },
 ]
 
+// eslint-disable-next-line react/display-name
 let MyDialogPanel = forwardRef<HTMLDivElement, any>(function (props, ref) {
   return (
     <Dialog.Panel
