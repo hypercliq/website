@@ -1,6 +1,6 @@
 {
   "name": "hypercliq-website",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "private": true,
   "engines": {
     "node": ">=20.0.0 <22.0.0"
@@ -48,7 +48,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hypercliq/website"
+    "url": "https://github.com/hypercliq/website"
   },
   "bugs": {
     "url": "https://github.com/hypercliq/website/issues"
