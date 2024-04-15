@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "npx serve@latest out",
     "lint": "next lint",
     "format": "prettier --write ."
   },
@@ -45,5 +45,13 @@
     "prettier-plugin-tailwindcss": "^0.5.13",
     "tailwindcss": "^3.4.3",
     "typescript": "^5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypercliq/website"
+  },
+  "bugs": {
+    "url": "https://github.com/hypercliq/website/issues"
+  },
+  "homepage": "https://hypercliq.com"
 }
