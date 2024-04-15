@@ -7,6 +7,8 @@ import LinkedInIcon from './components/LinkedInIcon'
 import XIcon from './components/XIcon'
 import YouTubeIcon from './components/YouTubeIcon'
 
+import pkg from '../../package.json'
+
 const impact = [
   { text: 'Solutions', href: '/solutions' },
   // { text: 'Collaborations', href: '/collaborations' },
@@ -107,9 +109,16 @@ const Footer = () => {
         </div>
         <div className="mt-16 text-sm">
           <hr className="border-foreground/60" />
-          <p className="pt-4 md:pt-8">
-            © {new Date().getFullYear()} Hypercliq. All rights reserved.
-          </p>
+          <div className="mt-4 flex items-center justify-between">
+            <p className="pt-4 md:pt-8">
+              © {new Date().getFullYear()} Hypercliq. All rights reserved.
+            </p>
+            <p className="pt-4 md:pt-8">
+              <Link href={pkg.repository.url}>
+                <span className="text-foreground/60">v{pkg.version}</span>
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
