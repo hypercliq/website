@@ -66,7 +66,7 @@ export default function Services() {
         ))}
       </div>
       <div className="mt-4 px-4 md:px-8">
-        <p className="bg-gradient-to-r from-[#af21f6] to-[#21f6af] p-4 text-center  text-xl font-semibold leading-8 tracking-normal text-white shadow-md">
+        <p className="bg-gradient-to-r from-[#af21f6] to-[#21f6af] p-4 text-center text-xl font-semibold leading-8 tracking-normal text-white shadow-md">
           Unleashing the power of data with our cutting-edge Machine Learning
           and AI technologies, we work closely with you, leveraging your domain
           expertise with our data proficiency to create tailored strategies.

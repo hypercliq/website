@@ -23,7 +23,7 @@ export default function Hero() {
       />
       <div className="relative m-auto flex min-h-screen max-w-7xl flex-col items-center justify-center pt-24 md:flex-row">
         <div className="flex w-full flex-col justify-center pl-4 md:pl-8 lg:w-1/2">
-          <p className="text-2xl font-semibold uppercase tracking-widest  sm:text-3xl">
+          <p className="text-2xl font-semibold uppercase tracking-widest sm:text-3xl">
             Hello
           </p>
           <h1 className="text-7xl font-light tracking-tight md:text-8xl lg:text-9xl">
@@ -32,7 +32,7 @@ export default function Hero() {
               hypercliq
             </span>
           </h1>
-          <div className="mb-5 mt-10 flex items-center  gap-x-6">
+          <div className="mb-5 mt-10 flex items-center gap-x-6">
             <Link
               href="/services"
               className="text-md rounded-md bg-accent px-3.5 py-2.5 font-semibold text-onAccent shadow-sm hover:brightness-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"

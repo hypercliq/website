@@ -1,7 +1,12 @@
 'use client'
 
 import LogoSVG, { LogoMode } from '@/app/components/LogoSVG'
-import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/react'
+import {
+  Dialog,
+  DialogPanel,
+  Transition,
+  TransitionChild,
+} from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'

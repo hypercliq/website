@@ -14,7 +14,7 @@ export default function About() {
       id="about"
       className="m-auto flex max-w-7xl flex-col items-start py-10 md:py-16 lg:flex-row"
     >
-      <header className=" w-full px-4 md:w-1/2 md:px-0 md:pl-8">
+      <header className="w-full px-4 md:w-1/2 md:px-0 md:pl-8">
         <div className="truncate font-semibold text-accent sm:text-lg">
           {sentences[0]}
         </div>
