@@ -1,6 +1,6 @@
 'use client'
 
-import { Dialog } from '@headlessui/react'
+import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react'
 import Image, { StaticImageData } from 'next/image'
@@ -39,10 +39,10 @@ const ImagePopper: React.FC<ImagePopperProps> = ({ src, alt, className }) => {
           {/* Container to center the panel */}
           <div className="flex min-h-full items-center justify-center p-4">
             {/* The actual dialog panel  */}
-            <Dialog.Panel>
-              <Dialog.Title as="h2" className="sr-only">
+            <DialogPanel>
+              <DialogTitle as="h2" className="sr-only">
                 Image Modal
-              </Dialog.Title>
+              </DialogTitle>
 
               <button
                 onClick={() => setIsOpen(false)}
@@ -59,7 +59,7 @@ const ImagePopper: React.FC<ImagePopperProps> = ({ src, alt, className }) => {
                   setIsOpen(false)
                 }}
               />
-            </Dialog.Panel>
+            </DialogPanel>
           </div>
         </div>
       </Dialog>

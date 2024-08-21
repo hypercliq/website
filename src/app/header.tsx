@@ -1,7 +1,12 @@
 'use client'
 
 import LogoSVG, { LogoMode } from '@/app/components/LogoSVG'
-import { Dialog, Transition } from '@headlessui/react'
+import {
+  Dialog,
+  DialogPanel,
+  Transition,
+  TransitionChild,
+} from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -27,7 +32,7 @@ const links = [
 // eslint-disable-next-line react/display-name
 let MyDialogPanel = forwardRef<HTMLDivElement, any>(function (props, ref) {
   return (
-    <Dialog.Panel
+    <DialogPanel
       className="fixed inset-y-0 right-0 z-[1000] w-full overflow-y-auto bg-surface px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-foreground"
       ref={ref}
       {...props}
@@ -90,8 +95,7 @@ export default function Header() {
                 pathname === link.href
                   ? 'cursor-default text-primary'
                   : 'text-foreground/75 hover:text-foreground'
-              } text-sm font-semibold leading-6
-              transition-colors duration-200 `}
+              } text-sm font-semibold leading-6 transition-colors duration-200`}
             >
               {link.text}
             </Link>
@@ -104,7 +108,7 @@ export default function Header() {
         show={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
-        <Transition.Child
+        <TransitionChild
           enter="transition-opacity ease-linear duration-75"
           enterFrom="opacity-0"
           enterTo="opacity-100"
@@ -113,8 +117,8 @@ export default function Header() {
           leaveTo="opacity-0"
         >
           <div className="fixed inset-0 z-[900] backdrop-brightness-[.25]" />
-        </Transition.Child>
-        <Transition.Child
+        </TransitionChild>
+        <TransitionChild
           as={MyDialogPanel}
           enter="transition ease-in-out duration-300 transform"
           enterFrom="translate-x-full"
@@ -155,8 +159,7 @@ export default function Header() {
                       pathname === link.href
                         ? 'cursor-default text-primary'
                         : 'text-foreground/75 hover:text-foreground'
-                    } -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7
-                    transition-colors duration-200`}
+                    } -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition-colors duration-200`}
                   >
                     {link.text}
                   </Link>
@@ -164,7 +167,7 @@ export default function Header() {
               </div>
             </div>
           </div>
-        </Transition.Child>
+        </TransitionChild>
       </Transition>
     </header>
   )
