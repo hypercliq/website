@@ -1,6 +1,6 @@
 {
   "name": "hypercliq-website",
-  "version": "2.4.3",
+  "version": "2.5.0",
   "private": true,
   "engines": {
     "node": ">=20.0.0 <22.0.0"
