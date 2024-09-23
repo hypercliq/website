@@ -17,7 +17,7 @@
     "@headlessui/react": "^2.1.8",
     "@heroicons/react": "^2.1.5",
     "@react-three/drei": "^9.113.0",
-    "@react-three/fiber": "^8.17.7",
+    "@react-three/fiber": "^8.17.8",
     "@uidotdev/usehooks": "^2.4.1",
     "leaflet": "^1.9.4",
     "leaflet-gesture-handling": "^1.2.2",
