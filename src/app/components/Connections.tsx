@@ -343,7 +343,7 @@ const isWebGLAvailable = (): boolean => {
 
 const Connections: React.FC<{ style?: CSSProperties }> = ({ style }) => {
   return isWebGLAvailable() ? (
-    <Canvas style={style} camera={{ position: [0, 0, 5] }} dpr={[1, 2]}>
+    <Canvas style={style} camera={{ position: [0, 0, 5] }} dpr={[1, 1]}>
       <PerformanceMonitor>
         <Graph />
       </PerformanceMonitor>
