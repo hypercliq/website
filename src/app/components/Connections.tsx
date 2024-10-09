@@ -335,7 +335,8 @@ const isWebGLAvailable = (): boolean => {
       window.WebGLRenderingContext &&
       (canvas.getContext('webgl') || canvas.getContext('experimental-webgl'))
     )
-  } catch (e) {
+  } catch (error) {
+    console.log(error)
     return false
   }
 }
