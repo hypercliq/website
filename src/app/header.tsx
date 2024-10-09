@@ -33,7 +33,7 @@ const links = [
 let MyDialogPanel = forwardRef<HTMLDivElement, any>(function (props, ref) {
   return (
     <DialogPanel
-      className="fixed inset-y-0 right-0 z-[1000] w-full overflow-y-auto bg-surface px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-foreground"
+      className="easy-in-out fixed inset-y-0 right-0 z-[1000] w-full overflow-y-auto bg-surface px-6 py-6 duration-300 data-[closed]:translate-x-full sm:max-w-sm sm:ring-1 sm:ring-foreground"
       ref={ref}
       {...props}
     />
@@ -108,25 +108,10 @@ export default function Header() {
         show={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
-        <TransitionChild
-          enter="transition-opacity ease-linear duration-75"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition-opacity ease-linear duration-75"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <div className="fixed inset-0 z-[900] backdrop-brightness-[.25]" />
+        <TransitionChild>
+          <div className="fixed inset-0 z-[900] backdrop-brightness-[.25] duration-75 ease-linear data-[closed]:opacity-0" />
         </TransitionChild>
-        <TransitionChild
-          as={MyDialogPanel}
-          enter="transition ease-in-out duration-300 transform"
-          enterFrom="translate-x-full"
-          enterTo="translate-x-0"
-          leave="transition ease-in-out duration-300 transform"
-          leaveFrom="translate-x-0"
-          leaveTo="translate-x-full"
-        >
+        <TransitionChild as={MyDialogPanel}>
           <div className="flex items-center justify-between">
             <Link
               href="/"
