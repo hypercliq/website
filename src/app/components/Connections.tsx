@@ -14,6 +14,7 @@ import {
 } from 'react'
 import { Material, Mesh, MeshBasicMaterial, Vector3 } from 'three'
 import Perlin from '../utils/perlin'
+import LogoSVG, { LogoMode } from './LogoSVG'
 
 const c = 10
 const perlin = new Perlin()
@@ -299,13 +300,55 @@ const Graph = () => {
   )
 }
 
+const renderConnectionsSVG = (style: CSSProperties | undefined) => (
+  <svg
+    style={style}
+    viewBox="0 0 338.7 190.5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g fill="none" stroke="#8b8b8e">
+      <path d="m264.5 135 58.3-22.5z" strokeWidth="1.5" />
+      <path d="m197.3 180.3 51.3-62.2z" strokeWidth=".4" />
+      <path d="m311.7 164-47.5-29Z" />
+      <path d="m297.6 90.6 23-77.4Z" strokeWidth="1.2" />
+      <path d="m322.6 111.8-25-21Z" strokeWidth="1.7" />
+      <path d="M264 135.5 197 180.8z" strokeWidth="1.2" />
+      <path d="m297.5 90.5-21.4-46Z" strokeWidth=".8" />
+    </g>
+    <g fill="#8b8b8e">
+      <circle cx="264" cy="134.9" r="5.7" />
+      <circle cx="276.2" cy="44.4" r="2.9" />
+      <circle cx="320.8" cy="13.1" r="9" />
+      <circle cx="311.6" cy="163.9" r="6.5" />
+      <circle cx="322.6" cy="112.3" r="12.5" />
+      <circle cx="196.6" cy="180.7" r="7.5" />
+      <circle cx="248.7" cy="117.9" r="4" />
+      <circle cx="297.4" cy="90.7" r="5.7" className="fill-primary" />
+    </g>
+  </svg>
+)
+
+const isWebGLAvailable = (): boolean => {
+  try {
+    const canvas = document.createElement('canvas')
+    return !!(
+      window.WebGLRenderingContext &&
+      (canvas.getContext('webgl') || canvas.getContext('experimental-webgl'))
+    )
+  } catch (e) {
+    return false
+  }
+}
+
 const Connections: React.FC<{ style?: CSSProperties }> = ({ style }) => {
-  return (
+  return isWebGLAvailable() ? (
     <Canvas style={style} camera={{ position: [0, 0, 5] }} dpr={[1, 2]}>
       <PerformanceMonitor>
         <Graph />
       </PerformanceMonitor>
     </Canvas>
+  ) : (
+    renderConnectionsSVG(style)
   )
 }
 
