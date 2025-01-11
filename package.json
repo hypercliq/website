@@ -1,6 +1,6 @@
 {
   "name": "hypercliq-website",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "private": true,
   "engines": {
     "node": ">=20.0.0 <22.0.0"
@@ -14,37 +14,37 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@headlessui/react": "^2.1.9",
-    "@heroicons/react": "^2.1.5",
-    "@react-three/drei": "^9.114.3",
-    "@react-three/fiber": "^8.17.10",
+    "@headlessui/react": "^2.2.0",
+    "@heroicons/react": "^2.2.0",
+    "@react-three/drei": "^9.120.6",
+    "@react-three/fiber": "^8.17.12",
     "@uidotdev/usehooks": "^2.4.1",
     "leaflet": "^1.9.4",
     "leaflet-gesture-handling": "^1.2.2",
-    "next": "^14.2.15",
-    "next-themes": "^0.3.0",
-    "pure-react-carousel": "^1.30.1",
+    "next": "^14.2.23",
+    "next-themes": "^0.4.4",
+    "pure-react-carousel": "^1.32.0",
     "react": "^18",
     "react-dom": "^18",
     "react-leaflet": "^4.2.1",
     "sharp": "^0.33.5",
-    "three": "^0.169.0"
+    "three": "^0.172.0"
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.9",
-    "@types/leaflet": "^1.9.12",
+    "@tailwindcss/forms": "^0.5.10",
+    "@types/leaflet": "^1.9.16",
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@types/three": "^0.169.0",
+    "@types/three": "^0.172.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^8",
-    "eslint-config-next": "^14.2.15",
+    "eslint-config-next": "^14.2.23",
     "eslint-plugin-unicorn": "^51.0.1",
     "postcss": "^8",
-    "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.8",
-    "tailwindcss": "^3.4.13",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5"
   },
   "repository": {
