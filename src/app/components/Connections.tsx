@@ -14,7 +14,6 @@ import {
 } from 'react'
 import { Material, Mesh, MeshBasicMaterial, Vector3 } from 'three'
 import Perlin from '../utils/perlin'
-import LogoSVG, { LogoMode } from './LogoSVG'
 
 const c = 10
 const perlin = new Perlin()
