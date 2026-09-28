@@ -24,29 +24,29 @@ const SplatViewerPoster: StaticImageData = {
   height: 1080,
 }
 
-export interface Project {
+export interface ProjectSummary {
   slug: string
   title: string
   field: string
   summary: string
-  contribution: string
-  context: string
-  images: StaticImageData[]
+  images: [StaticImageData, ...StaticImageData[]]
 }
 
-export const projects: Project[] = [
-  {
-    slug: 'splat-viewer',
-    title: 'Splat Viewer',
-    field: 'Current work · 3DGS and LiDAR',
-    summary:
-      'A desktop viewer for Gaussian splats and large LiDAR scans, with tools to inspect, measure, and extract structure from spaces.',
-    contribution:
-      'We are developing the viewer to open Gaussian splats and point clouds, detect building geometry in scans, and export the results.',
-    context:
-      'The work began in LUMINOUS’s architectural design review pilot and is continuing as a broader Hypercliq tool.',
-    images: [SplatViewerPoster],
-  },
+export interface CaseStudyProject extends ProjectSummary {
+  contribution: string
+  context: string
+}
+
+export const splatViewerProject: ProjectSummary = {
+  slug: 'splat-viewer',
+  title: 'Splat Viewer',
+  field: 'Current work · 3DGS and LiDAR',
+  summary:
+    'A desktop viewer for Gaussian splats and large LiDAR scans, with tools to inspect, measure, and extract structure from spaces.',
+  images: [SplatViewerPoster],
+}
+
+export const caseStudyProjects: CaseStudyProject[] = [
   {
     slug: 'sustainable-design-data-management-platform',
     title: 'Materials data for sustainable product design',
@@ -132,12 +132,13 @@ export const projects: Project[] = [
   },
 ]
 
-export const caseStudyProjects = projects.filter(
-  (project) => project.slug !== 'splat-viewer',
-)
+export const projects: ProjectSummary[] = [
+  splatViewerProject,
+  ...caseStudyProjects,
+]
 
-export function getProject(slug: string): Project {
-  const project = projects.find((item) => item.slug === slug)
+export function getProject(slug: string): CaseStudyProject {
+  const project = caseStudyProjects.find((item) => item.slug === slug)
   if (!project) throw new Error(`Unknown project: ${slug}`)
   return project
 }

@@ -1,8 +1,8 @@
-import type { Project } from '@/app/data/projects'
+import type { ProjectSummary } from '@/app/data/projects'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({ project }: { project: ProjectSummary }) {
   return (
     <Link
       href={`/solutions/${project.slug}`}

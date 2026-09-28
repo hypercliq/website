@@ -1,8 +1,8 @@
-import type { Project } from '@/app/data/projects'
+import type { CaseStudyProject } from '@/app/data/projects'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function CaseStudy({ project }: { project: Project }) {
+export default function CaseStudy({ project }: { project: CaseStudyProject }) {
   return (
     <main>
       <div className="border-foreground/15 bg-surface border-b">
