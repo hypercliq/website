@@ -39,6 +39,8 @@ jobs:
         run: npm run typecheck
       - name: Build with Next.js
         run: npm run build
+      - name: Smoke test static export
+        run: npm run smoke
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:

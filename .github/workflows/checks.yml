@@ -29,3 +29,5 @@ jobs:
         run: npm run typecheck
       - name: Build static site
         run: npm run build
+      - name: Smoke test static export
+        run: npm run smoke

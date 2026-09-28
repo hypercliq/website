@@ -20,10 +20,11 @@ npm run lint
 npm run typecheck
 npm run format:check
 npm run build
+npm run smoke
 npm audit
 ```
 
-`npm run build` writes a static export to `out/`. Pull requests and releases run formatting, lint, typecheck, and build checks. The release workflow deploys `out/` when a GitHub release is published or the workflow is run manually. Merging a pull request does not publish the site.
+`npm run build` writes a static export to `out/`. The smoke test checks that sitemap routes and local links and assets in the export resolve. Pull requests and releases run formatting, lint, typecheck, build, and smoke checks. The release workflow deploys `out/` when a GitHub release is published or the workflow is run manually. Merging a pull request does not publish the site.
 
 Use `npm run start` after a build to preview the exported site locally.
 
