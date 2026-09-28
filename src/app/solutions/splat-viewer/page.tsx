@@ -85,7 +85,7 @@ export default function SplatViewer() {
               stage is loaded and explored on its own.
             </p>
           </div>
-          <div className="max-w-5xl">
+          <div className="max-w-4xl">
             <ProjectVideo
               media={renovationMedia}
               caption="1 min · Edited from separate viewer recordings"
@@ -144,10 +144,12 @@ export default function SplatViewer() {
               E57 example.
             </p>
           </div>
-          <ProjectVideo
-            media={splatViewerMedia}
-            caption="5 min 22 sec · Feature walkthrough"
-          />
+          <div className="max-w-5xl">
+            <ProjectVideo
+              media={splatViewerMedia}
+              caption="5 min 22 sec · Feature walkthrough"
+            />
+          </div>
         </section>
       </div>
     </main>
