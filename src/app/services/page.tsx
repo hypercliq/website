@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Data platforms, analysis tools, applied AI, and research software by Hypercliq.',
+    'Spatial tools, data platforms, and research software by Hypercliq.',
 }
 
 const services = [

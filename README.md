@@ -30,6 +30,6 @@ Use `npm run start` after a build to preview the exported site locally.
 
 ## Content
 
-Standard case studies live in `src/app/data/projects.ts`. Adding one there creates its card, detail route, and sitemap entry. Bespoke projects use an explicit page, a summary record in the same data file, and a sitemap entry. Company contact details live in `src/app/data/company.ts`.
+Standard case studies live in `src/app/data/projects.ts`. Adding one there creates its card, detail route, and sitemap entry. Bespoke projects have their own pages and explicit sitemap entries. Company contact details live in `src/app/data/company.ts`.
 
 The LUMINOUS and Splat Viewer pages use silent, click-to-play videos in `public/luminous/` and `public/splat-viewer/`; their poster and video paths are in `src/app/data/media.ts`. Each video has a text description. The renovation clip edits together separate viewer recordings, with each scan loaded individually. The compressed MP4s and posters are part of the static export.

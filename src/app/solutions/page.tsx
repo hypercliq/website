@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Selected work',
   description:
-    'Selected data platforms, research tools, and systems designed by Hypercliq.',
+    'Selected spatial tools, data platforms, and research software by Hypercliq.',
 }
 
 export default function Solutions() {

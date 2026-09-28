@@ -5,7 +5,7 @@ import Image from 'next/image'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Hypercliq is an Athens based team working on data systems, applied AI, and research software.',
+    'Hypercliq is an Athens based team building spatial tools, data systems, and research software.',
 }
 
 const Florendia = staticImage('Florendia_r', 180, 180)

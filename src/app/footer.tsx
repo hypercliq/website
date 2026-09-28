@@ -44,8 +44,8 @@ export default function Footer() {
               <LogoSVG />
             </Link>
             <p className="text-foreground/75 mt-6 max-w-xs leading-7">
-              Data systems, applied AI, and research software. Based in Athens,
-              working across Europe.
+              Spatial tools, data systems, and research software. Based in
+              Athens, working across Europe.
             </p>
             <a
               href={`mailto:${company.email}`}

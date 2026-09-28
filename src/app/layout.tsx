@@ -9,11 +9,11 @@ const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Hypercliq — Data systems and research software',
+    default: 'Hypercliq — Spatial tools and data systems',
     template: '%s — Hypercliq',
   },
   description:
-    'Hypercliq designs data platforms, analysis tools, and research software with partners across Europe.',
+    'Hypercliq builds spatial tools, data platforms, and research software with partners across Europe.',
 }
 
 interface RootLayoutProps {
