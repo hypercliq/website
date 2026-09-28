@@ -10,7 +10,8 @@ export default function ProjectVideo({
   return (
     <figure className="bg-[#1b2a27]">
       <video
-        className="aspect-video w-full object-contain"
+        className="w-full object-contain"
+        style={{ aspectRatio: media.aspectRatio ?? '16 / 9' }}
         controls
         playsInline
         preload="none"
