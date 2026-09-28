@@ -132,6 +132,10 @@ export const projects: Project[] = [
   },
 ]
 
+export const caseStudyProjects = projects.filter(
+  (project) => project.slug !== 'splat-viewer',
+)
+
 export function getProject(slug: string): Project {
   const project = projects.find((item) => item.slug === slug)
   if (!project) throw new Error(`Unknown project: ${slug}`)
