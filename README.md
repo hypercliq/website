@@ -18,11 +18,12 @@ Open http://localhost:3000. The site content lives in `src/app`; the case study 
 ```sh
 npm run lint
 npm run typecheck
+npm run format:check
 npm run build
 npm audit
 ```
 
-`npm run build` writes a static export to `out/`. The release workflow builds and deploys that directory when a GitHub release is published or the workflow is run manually. Merging a pull request does not publish the site.
+`npm run build` writes a static export to `out/`. Pull requests run formatting, lint, typecheck, and build checks. The release workflow builds and deploys `out/` when a GitHub release is published or the workflow is run manually. Merging a pull request does not publish the site.
 
 ## Content
 

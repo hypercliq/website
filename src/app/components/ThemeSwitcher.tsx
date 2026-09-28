@@ -8,7 +8,11 @@ const subscribe = () => () => {}
 export default function ThemeSwitcher() {
   const { theme, setTheme } = useTheme()
   // The stored theme is only available after hydration.
-  const mounted = useSyncExternalStore(subscribe, () => true, () => false)
+  const mounted = useSyncExternalStore(
+    subscribe,
+    () => true,
+    () => false,
+  )
 
   return (
     <label className="flex items-center gap-2 text-sm">
