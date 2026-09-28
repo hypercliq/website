@@ -1,41 +1,3 @@
-import { FC } from 'react'
-
-type PathClasses = {
-  b1?: string
-  b2?: string
-  b3?: string
-  b4?: string
-  b5?: string
-  b6?: string
-  h?: string
-  y?: string
-  p?: string
-  e?: string
-  r?: string
-  c?: string
-  l?: string
-  i?: string
-  q?: string
-  dot?: string
-}
-
-interface SvgComponentProps {
-  mode?: LogoMode
-  pathClasses?: PathClasses
-}
-
-export enum LogoMode {
-  FullLogo = 'fullLogo',
-  TextOnly = 'textOnly',
-  GraphicOnly = 'graphicOnly',
-}
-
-const viewBoxes: { [key in LogoMode]: string } = {
-  [LogoMode.FullLogo]: '0 0 1616 284',
-  [LogoMode.TextOnly]: '371 20 1245 264',
-  [LogoMode.GraphicOnly]: '0 0 289 284',
-}
-
 const graphicPaths = {
   b1: 'M77.24 270.06a44.99 44.99 0 0 1-63.56-3.18 45 45 0 1 1 66.74-60.38 44.98 44.98 0 0 1-3.18 63.56Z',
   b2: 'M139.98 71.67a40 40 0 1 1-53.67-59.32 40 40 0 1 1 53.67 59.32Z',
@@ -58,50 +20,31 @@ const textPaths = {
   dot: 'M1407.05 61a24.35 24.35 90 0 0 7.29 1.04 27.45 27.45 90 0 0 3.75-.24 19.66 19.66 90 0 0 11.73-5.76q5.87-6.01 5.87-14.82a22.19 22.19 90 0 0-.02-.89 17.71 17.71 90 0 0-5.98-12.85 20.2 20.2 90 0 0-8.31-4.57 26.18 26.18 90 0 0-7.04-.9 27.81 27.81 90 0 0-3.15.17 20.5 20.5 90 0 0-12.2 5.57 19.17 19.17 90 0 0-4.41 6.21 19.94 19.94 90 0 0-1.6 8.06 19.75 19.75 90 0 0 1.07 6.56 19.59 19.59 90 0 0 4.94 7.59 19.84 19.84 90 0 0 8.06 4.83',
 }
 
-const renderPaths = (
-  paths: Record<string, string>,
-  pathClasses: PathClasses,
-) => (
-  <>
-    {Object.keys(paths).map((key) =>
-      key !== 'b1' && key !== 'dot' ? (
-        <path
-          key={key}
-          id={key}
-          className={
-            pathClasses[key as keyof PathClasses] ??
-            'fill-foreground stroke-foreground'
-          }
-          d={paths[key as keyof PathClasses]}
-        />
-      ) : (
-        <path
-          key={key}
-          id={key}
-          className={
-            pathClasses[key] ?? 'fill-brand-orange stroke-brand-orange'
-          }
-          d={paths[key]}
-        />
-      ),
-    )}
-  </>
-)
+const renderPaths = (paths: Record<string, string>) =>
+  Object.entries(paths).map(([key, d]) => (
+    <path
+      key={key}
+      className={
+        key === 'b1' || key === 'dot'
+          ? 'fill-brand-orange stroke-brand-orange'
+          : 'fill-foreground stroke-foreground'
+      }
+      d={d}
+    />
+  ))
 
-const LogoSVG: FC<SvgComponentProps> = ({
-  mode = LogoMode.FullLogo,
-  pathClasses = {},
-}) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox={viewBoxes[mode]}
-    className="h-full w-full"
-  >
-    <g strokeWidth="2" fill="none">
-      {mode !== 'textOnly' && renderPaths(graphicPaths, pathClasses)}
-      {mode !== 'graphicOnly' && renderPaths(textPaths, pathClasses)}
-    </g>
-  </svg>
-)
-
-export default LogoSVG
+export default function LogoSVG() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1616 284"
+      className="h-full w-full"
+      aria-hidden="true"
+    >
+      <g strokeWidth="2" fill="none">
+        {renderPaths(graphicPaths)}
+        {renderPaths(textPaths)}
+      </g>
+    </svg>
+  )
+}
