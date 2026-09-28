@@ -46,9 +46,6 @@ export default function Terms() {
             'These terms are governed by Greek law, with European Union law applying where relevant. Disputes are subject to the jurisdiction of Greek courts.',
         },
       ]}
-      contactEmail="info@hypercliq.com"
-      companyName="Hypercliq"
-      companyAddress="Prantouna 57, 11525 Athens, Greece"
       lastUpdated="28 Sep 2026"
     />
   )

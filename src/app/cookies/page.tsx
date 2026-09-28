@@ -28,9 +28,6 @@ export default function Cookies() {
             'We will update this page if the site starts using other cookies or browser storage.',
         },
       ]}
-      contactEmail="info@hypercliq.com"
-      companyName="Hypercliq"
-      companyAddress="Prantouna 57, 11525 Athens, Greece"
       lastUpdated="28 Sep 2026"
     />
   )

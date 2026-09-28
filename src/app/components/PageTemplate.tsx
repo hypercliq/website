@@ -1,3 +1,4 @@
+import { company } from '@/app/data/company'
 import Link from 'next/link'
 
 interface Section {
@@ -9,9 +10,6 @@ interface PageProps {
   title: string
   intro: string
   sections: Section[]
-  contactEmail: string
-  companyName: string
-  companyAddress: string
   lastUpdated: string
 }
 
@@ -19,9 +17,6 @@ export default function PageTemplate({
   title,
   intro,
   sections,
-  contactEmail,
-  companyName,
-  companyAddress,
   lastUpdated,
 }: PageProps) {
   return (
@@ -62,17 +57,17 @@ export default function PageTemplate({
             <p className="text-foreground/75 mt-4 leading-7">
               Questions about this page can be sent to{' '}
               <a
-                href={`mailto:${contactEmail}`}
+                href={`mailto:${company.email}`}
                 className="text-accent underline"
               >
-                {contactEmail}
+                {company.email}
               </a>
               .
             </p>
             <address className="text-foreground/75 mt-4 not-italic">
-              {companyName}
+              {company.name}
               <br />
-              {companyAddress}
+              {company.addressLines.join(', ')}
             </address>
             <Link
               href="/contact"

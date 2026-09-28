@@ -1,3 +1,4 @@
+import { company } from '@/app/data/company'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -27,9 +28,9 @@ export default function Careers() {
             Send a short introduction and your CV to{' '}
             <a
               className="text-accent font-semibold underline underline-offset-4"
-              href="mailto:info@hypercliq.com"
+              href={`mailto:${company.email}`}
             >
-              info@hypercliq.com
+              {company.email}
             </a>
             . Tell us what you have worked on and what interests you.
           </p>

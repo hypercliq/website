@@ -1,5 +1,6 @@
 import LogoSVG from '@/app/components/LogoSVG'
 import ThemeSwitcher from '@/app/components/ThemeSwitcher'
+import { company } from '@/app/data/company'
 import Link from 'next/link'
 
 const groups = [
@@ -47,10 +48,10 @@ export default function Footer() {
               working across Europe.
             </p>
             <a
-              href="mailto:info@hypercliq.com"
+              href={`mailto:${company.email}`}
               className="border-accent text-accent mt-5 inline-block border-b pb-1 font-semibold"
             >
-              info@hypercliq.com
+              {company.email}
             </a>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import PageTemplate from '@/app/components/PageTemplate'
+import { company } from '@/app/data/company'
 
 export const metadata: Metadata = {
   title: 'Privacy policy',
@@ -55,13 +56,9 @@ export default function Privacy() {
         },
         {
           title: 'Your choices and requests',
-          content:
-            'You can clear your browser storage at any time. For questions about information you have sent us, or to request access, correction, or deletion, email info@hypercliq.com.',
+          content: `You can clear your browser storage at any time. For questions about information you have sent us, or to request access, correction, or deletion, email ${company.email}.`,
         },
       ]}
-      contactEmail="info@hypercliq.com"
-      companyName="Hypercliq"
-      companyAddress="Prantouna 57, 11525 Athens, Greece"
       lastUpdated="28 Sep 2026"
     />
   )

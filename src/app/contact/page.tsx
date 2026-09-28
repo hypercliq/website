@@ -1,3 +1,4 @@
+import { company } from '@/app/data/company'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -25,16 +26,16 @@ export default function Contact() {
               Email
             </p>
             <a
-              href="mailto:info@hypercliq.com"
+              href={`mailto:${company.email}`}
               className="decoration-accent mt-4 inline-block text-2xl font-semibold tracking-tight underline underline-offset-8"
             >
-              info@hypercliq.com
+              {company.email}
             </a>
             <p className="text-accent mt-8 text-xs font-semibold tracking-[0.18em] uppercase">
               Phone
             </p>
-            <a href="tel:+302112128520" className="mt-4 inline-block text-xl">
-              +30 211 212 8520
+            <a href={company.phoneHref} className="mt-4 inline-block text-xl">
+              {company.phone}
             </a>
           </div>
           <div className="border-foreground/20 border-t py-8 md:border-t-0 md:border-l md:py-10 md:pl-12">
@@ -42,11 +43,11 @@ export default function Contact() {
               Office
             </p>
             <address className="mt-4 text-xl leading-8 not-italic">
-              Prantouna 57
-              <br />
-              11525 Athens
-              <br />
-              Greece
+              {company.addressLines.map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
             </address>
             <a
               className="border-accent text-accent mt-7 inline-block border-b pb-1 font-semibold"
