@@ -31,6 +31,12 @@ jobs:
           static_site_generator: next
       - name: Install dependencies
         run: npm ci
+      - name: Check formatting
+        run: npm run format:check
+      - name: Lint
+        run: npm run lint
+      - name: Typecheck
+        run: npm run typecheck
       - name: Build with Next.js
         run: npm run build
       - name: Upload artifact

@@ -23,7 +23,7 @@ npm run build
 npm audit
 ```
 
-`npm run build` writes a static export to `out/`. Pull requests run formatting, lint, typecheck, and build checks. The release workflow builds and deploys `out/` when a GitHub release is published or the workflow is run manually. Merging a pull request does not publish the site.
+`npm run build` writes a static export to `out/`. Pull requests and releases run formatting, lint, typecheck, and build checks. The release workflow deploys `out/` when a GitHub release is published or the workflow is run manually. Merging a pull request does not publish the site.
 
 Use `npm run start` after a build to preview the exported site locally.
 
