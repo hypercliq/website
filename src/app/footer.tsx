@@ -77,7 +77,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-foreground/15 text-foreground/65 mt-16 flex flex-col gap-6 border-t pt-7 text-sm sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Hypercliq</p>
+          <p>© Hypercliq</p>
           <div className="flex items-center gap-6">
             <a
               href="https://www.linkedin.com/company/hypercliq"
