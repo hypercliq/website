@@ -4,15 +4,21 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Areas of work',
   description:
-    'Hypercliq has worked on product design, workplace health, construction, and agricultural research.',
+    'Hypercliq works with spatial data, construction technology, workplace health, and product design.',
 }
 
 const domains = [
   {
-    name: 'Product design',
+    name: 'Spatial data and XR',
     detail:
-      'Materials data, body shape analysis, and product configuration for teams designing physical goods.',
-    link: '/solutions/sustainable-design-data-management-platform',
+      'Tools for exploring Gaussian splats and LiDAR scans, measuring spaces, and reviewing captured environments.',
+    link: '/solutions/splat-viewer',
+  },
+  {
+    name: 'Construction',
+    detail:
+      'Spatial review tools and system architecture connecting site data, workers, and automated equipment.',
+    link: '/solutions/luminous',
   },
   {
     name: 'Workplace health',
@@ -21,16 +27,10 @@ const domains = [
     link: '/solutions/3d-motion-tracking-for-ergonomic-movement-assessment',
   },
   {
-    name: 'Construction',
+    name: 'Product design',
     detail:
-      'System architecture for connecting site data, workers, and automated equipment.',
-    link: '/solutions/system-architecture-design-for-construction-automation',
-  },
-  {
-    name: 'Agriculture',
-    detail:
-      'Visual data management for research, from field images to datasets.',
-    link: '/solutions/visual-repository-for-agricultural-rd-innovation',
+      'Materials data, body shape analysis, and product configuration for teams designing physical goods.',
+    link: '/solutions/sustainable-design-data-management-platform',
   },
 ]
 

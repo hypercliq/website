@@ -2,7 +2,15 @@ import type { ProjectSummary } from '@/app/data/projects'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function ProjectCard({ project }: { project: ProjectSummary }) {
+export default function ProjectCard({
+  project,
+  headingLevel = 3,
+}: {
+  project: ProjectSummary
+  headingLevel?: 3 | 4
+}) {
+  const Heading = headingLevel === 4 ? 'h4' : 'h3'
+
   return (
     <Link
       href={`/solutions/${project.slug}`}
@@ -12,7 +20,7 @@ export default function ProjectCard({ project }: { project: ProjectSummary }) {
         <Image
           src={project.images[0]}
           alt=""
-          className={`h-full w-full ${project.slug === 'splat-viewer' ? 'object-contain' : 'object-cover'}`}
+          className="h-full w-full object-cover"
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
         />
       </div>
@@ -20,9 +28,9 @@ export default function ProjectCard({ project }: { project: ProjectSummary }) {
         <p className="text-accent text-xs font-semibold tracking-[0.16em] uppercase">
           {project.field}
         </p>
-        <h3 className="mt-3 text-2xl leading-tight font-semibold tracking-tight group-hover:underline group-hover:underline-offset-4">
+        <Heading className="mt-3 text-2xl leading-tight font-semibold tracking-tight group-hover:underline group-hover:underline-offset-4">
           {project.title}
-        </h3>
+        </Heading>
         <p className="text-foreground/75 mt-3 leading-7">{project.summary}</p>
         <span className="text-accent mt-6 inline-block text-sm font-semibold">
           View project <span aria-hidden="true">↗</span>

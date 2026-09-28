@@ -3,13 +3,13 @@ import Link from 'next/link'
 const services = [
   {
     number: '01',
-    title: 'Data platforms',
-    text: 'We structure and connect information so teams can find it, maintain it, and use it in their work.',
+    title: 'Spatial data and visualization',
+    text: 'We build tools for inspecting 3D scans, Gaussian splats, and other complex data.',
   },
   {
     number: '02',
-    title: 'Analysis and visualization',
-    text: 'We build interfaces and analysis tools that make complex data easier to examine and discuss.',
+    title: 'Data platforms',
+    text: 'We structure and connect information so teams can find it, maintain it, and use it in their work.',
   },
   {
     number: '03',

@@ -66,8 +66,9 @@ export default function About() {
             </p>
             <p>
               We collaborate with specialists in other fields when a project
-              calls for it. That has taken our work into product design,
-              workplace health, construction, and agriculture.
+              calls for it. Recent work includes spatial tools and construction
+              technology, alongside earlier projects in workplace health and
+              product design.
             </p>
           </div>
         </div>

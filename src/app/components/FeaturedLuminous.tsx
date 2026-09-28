@@ -14,12 +14,12 @@ export default function FeaturedLuminous() {
           LUMINOUS · Pilot 3
         </p>
         <h3 className="mt-5 text-3xl leading-tight font-semibold tracking-tight sm:text-4xl">
-          From scan to spatial data
+          Architecture, voice, and spatial tools
         </h3>
         <p className="text-foreground/75 mt-5 max-w-lg text-lg leading-8">
-          Our viewer opens a Ricoh E57 scan and identifies walls, rooms, doors,
-          and windows. We developed this work for LUMINOUS’s architectural
-          design review pilot.
+          For LUMINOUS, we authored the platform architecture, worked on its
+          voice layer, and developed Splat Viewer for architectural review. The
+          video shows the viewer processing a scan captured by Ricoh.
         </p>
         <Link
           href="/solutions/luminous"

@@ -9,16 +9,16 @@ export const metadata: Metadata = {
 
 const services = [
   {
+    title: 'Spatial data and visualization',
+    body: 'We build tools to inspect 3D scans, Gaussian splats, and other complex data. Our current work includes viewing captured spaces, measuring them, and extracting building geometry.',
+  },
+  {
     title: 'Data platforms',
     body: 'We design the structure behind complex information: how it is collected, connected, searched, and kept useful. The result may be a repository, a research platform, or a product data system.',
   },
   {
-    title: 'Analysis and visualization',
-    body: 'We turn data into interfaces people can inspect. That includes dashboards, 3D data tools, and visual systems for exploring patterns and discussing findings.',
-  },
-  {
-    title: 'Applied AI',
-    body: 'When a project calls for it, we build machine learning into a wider workflow. We pay attention to the data, the task, and how a person will review the output.',
+    title: 'Research software and applied AI',
+    body: 'We develop software for research projects, including machine learning workflows when the task calls for them. We pay attention to the data, the task, and how people review the output.',
   },
   {
     title: 'Research and technical consulting',
@@ -38,8 +38,8 @@ export default function Services() {
             Useful systems for complicated work.
           </h1>
           <p className="text-foreground/75 mt-7 max-w-2xl text-xl leading-8">
-            We help teams organize information, make sense of it, and build the
-            software they need to work with it.
+            Our work ranges from 3D viewers and analysis tools to data platforms
+            and research software.
           </p>
         </div>
       </header>

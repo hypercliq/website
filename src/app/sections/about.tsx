@@ -24,8 +24,8 @@ export default function About() {
           the people who need it.
         </p>
         <p className="mt-5">
-          Our published work spans materials, workplace ergonomics,
-          construction, and agriculture.
+          Our recent work includes 3D scans, XR, and construction technology.
+          Earlier projects cover workplace health and product design.
         </p>
         <Link
           href="/about"

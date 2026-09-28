@@ -1,6 +1,7 @@
 import FeaturedLuminous from '@/app/components/FeaturedLuminous'
+import FeaturedSplatViewer from '@/app/components/FeaturedSplatViewer'
 import ProjectCard from '@/app/components/ProjectCard'
-import { projects } from '@/app/data/projects'
+import { caseStudyProjects } from '@/app/data/projects'
 import Link from 'next/link'
 
 export default function Solutions() {
@@ -29,10 +30,18 @@ export default function Solutions() {
             All projects ↗
           </Link>
         </div>
+        <FeaturedSplatViewer />
         <FeaturedLuminous />
+        <h3 className="mt-16 text-2xl font-semibold tracking-tight">
+          Earlier projects
+        </h3>
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {projects.slice(0, 3).map((project) => (
-            <ProjectCard key={project.slug} project={project} />
+          {caseStudyProjects.slice(0, 3).map((project) => (
+            <ProjectCard
+              key={project.slug}
+              project={project}
+              headingLevel={4}
+            />
           ))}
         </div>
       </div>

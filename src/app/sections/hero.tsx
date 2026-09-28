@@ -12,7 +12,7 @@ export default function Hero() {
             Thoughtful software for difficult data.
           </h1>
           <p className="text-foreground/75 mt-8 max-w-2xl text-xl leading-8">
-            We design data platforms, analysis tools, and research software with
+            We build spatial tools, data platforms, and research software with
             partners across Europe.
           </p>
           <div className="mt-10 flex flex-wrap gap-5">

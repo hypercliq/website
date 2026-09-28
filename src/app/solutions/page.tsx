@@ -1,6 +1,7 @@
 import FeaturedLuminous from '@/app/components/FeaturedLuminous'
+import FeaturedSplatViewer from '@/app/components/FeaturedSplatViewer'
 import ProjectCard from '@/app/components/ProjectCard'
-import { projects } from '@/app/data/projects'
+import { caseStudyProjects } from '@/app/data/projects'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -21,8 +22,8 @@ export default function Solutions() {
             Built around real problems.
           </h1>
           <p className="text-foreground/75 mt-7 max-w-2xl text-xl leading-8">
-            A selection of data platforms, research tools, and system designs.
-            Each project shows a different part of our practice.
+            Our current work in spatial data and XR, followed by earlier data
+            platforms, research tools, and system designs.
           </p>
         </div>
       </header>
@@ -30,13 +31,14 @@ export default function Solutions() {
         className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24"
         aria-label="Projects"
       >
-        <h2 className="text-3xl font-semibold tracking-tight">Featured work</h2>
+        <h2 className="text-3xl font-semibold tracking-tight">Current work</h2>
+        <FeaturedSplatViewer />
         <FeaturedLuminous />
         <h2 className="mt-20 text-3xl font-semibold tracking-tight">
-          More projects
+          Earlier projects
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project) => (
+          {caseStudyProjects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}
         </div>
