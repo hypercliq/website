@@ -1,77 +1,70 @@
-import {
-  ChartBarIcon,
-  ChatBubbleLeftRightIcon,
-  CircleStackIcon,
-} from '@heroicons/react/24/outline'
-import TextCarousel from '@/app/components/TextCarousel'
+import Link from 'next/link'
 
 const services = [
   {
-    title: 'Flexible Data Organization',
-    description:
-      'Experience seamless data management with our adaptable and efficient data structuring systems.',
-    icon: <CircleStackIcon className="h-12 w-12 text-primary" />,
+    number: '01',
+    title: 'Spatial data and visualization',
+    text: 'We build tools for inspecting 3D scans, Gaussian splats, and other complex data.',
   },
   {
-    title: 'Data Visualization and Insight Extraction',
-    description:
-      'Turn data into insights with our advanced data visualization and knowledge extraction tools.',
-    icon: <ChartBarIcon className="h-12 w-12 text-primary" />,
+    number: '02',
+    title: 'Data platforms',
+    text: 'We structure and connect information so teams can find it, maintain it, and use it in their work.',
   },
   {
-    title: 'Professional IT Consulting',
-    description:
-      'Transform your business with our expert IT consulting services.',
-    icon: <ChatBubbleLeftRightIcon className="h-12 w-12 text-primary" />,
+    number: '03',
+    title: 'Applied AI and research software',
+    text: 'We develop software for research projects, including machine learning workflows and domain specific tools.',
   },
-]
-
-const sentences = [
-  'Your Domain, Our Expertise',
-  'Data Mastery, Domain Expertise',
-  'Your Vision, Our Innovation',
-  'Transforming Domains with Data',
-  'Strategic Solutions, Diverse Domains',
 ]
 
 export default function Services() {
   return (
     <section
       id="services"
-      className="m-auto flex max-w-7xl flex-col py-10 md:py-16"
+      className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28"
+      aria-labelledby="services-title"
     >
-      <h2 className="mt-2 px-4 text-center text-4xl font-bold tracking-tight sm:text-5xl md:px-8">
-        Empowering Innovation
-      </h2>
-
-      <TextCarousel
-        textArray={sentences}
-        fromDirection="top"
-        toDirection="bottom"
-        className="mt-2 h-10 text-2xl font-bold tracking-tight text-accent sm:text-3xl"
-        innerClassName="px-4 md:px-8 text-center"
-        tag={'h3'}
-      />
-
-      <div className="mt-8 grid grid-cols-1 gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 md:px-8 lg:grid-cols-3">
+      <div className="grid gap-10 md:grid-cols-2">
+        <div>
+          <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
+            What we do
+          </p>
+          <h2
+            id="services-title"
+            className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl"
+          >
+            From data to working software.
+          </h2>
+        </div>
+        <p className="text-foreground/75 max-w-lg text-lg leading-8">
+          We work with partners from the first questions through to a usable
+          system. Our projects often bring together data engineering, design,
+          and research.
+        </p>
+      </div>
+      <div className="border-foreground/15 mt-14 grid border-t md:grid-cols-3">
         {services.map((service) => (
-          <div key={service.title} className="bg-surface p-4 shadow-md">
-            <div className="flex items-center justify-center">
-              {service.icon}
-            </div>
-
-            <h4 className="mt-6 text-2xl font-bold">{service.title}</h4>
-            <p className="mt-4 text-xl">{service.description}</p>
+          <div
+            key={service.number}
+            className="border-foreground/15 border-b py-8 md:pr-10"
+          >
+            <p className="text-accent text-sm font-semibold">
+              {service.number}
+            </p>
+            <h3 className="mt-5 text-2xl font-semibold tracking-tight">
+              {service.title}
+            </h3>
+            <p className="text-foreground/75 mt-4 leading-7">{service.text}</p>
           </div>
         ))}
       </div>
-      <div className="mt-4 px-4 md:px-8">
-        <p className="bg-gradient-to-r from-[#af21f6] to-[#21f6af] p-4 text-center text-xl font-semibold leading-8 tracking-normal text-white shadow-md">
-          Unleashing the power of data with our cutting-edge Machine Learning
-          and AI technologies, we work closely with you, leveraging your domain
-          expertise with our data proficiency to create tailored strategies.
-        </p>
-      </div>
+      <Link
+        href="/services"
+        className="border-accent text-accent mt-10 inline-block border-b-2 pb-1 font-semibold"
+      >
+        More about our services ↗
+      </Link>
     </section>
   )
 }

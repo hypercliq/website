@@ -3,7 +3,6 @@ import Contact from '@/app/sections/contact'
 import Hero from '@/app/sections/hero'
 import Services from '@/app/sections/services'
 import Solutions from '@/app/sections/solutions'
-import ScrollToTopButton from './components/ScrollToTopButton'
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <Services />
       <Solutions />
       <Contact />
-      <ScrollToTopButton />
     </main>
   )
 }

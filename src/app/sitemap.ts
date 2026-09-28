@@ -1,66 +1,29 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next'
+import { caseStudyProjects } from '@/app/data/projects'
+
+export const dynamic = 'force-static'
+
+const siteUrl = 'https://hypercliq.com'
+const pages = [
+  '/',
+  '/domains',
+  '/services',
+  '/solutions',
+  '/solutions/luminous',
+  '/solutions/splat-viewer',
+  '/about',
+  '/careers',
+  '/contact',
+  '/privacy',
+  '/terms',
+  '/cookies',
+]
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    {
-      url: 'https://hypercliq.com/',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
-    },
-    {
-      url: 'https://hypercliq.com/domains',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://hypercliq.com/services',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://hypercliq.com/solutions',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://hypercliq.com/about',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.6,
-    },
-    {
-      url: 'https://hypercliq.com/careers',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: 'https://hypercliq.com/contact',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.6,
-    },
-    {
-      url: 'https://hypercliq.com/privacy',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.4,
-    },
-    {
-      url: 'https://hypercliq.com/terms',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.4,
-    },
-    {
-      url: 'https://hypercliq.com/cookies',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.4,
-    },
+    ...pages.map((path) => ({ url: `${siteUrl}${path}` })),
+    ...caseStudyProjects.map((project) => ({
+      url: `${siteUrl}/solutions/${project.slug}`,
+    })),
   ]
 }

@@ -1,159 +1,57 @@
-'use client'
-
-import LogoSVG, { LogoMode } from '@/app/components/LogoSVG'
-import {
-  Dialog,
-  DialogPanel,
-  Transition,
-  TransitionChild,
-} from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import LogoSVG from '@/app/components/LogoSVG'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { forwardRef, useEffect, useState } from 'react'
 
 const links = [
-  {
-    text: 'Domains',
-    href: '/domains',
-    description: 'Discover our domains',
-  },
-  { text: 'Services', href: '/services', description: 'View our services' },
-  {
-    text: 'Solutions',
-    href: '/solutions',
-    description: 'Explore our solutions',
-  },
-  { text: 'About', href: '/about', description: 'Learn more about us' },
-  { text: 'Careers', href: '/careers', description: 'Join our team' },
-  { text: 'Contact', href: '/contact', description: 'Get in touch with us' },
+  { label: 'Work', href: '/solutions' },
+  { label: 'Services', href: '/services' },
+  { label: 'Fields', href: '/domains' },
+  { label: 'About', href: '/about' },
+  { label: 'Careers', href: '/careers' },
+  { label: 'Contact', href: '/contact' },
 ]
 
-// eslint-disable-next-line react/display-name
-let MyDialogPanel = forwardRef<HTMLDivElement, any>(function (props, ref) {
-  return (
-    <DialogPanel
-      className="easy-in-out fixed inset-y-0 right-0 z-[1000] w-full overflow-y-auto bg-surface px-6 py-6 duration-300 data-[closed]:translate-x-full sm:max-w-sm sm:ring-1 sm:ring-foreground"
-      ref={ref}
-      {...props}
-    />
-  )
-})
-
 export default function Header() {
-  const pathname = usePathname()
-
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  // get the width of the window using useEffect hook
-  const [width, setWidth] = useState(0)
-  useEffect(() => {
-    setWidth(window.innerWidth)
-  }, [])
-
-  // add a resize event listener
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth)
-    window.addEventListener('resize', handleResize)
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-
   return (
-    <header className="relative z-10 bg-background">
+    <header className="border-foreground/15 bg-background relative z-10 border-b">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
-        aria-label="Global"
+        className="mx-auto flex max-w-7xl items-center justify-between gap-8 px-6 py-5 md:px-8"
+        aria-label="Main navigation"
       >
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">hypercliq</span>
-            <div className="h-8 w-auto">
-              <LogoSVG
-                mode={width > 640 ? LogoMode.FullLogo : LogoMode.GraphicOnly}
-              />
-            </div>
-          </Link>
-        </div>
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground/50"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="hidden lg:flex lg:gap-x-12">
+        <Link
+          href="/"
+          className="focus-visible:outline-accent block h-8 w-40 shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4"
+          aria-label="Hypercliq home"
+        >
+          <LogoSVG />
+        </Link>
+        <div className="hidden items-center gap-7 lg:flex">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`${
-                pathname === link.href
-                  ? 'cursor-default text-primary'
-                  : 'text-foreground/75 hover:text-foreground'
-              } text-sm font-semibold leading-6 transition-colors duration-200`}
+              className="text-foreground/75 hover:text-accent focus-visible:outline-accent text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-4"
             >
-              {link.text}
+              {link.label}
             </Link>
           ))}
         </div>
+        <details className="group relative lg:hidden">
+          <summary className="border-foreground/25 focus-visible:outline-accent cursor-pointer list-none border px-4 py-2 text-sm font-semibold focus-visible:outline-2">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
+          <div className="border-foreground/20 bg-background absolute top-full right-0 mt-3 w-56 border p-3 shadow-lg">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="hover:bg-surface focus-visible:outline-accent block px-3 py-2 text-base font-medium focus-visible:outline-2"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </details>
       </nav>
-      <Transition
-        as={Dialog}
-        className="lg:hidden"
-        show={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
-      >
-        <TransitionChild>
-          <div className="fixed inset-0 z-[900] backdrop-brightness-[.25] duration-75 ease-linear data-[closed]:opacity-0" />
-        </TransitionChild>
-        <TransitionChild as={MyDialogPanel}>
-          <div className="flex items-center justify-between">
-            <Link
-              href="/"
-              className="-m-1.5 p-1.5"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span className="sr-only">Hypercliq</span>
-              <div className="h-8 w-auto">
-                <LogoSVG mode={LogoMode.GraphicOnly} />
-              </div>
-            </Link>
-            <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5 text-foreground/50"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-foreground/50">
-              <div className="space-y-2 py-6">
-                {links.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`${
-                      pathname === link.href
-                        ? 'cursor-default text-primary'
-                        : 'text-foreground/75 hover:text-foreground'
-                    } -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition-colors duration-200`}
-                  >
-                    {link.text}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </TransitionChild>
-      </Transition>
     </header>
   )
 }

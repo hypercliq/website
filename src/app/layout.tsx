@@ -3,16 +3,17 @@ import Footer from '@/app/footer'
 import '@/app/globals.css'
 import Header from '@/app/header'
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
-const montserrat = Montserrat({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
 export const metadata: Metadata = {
-  title: 'Hypercliq: Data-Driven Solutions with AI & Machine Learning',
+  title: {
+    default: 'Hypercliq — Spatial tools and data systems',
+    template: '%s — Hypercliq',
+  },
   description:
-    'Hypercliq, leveraging Machine Learning and Artificial Intelligence, transforms data into actionable insights. Our expertise lies in delivering data-driven solutions, helping businesses unlock their potential. With a strong presence in European research projects, we partner with leading institutions and companies to face and overcome new challenges.',
-  keywords:
-    'Hypercliq, AI, Machine Learning, Statistical Data Analysis, European Research Projects, Data Extraction',
+    'Hypercliq builds spatial tools, data platforms, and research software with partners across Europe.',
 }
 
 interface RootLayoutProps {
@@ -21,8 +22,8 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
-      <body className={montserrat.className}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
         <ThemeProvider>
           <Header />
           {children}

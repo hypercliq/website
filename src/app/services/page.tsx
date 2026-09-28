@@ -1,103 +1,83 @@
-// ServicesPage.tsx
-import { Metadata } from 'next'
 import Link from 'next/link'
-import {
-  BoltIcon,
-  EyeIcon,
-  CogIcon,
-  CpuChipIcon,
-} from '@heroicons/react/24/outline'
-import HighlightSpan from '../components/HighlightSpan'
-import MainContainer from '../components/Container'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Services',
+  description:
+    'Spatial tools, data platforms, and research software by Hypercliq.',
+}
 
 const services = [
   {
-    icon: <BoltIcon className="h-8 w-8 text-primary" />,
-    title: 'Data-Driven Solutions',
-    text: "Experience the seamless orchestration of your data with Hypercliq's adaptable and efficient data structuring systems. Whether it's analysis, visualization, organization, or extraction, our proficiency in AI, ML, and statistical analysis ensures that your data becomes a strategic asset. Unlock the full potential of your data and revolutionize the way you make decisions.",
+    title: 'Spatial data and visualization',
+    body: 'We build tools to inspect 3D scans, Gaussian splats, and other complex data. Our current work includes viewing captured spaces, measuring them, and extracting building geometry.',
   },
   {
-    icon: <EyeIcon className="h-8 w-8 text-primary" />,
-    title: 'Data Visualization and Insight Extraction',
-    text: 'Uncover the stories hidden within your data. Hypercliq transforms raw data into compelling visual narratives and extracts actionable insights. Our advanced data visualization and knowledge extraction tools empower you to make informed decisions and stay ahead in your industry. Turn complex datasets into a source of strategic advantage.',
+    title: 'Data platforms',
+    body: 'We design the structure behind complex information: how it is collected, connected, searched, and kept useful. The result may be a repository, a research platform, or a product data system.',
   },
   {
-    icon: <CogIcon className="h-8 w-8 text-primary" />,
-    title: 'Professional IT Consulting',
-    text: "Navigate the ever-evolving landscape of technology with confidence. Hypercliq's professional IT consulting services provide strategic guidance and hands-on support. Whether you're embarking on a digital transformation or seeking optimization, our consulting team is your trusted partner. Let's shape the future of your IT landscape together.",
+    title: 'Research software and applied AI',
+    body: 'We develop software for research projects, including machine learning workflows when the task calls for them. We pay attention to the data, the task, and how people review the output.',
   },
   {
-    icon: <CpuChipIcon className="h-8 w-8 text-primary" />,
-    title: 'Unleashing the Power of Data with ML and AI',
-    text: 'At Hypercliq, we go beyond data processing; we unleash its power with cutting-edge Machine Learning and AI technologies. Collaborate closely with our team as we blend your domain expertise with our data proficiency to create strategies that go beyond conventional boundaries. Revolutionize your approach to innovation, elevate your business, and embark on a journey where data drives your success.',
+    title: 'Research and technical consulting',
+    body: 'We help shape technical approaches, system architectures, and collaborative research proposals. Our portfolio includes work in European research programmes.',
   },
 ]
 
-export const metadata: Metadata = {
-  title: 'Igniting Innovation with Hypercliq Services',
-  description:
-    'Empowering innovation through data-driven solutions and expert IT consulting services. Transform your business with our cutting-edge technologies.',
-}
-
-const Services = () => {
+export default function Services() {
   return (
-    <MainContainer>
-      <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:items-start">
-        <h1 className="mb-6 text-4xl font-bold md:w-1/2">
-          Igniting Innovation with Hypercliq Services
-        </h1>
-        <p className="text-lg md:w-1/2">
-          Welcome to a realm where data becomes a{' '}
-          <HighlightSpan>catalyst for innovation</HighlightSpan>. Hypercliq
-          offers a <HighlightSpan>comprehensive suite</HighlightSpan> of
-          data-driven solutions and expert IT consulting services, transforming
-          businesses with{' '}
-          <HighlightSpan>cutting-edge technologies</HighlightSpan>. Explore our
-          dynamic range of services, each meticulously crafted to{' '}
-          <HighlightSpan>elevate your domain</HighlightSpan> to new heights.
-        </p>
-      </div>
-
-      <div className="mx-auto mt-8 grid max-w-7xl grid-cols-1 gap-4 md:grid-cols-2">
-        {services.map((service, index) => (
-          <section key={index} className="bg-background p-4">
-            <div className="mb-4 flex items-center">
-              {service.icon}
-              <h2 className="ml-4 text-xl font-bold">{service.title}</h2>
-            </div>
-            <p className="">{service.text}</p>
-          </section>
-        ))}
-      </div>
-
-      <div className="mt-8">
-        {/* Additional Text */}
-        <section>
-          <p className="text-lg">
-            Elevate your business to new heights with Hypercliq&apos;s
-            innovative services. Our commitment to excellence and expertise in{' '}
-            <Link className="text-accent underline" href="/solutions">
-              data-driven solutions
-            </Link>{' '}
-            position us as your strategic partner. Connect with us to explore{' '}
-            <Link className="text-accent underline" href="/domains">
-              collaborative opportunities
-            </Link>{' '}
-            and revolutionize your approach to innovation.
+    <main>
+      <header className="border-foreground/15 bg-surface border-b">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
+          <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
+            Services
           </p>
-        </section>
-      </div>
-
-      <section className="mt-8 flex items-center justify-center">
-        <Link
-          className="text-md rounded-md bg-accent px-3.5 py-2.5 font-semibold text-onAccent shadow-sm hover:brightness-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-          href="/contact"
-        >
-          Transform Now
-        </Link>
+          <h1 className="mt-4 max-w-4xl text-5xl font-semibold tracking-tight sm:text-6xl">
+            Useful systems for complicated work.
+          </h1>
+          <p className="text-foreground/75 mt-7 max-w-2xl text-xl leading-8">
+            Our work ranges from 3D viewers and analysis tools to data platforms
+            and research software.
+          </p>
+        </div>
+      </header>
+      <section
+        className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24"
+        aria-label="Services"
+      >
+        <div className="grid gap-x-16 md:grid-cols-2">
+          {services.map((service, index) => (
+            <article
+              key={service.title}
+              className="border-foreground/20 border-t py-8 md:py-10"
+            >
+              <span className="text-accent text-sm font-semibold">
+                0{index + 1}
+              </span>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight">
+                {service.title}
+              </h2>
+              <p className="text-foreground/75 mt-4 max-w-lg leading-7">
+                {service.body}
+              </p>
+            </article>
+          ))}
+        </div>
+        <div className="border-foreground/15 mt-12 border-t pt-10">
+          <p className="max-w-xl text-lg leading-8">
+            The scope depends on the problem. We can discuss an early idea or an
+            existing system that needs work.
+          </p>
+          <Link
+            href="/contact"
+            className="border-accent text-accent mt-6 inline-block border-b-2 pb-1 font-semibold"
+          >
+            Discuss a project ↗
+          </Link>
+        </div>
       </section>
-    </MainContainer>
+    </main>
   )
 }
-
-export default Services

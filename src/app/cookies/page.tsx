@@ -1,70 +1,29 @@
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import PageTemplate from '@/app/components/PageTemplate'
 
-// create metadata for this page
 export const metadata: Metadata = {
-  title: 'Cookie Policy',
-  description: 'Cookie Policy for Hypercliq',
+  title: 'Cookie policy',
+  description: 'How this website uses browser storage.',
 }
 
-const CookiePolicy = () => {
-  const sections = [
-    {
-      title: 'What Are Cookies',
-      content: (
-        <>
-          Cookies are small pieces of data stored on your device&apos;s browser.
-          They are commonly used to enhance your browsing experience, remember
-          your preferences, and provide personalized content.
-        </>
-      ),
-    },
-    {
-      title: 'Our Use of Cookies',
-      content: (
-        <>
-          Currently, we do not use any cookies on our website. However, in the
-          future, we may introduce our own cookies to improve site
-          functionalities. These cookies will not be used for ads or any
-          intrusive purposes. We will update this policy accordingly if there
-          are changes to our use of cookies.
-        </>
-      ),
-    },
-    {
-      title: 'Your Choices',
-      content: (
-        <>
-          You have the option to disable cookies in your browser settings.
-          However, please note that disabling cookies may affect the
-          functionality of our website.
-        </>
-      ),
-    },
-    {
-      title: 'Changes to This Policy',
-      content: (
-        <>
-          This Cookie Policy is effective as of January 2024 and may be updated
-          from time to time. Any changes to our use of cookies will be reflected
-          in this policy. Please review this Cookie Policy periodically for any
-          updates.
-        </>
-      ),
-    },
-  ]
-
+export default function Cookies() {
   return (
     <PageTemplate
-      title="Cookie Policy"
-      intro="This Cookie Policy outlines how we use cookies on our website. By using our website, you consent to the use of cookies as described in this policy."
-      sections={sections}
-      contactEmail="info@hypercliq.com"
-      companyName="Hypercliq"
-      companyAddress="Prantouna 57, 11525 Athens, Greece"
-      lastUpdated="05 Jan 2024"
+      title="Cookie policy"
+      intro="This site does not set advertising or analytics cookies. The theme control can save your display preference in your browser."
+      sections={[
+        {
+          title: 'Theme preference',
+          content:
+            'If you choose a light, dark, or system theme, the site stores that choice in your browser so it can use it on your next visit. You can clear it through your browser settings.',
+        },
+        {
+          title: 'Other services',
+          content:
+            'The contact page links to OpenStreetMap. Its website opens only if you follow that link; it is not embedded here.',
+        },
+      ]}
+      lastUpdated="28 Sep 2026"
     />
   )
 }
-
-export default CookiePolicy

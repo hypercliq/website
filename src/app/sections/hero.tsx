@@ -1,59 +1,43 @@
-'use client'
-
 import Link from 'next/link'
-import Connections from '../components/Connections'
-// import { useFeatureFlag } from '../hooks/useFeatureFlag'
 
 export default function Hero() {
-  // const isFeatureEnabled = useFeatureFlag('connections')
-
   return (
-    <section
-      id="hero"
-      className="relative -top-20 -mb-20 h-max overflow-hidden bg-surface"
-    >
-      <Connections
-        style={{
-          position: 'absolute',
-          left: 0,
-          top: 0,
-          width: '100%',
-          height: '100%',
-        }}
-      />
-      <div className="relative m-auto flex min-h-screen max-w-7xl flex-col items-center justify-center pt-24 md:flex-row">
-        <div className="flex w-full flex-col justify-center pl-4 md:pl-8 lg:w-1/2">
-          <p className="text-2xl font-semibold uppercase tracking-widest sm:text-3xl">
-            Hello
+    <section className="border-foreground/15 bg-surface border-b">
+      <div className="mx-auto grid max-w-7xl items-end gap-12 px-6 py-20 md:min-h-[40rem] md:grid-cols-[2fr_1fr] md:px-8 md:py-28">
+        <div>
+          <p className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">
+            Hypercliq · Athens, Greece
           </p>
-          <h1 className="text-7xl font-light tracking-tight md:text-8xl lg:text-9xl">
-            We are{' '}
-            <span className="w-1/5 animate-highlight bg-gradient-to-r from-primary from-[50%] to-white/0 to-[50%] bg-[length:201%_100%] bg-[100%_0] font-semibold tracking-normal">
-              hypercliq
-            </span>
+          <h1 className="mt-7 max-w-4xl text-5xl leading-[1.08] font-semibold tracking-tight sm:text-6xl lg:text-7xl">
+            Thoughtful software for difficult data.
           </h1>
-          <div className="mb-5 mt-10 flex items-center gap-x-6">
+          <p className="text-foreground/75 mt-8 max-w-2xl text-xl leading-8">
+            We build spatial tools, data platforms, and research software with
+            partners across Europe.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-5">
             <Link
-              href="/services"
-              className="text-md rounded-md bg-accent px-3.5 py-2.5 font-semibold text-onAccent shadow-sm hover:brightness-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              href="/solutions"
+              className="bg-accent text-onAccent focus-visible:outline-accent inline-flex items-center px-6 py-3 font-semibold focus-visible:outline-2 focus-visible:outline-offset-4"
             >
-              Our services
+              See our work ↗
             </Link>
             <Link
-              href="/about"
-              className="text-md group font-semibold leading-6"
+              href="/contact"
+              className="border-accent text-accent inline-flex items-center border-b-2 font-semibold"
             >
-              Learn more{' '}
-              <span
-                className="inline-block transition-all group-hover:translate-x-1 group-hover:text-accent"
-                aria-hidden="true"
-              >
-                {'\u2192'}
-              </span>
+              Get in touch ↗
             </Link>
           </div>
         </div>
-        <div className="w-full lg:w-1/2"></div>
+        <div className="border-foreground/25 hidden border-t pt-5 md:block">
+          <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
+            Our focus
+          </p>
+          <p className="mt-4 text-lg leading-8">
+            Clear structures. Useful interfaces. Careful implementation.
+          </p>
+        </div>
       </div>
     </section>
   )
