@@ -9,18 +9,25 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <main className="min-h-[65vh]">
-      <div className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
-        <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
-          Contact
-        </p>
-        <h1 className="mt-4 max-w-4xl text-5xl font-semibold tracking-tight sm:text-6xl">
-          Tell us what you are working on.
-        </h1>
-        <p className="text-foreground/75 mt-7 max-w-2xl text-xl leading-8">
-          A short email is enough to start a conversation. We read messages
-          about projects, research collaborations, and technical questions.
-        </p>
-        <div className="border-foreground/20 mt-16 grid border-t md:grid-cols-2">
+      <header className="border-foreground/15 bg-surface border-b">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
+          <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
+            Contact
+          </p>
+          <h1 className="mt-4 max-w-4xl text-5xl font-semibold tracking-tight sm:text-6xl">
+            Tell us what you are working on.
+          </h1>
+          <p className="text-foreground/75 mt-7 max-w-2xl text-xl leading-8">
+            A short email is enough to start a conversation. We read messages
+            about projects, research collaborations, and technical questions.
+          </p>
+        </div>
+      </header>
+      <section
+        className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24"
+        aria-label="Contact details"
+      >
+        <div className="border-foreground/20 grid border-t md:grid-cols-2">
           <div className="py-8 md:py-10">
             <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
               Email
@@ -59,7 +66,7 @@ export default function Contact() {
             </a>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   )
 }
