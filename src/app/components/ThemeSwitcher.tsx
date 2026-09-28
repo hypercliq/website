@@ -20,7 +20,6 @@ export default function ThemeSwitcher() {
       <select
         aria-label="Color theme"
         value={mounted ? (theme ?? 'system') : 'system'}
-        disabled={!mounted}
         onChange={(event) => setTheme(event.target.value)}
         className="border-foreground/25 bg-background text-foreground focus-visible:outline-accent border px-2 py-1 focus-visible:outline-2 focus-visible:outline-offset-2"
       >
