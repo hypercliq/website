@@ -69,10 +69,12 @@ export default function Luminous() {
             walls, floors, doors, windows, and rooms.
           </p>
         </div>
-        <ProjectVideo
-          media={luminousMedia}
-          caption="44 sec · Scan captured by Ricoh"
-        />
+        <div className="max-w-5xl">
+          <ProjectVideo
+            media={luminousMedia}
+            caption="44 sec · Scan captured by Ricoh"
+          />
+        </div>
 
         <section
           className="border-foreground/15 mt-20 border-t pt-10"
