@@ -2,31 +2,41 @@ import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <section id="hero" className="border-b border-foreground/10 bg-surface">
-      <div className="mx-auto flex min-h-[36rem] max-w-7xl flex-col justify-center px-4 py-20 md:px-8 md:py-28">
-        <p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-          Hypercliq · Athens, Greece
-        </p>
-        <h1 className="max-w-4xl text-5xl font-semibold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
-          Data systems and applied AI for complex problems.
-        </h1>
-        <p className="mt-8 max-w-2xl text-lg leading-8 text-foreground/75 sm:text-xl">
-          We design and build data platforms, analysis tools, and research
-          software with partners across Europe.
-        </p>
-        <div className="mt-10 flex flex-wrap items-center gap-4">
-          <Link
-            href="/solutions"
-            className="rounded-md bg-accent px-5 py-3 font-semibold text-onAccent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-          >
-            Explore our work
-          </Link>
-          <Link
-            href="/contact"
-            className="rounded-md border border-foreground/25 px-5 py-3 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-          >
-            Discuss a project
-          </Link>
+    <section className="border-foreground/15 bg-surface border-b">
+      <div className="mx-auto grid max-w-7xl items-end gap-12 px-6 py-20 md:min-h-[40rem] md:grid-cols-[2fr_1fr] md:px-8 md:py-28">
+        <div>
+          <p className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">
+            Hypercliq · Athens, Greece
+          </p>
+          <h1 className="mt-7 max-w-4xl text-5xl leading-[1.08] font-semibold tracking-tight sm:text-6xl lg:text-7xl">
+            Thoughtful software for difficult data.
+          </h1>
+          <p className="text-foreground/75 mt-8 max-w-2xl text-xl leading-8">
+            We design data platforms, analysis tools, and research software with
+            partners across Europe.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-5">
+            <Link
+              href="/solutions"
+              className="bg-accent text-onAccent focus-visible:outline-accent inline-flex items-center px-6 py-3 font-semibold focus-visible:outline-2 focus-visible:outline-offset-4"
+            >
+              See our work ↗
+            </Link>
+            <Link
+              href="/contact"
+              className="border-accent text-accent inline-flex items-center border-b-2 font-semibold"
+            >
+              Get in touch ↗
+            </Link>
+          </div>
+        </div>
+        <div className="border-foreground/25 hidden border-t pt-5 md:block">
+          <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
+            Our focus
+          </p>
+          <p className="mt-4 text-lg leading-8">
+            Clear structures. Useful interfaces. Careful implementation.
+          </p>
         </div>
       </div>
     </section>

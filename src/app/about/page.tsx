@@ -1,151 +1,119 @@
-// AboutPage.tsx
-import { Metadata } from 'next'
-import Link from 'next/link'
+import { staticImage } from '@/app/data/image'
+import type { Metadata } from 'next'
+import Image from 'next/image'
 
-import Florendia from '@/app/assets/images/Florendia_r.avif'
-import Mirco from '@/app/assets/images/Mirco_r.avif'
-import George from '@/app/assets/images/George_r.avif'
-import LinkedInIcon from '../components/LinkedInIcon'
-import MainContainer from '../components/Container'
+export const metadata: Metadata = {
+  title: 'About',
+  description:
+    'Hypercliq is an Athens based team working on data systems, applied AI, and research software.',
+}
 
-// founders data
-const founders = [
+const Florendia = staticImage('Florendia_r', 180, 180)
+const George = staticImage('George_r', 180, 180)
+const Mirco = staticImage('Mirco_r', 180, 180)
+
+const people = [
   {
-    name: 'Florendia Fourlì - CEO',
-    urlImage: Florendia.src,
-    description:
-      'One of the founding experts at Hypercliq, brings a wealth of professional and research experience in the development of innovative AI applications. With a dedication to staying at the forefront of technology, she plays a crucial role in steering Hypercliq towards impactful AI solutions.',
-    linkedin: 'https://www.linkedin.com/in/florendia',
+    name: 'Florendia Fourlì',
+    role: 'Co-founder',
+    image: Florendia,
+    detail: 'Works on AI applications and research projects.',
+    link: 'https://www.linkedin.com/in/florendia',
   },
   {
-    name: 'Mirco Sanguineti - CTO',
-    urlImage: Mirco.src,
-    description:
-      "Boasting over two decades of expertise in AI, contributes a deep understanding of complex systems. His proficiency in analysis and programming has been a cornerstone of Hypercliq's technical capabilities, ensuring a strategic position in the dynamic field of AI.",
-    linkedin: 'https://www.linkedin.com/in/mirco-sanguineti',
+    name: 'Mirco Sanguineti',
+    role: 'Co-founder',
+    image: Mirco,
+    detail: 'Works on software architecture, analysis, and AI.',
+    link: 'https://www.linkedin.com/in/mirco-sanguineti',
   },
   {
-    name: 'George Kartsounis - CIO',
-    urlImage: George.src,
-    description:
-      "A physicist and Ph.D. holder in Robotic Vision and Flexible Automation, brings a unique perspective to Hypercliq's leadership. With extensive experience in coordinating large European research projects, he provides crucial insights into the industrial IT landscape, guiding the company toward innovative solutions.",
-    linkedin: 'https://www.linkedin.com/in/george-kartsounis-0954422a/',
+    name: 'George Kartsounis',
+    role: 'Co-founder',
+    image: George,
+    detail:
+      'Works on industrial research and European projects, with a background in robotic vision and automation.',
+    link: 'https://www.linkedin.com/in/george-kartsounis-0954422a/',
   },
 ]
 
-export const metadata: Metadata = {
-  title:
-    'Driving Change Through Expertise - About Hypercliq - AI Experts and IT Services',
-  description:
-    'Founded in 2011, Hypercliq is an established entity in the IT landscape, rooted in a partnership of seasoned Artificial Intelligence experts. Learn about our founders and the collaborative network that drives our success.',
-}
-
-interface Founder {
-  urlImage: string
-  name: string
-  description: string
-  linkedin: string
-}
-
-interface FounderCardProps {
-  founder: Founder
-}
-
-const FounderCard: React.FC<FounderCardProps> = ({ founder }) => (
-  <li className="mt-12 items-center justify-between first:mt-8 md:flex">
-    <div
-      className="mx-auto h-28 w-28 flex-shrink-0 rounded-full bg-cover bg-center brightness-90 contrast-[1.1] md:mx-0 md:h-40 md:w-40"
-      style={{ backgroundImage: `url(${founder.urlImage})` }}
-    />
-    <div className="mt-4 flex-grow md:ml-4 md:mt-0">
-      <h3 className="text-center text-xl font-semibold md:text-left">
-        {founder.name}
-      </h3>
-      <p className="mt-2 text-center text-foreground/75 md:text-left">
-        {founder.description}
-      </p>
-      <div className="mt-4 flex justify-center md:justify-start">
-        <Link href={founder.linkedin} target="_blank" rel="noopener noreferrer">
-          <LinkedInIcon className="h-6 w-6 fill-foreground/60 hover:fill-foreground" />
-        </Link>
-      </div>
-    </div>
-  </li>
-)
-
-const AboutPage = () => {
+export default function About() {
   return (
-    <MainContainer>
-      <div className="text-center">
-        <h1 className="mb-6 text-4xl font-bold text-primary">
-          Driving Change Through Expertise
-        </h1>
-        <p className="text-lg">
-          Founded in 2011, Hypercliq is an established entity in the IT
-          landscape, rooted in a partnership of seasoned Artificial Intelligence
-          (AI) experts. Specializing in comprehensive IT services, the company
-          excels in designing and implementing data management platforms and
-          crafting data analysis solutions for a diverse range of business and
-          industrial applications.
-        </p>
-      </div>
-
-      {/* About Our Founders Section */}
-      <section className="mt-8">
-        <h2 className="mb-4 text-2xl font-bold text-primary">
-          Meet Our Founders
-        </h2>
-
-        <ul>
-          {founders.map((founder) => (
-            <FounderCard
-              key={founder.name.replace(' ', '-')}
-              founder={founder}
-            />
-          ))}
-        </ul>
+    <main>
+      <header className="border-foreground/15 bg-surface border-b">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
+          <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
+            About Hypercliq
+          </p>
+          <h1 className="mt-4 max-w-4xl text-5xl font-semibold tracking-tight sm:text-6xl">
+            A small team for complex work.
+          </h1>
+          <p className="text-foreground/75 mt-7 max-w-2xl text-xl leading-8">
+            Founded in 2011, Hypercliq designs data systems and research
+            software. We work from Athens with partners across Europe.
+          </p>
+        </div>
+      </header>
+      <section className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24">
+        <div className="grid gap-12 md:grid-cols-[1fr_2fr]">
+          <h2 className="text-3xl font-semibold tracking-tight">How we work</h2>
+          <div className="text-foreground/75 max-w-2xl space-y-5 text-lg leading-8">
+            <p>
+              We bring software engineering, data work, and research experience
+              into the same conversation. Our role changes with the project:
+              sometimes we help define the technical approach; sometimes we
+              build the tools.
+            </p>
+            <p>
+              We collaborate with specialists in other fields when a project
+              calls for it. That has taken our work into product design,
+              workplace health, construction, and agriculture.
+            </p>
+          </div>
+        </div>
       </section>
-
-      {/* Collaborative Network Section */}
-      <section className="mt-8">
-        <h2 className="mb-4 text-2xl font-bold text-primary">
-          Collaborative Network of Experts
-        </h2>
-        <p>
-          Beyond its founders, Hypercliq leverages a network of affiliated IT
-          experts across European countries. Chosen for their expertise, these
-          collaborators have played integral roles in demanding projects,
-          contributing to the company&apos;s success. This collaborative
-          approach enhances Hypercliq&apos;s capabilities and ensures
-          adaptability to various challenges.
-        </p>
+      <section className="border-foreground/15 bg-surface border-t">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24">
+          <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
+            People
+          </p>
+          <h2 className="mt-4 text-4xl font-semibold tracking-tight">
+            The founders
+          </h2>
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            {people.map((person) => (
+              <article
+                key={person.name}
+                className="border-foreground/20 border-t pt-6"
+              >
+                <Image
+                  src={person.image}
+                  alt={person.name}
+                  className="h-40 w-40 rounded-full object-cover grayscale"
+                  sizes="160px"
+                />
+                <p className="text-accent mt-6 text-xs font-semibold tracking-[0.16em] uppercase">
+                  {person.role}
+                </p>
+                <h3 className="mt-2 text-2xl font-semibold tracking-tight">
+                  {person.name}
+                </h3>
+                <p className="text-foreground/75 mt-3 leading-7">
+                  {person.detail}
+                </p>
+                <a
+                  href={person.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-accent text-accent mt-5 inline-block border-b pb-1 font-semibold"
+                >
+                  LinkedIn ↗
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
-
-      {/* European Presence and Key Partnerships Section */}
-      <section className="mt-8">
-        <h2 className="mb-4 text-2xl font-bold text-primary">
-          Our European Presence and Key Partnerships
-        </h2>
-        <p>
-          Hypercliq&apos;s influence extends beyond its technical capabilities.
-          Leveraging our extensive network we are well-recognized in the
-          European IT, R&D and Industrial sectors. Our key partnerships with
-          reputable organizations throughout Europe further solidify our
-          standing in delivering innovative IT solutions.
-        </p>
-      </section>
-
-      {/* R&D Page Link */}
-      {/* <div className="mt-8 text-center">
-          <Link
-            href="/reserach-development"
-            className="text-lg font-semibold text-accent"
-          >
-            Explore Our R&D Involvements
-          </Link>
-        </div> */}
-    </MainContainer>
+    </main>
   )
 }
-
-export default AboutPage

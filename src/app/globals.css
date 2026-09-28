@@ -1,24 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-foreground: var(--site-foreground);
+  --color-background: var(--site-background);
+  --color-surface: var(--site-surface);
+  --color-accent: var(--site-accent);
+  --color-onAccent: var(--site-on-accent);
+  --color-primary: var(--site-accent);
+}
 
 :root {
-  --color-foreground: 22 22 29;
-  --color-background: 255 255 255;
-  --color-surface: 242 242 242;
-  --color-accent: 175 33 246;
-  --color-on-accent: 255 255 255;
+  color-scheme: light;
+  --site-foreground: #20292a;
+  --site-background: #faf9f5;
+  --site-surface: #eff1eb;
+  --site-accent: #126b61;
+  --site-on-accent: #ffffff;
 }
 
 .dark {
-  --color-foreground: 255 255 255;
-  --color-background: 22 22 29;
-  --color-surface: 31 31 38;
-  --color-accent: 33 246 175;
-  --color-on-accent: 22 22 29;
+  color-scheme: dark;
+  --site-foreground: #ecf0e9;
+  --site-background: #17201f;
+  --site-surface: #22302e;
+  --site-accent: #a6dac8;
+  --site-on-accent: #17201f;
 }
 
+html {
+  scroll-behavior: auto;
+}
 body {
-  color: rgb(var(--color-foreground));
-  background-color: rgb(var(--color-background));
+  background: var(--site-background);
+  color: var(--site-foreground);
+}
+::selection {
+  background: var(--site-accent);
+  color: var(--site-on-accent);
 }

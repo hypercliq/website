@@ -1,48 +1,29 @@
-# Hypercliq Website Development
+# Hypercliq website
 
-Welcome to the development repository for the Hypercliq company website. This project is built using [Next.js](https://nextjs.org/) and was bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The Hypercliq company site is a statically exported Next.js App Router project. It uses React, Tailwind CSS, and a small theme switcher. It is published to GitHub Pages.
 
-## Getting Started
+## Local development
 
-To start the development server, run one of the following commands:
+Use Node 24 LTS (`nvm use` reads `.nvmrc`), then:
 
-> npm run dev
+```sh
+npm ci
+npm run dev
+```
 
-Open http://localhost:3000 in your browser to preview the website locally. You can begin editing the pages by modifying the files in the app directory. The changes will be reflected automatically as you save the files.
+Open http://localhost:3000. The site content lives in `src/app`; the case study data is in `src/app/data/projects.ts`.
 
-## Font Optimization
+## Checks
 
-Leveraging the capabilities of [`next/font`](https://nextjs.org/docs/basic-features/font-optimization), the project automatically optimizes and loads [Montserrat](https://fonts.google.com/specimen/Montserrat), ensuring an efficient and performant font delivery to users.
+```sh
+npm run lint
+npm run typecheck
+npm run build
+npm audit
+```
 
-## Image Formats
+`npm run build` writes a static export to `out/`. The release workflow builds and deploys that directory when a GitHub release is published or the workflow is run manually. Merging a pull request does not publish the site.
 
-All images in this project should be in the `.avif` format to optimize file sizes and enhance loading performance.
+## Content
 
-## Learn More
-
-Explore the following resources to enhance your understanding of Next.js:
-
-- [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - An interactive Next.js tutorial.
-
-## Contributing
-
-### New Features
-
-To contribute a new feature:
-
-1. Fork the repository.
-2. Create a new branch for your feature: `git checkout -b feature/your-feature-name`.
-3. Make your changes and commit them: `git commit -m "Add your feature details"`.
-4. Push your changes to your forked repository: `git push origin feature/your-feature-name`.
-5. Submit a pull request to the `main` branch.
-
-### Releases and Hotfixes
-
-For releases and hotfixes, follow the guidelines outlined in Adam Ruka's article [Implementing OneFlow on GitHub, BitBucket, and GitLab](https://www.endoflineblog.com/implementing-oneflow-on-github-bitbucket-and-gitlab). This will ensure a streamlined process for managing releases and addressing hotfixes.
-
-## Automatic Deployment
-
-The website is automatically deployed when pull requests are merged into the `main` branch. Deployment is managed by a [GitHub Action](https://docs.github.com/en/actions) that builds the site and deploys it to [GitHub Pages](https://pages.github.com/).
-
-For more details on GitHub Pages deployment, refer to the GitHub Pages [documentation](https://docs.github.com/en/pages).
+The current project text describes work already represented in this repository. New 3DGS examples and videos can be added when the approved material is ready. Review company facts and legal text before publishing a release.

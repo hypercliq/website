@@ -1,27 +1,23 @@
-'use client'
-
-import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 export default function NotFound() {
-  const router = useRouter()
-
-  const goBack = () => {
-    router.back()
-  }
-
   return (
-    <div className="relative flex h-[--screen-height] flex-col items-center justify-center bg-surface text-center">
-      <div className="flex items-center justify-center">
-        <h2 className="text-4xl font-bold">404</h2>
-        <hr className="border-1 w-16 rotate-90 border-accent" />
-        <p>Could not find requested resource</p>
-      </div>
-      <button
-        className="mt-8 cursor-pointer rounded-md bg-accent px-4 py-2 font-semibold text-onAccent hover:bg-opacity-80 hover:dark:bg-opacity-80"
-        onClick={goBack}
+    <main className="mx-auto flex min-h-[65vh] max-w-7xl flex-col justify-center px-6 py-20 md:px-8">
+      <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
+        404
+      </p>
+      <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+        We couldn’t find that page.
+      </h1>
+      <p className="text-foreground/75 mt-6 text-lg">
+        The address may have changed, or the page may no longer be here.
+      </p>
+      <Link
+        href="/"
+        className="border-accent text-accent mt-8 w-fit border-b-2 pb-1 font-semibold"
       >
-        Go Back
-      </button>
-    </div>
+        Back to home ↗
+      </Link>
+    </main>
   )
 }

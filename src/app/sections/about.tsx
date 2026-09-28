@@ -1,26 +1,38 @@
+import Link from 'next/link'
+
 export default function About() {
   return (
     <section
-      id="about"
-      className="m-auto flex max-w-7xl flex-col items-start py-10 md:py-16 lg:flex-row"
+      className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-2 md:px-8 md:py-28"
+      aria-labelledby="about-title"
     >
-      <header className="w-full px-4 md:w-1/2 md:px-0 md:pl-8">
-        <p className="text-sm font-semibold uppercase tracking-widest text-accent">
-          What we do
+      <div>
+        <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
+          Our approach
         </p>
-        <h2 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">
-          Making complex information usable
+        <h2
+          id="about-title"
+          className="mt-4 max-w-xl text-4xl font-semibold tracking-tight sm:text-5xl"
+        >
+          The work starts with understanding the problem.
         </h2>
-      </header>
-      <div className="mt-6 w-full px-4 text-lg leading-8 text-foreground/75 md:w-1/2 md:px-0 md:pl-8 lg:mt-0">
+      </div>
+      <div className="text-foreground/75 max-w-xl text-lg leading-8">
         <p>
-          We work at the intersection of data engineering, applied AI, and
-          research. We turn complex information into tools people can use.
+          Research and product teams often have more information than they can
+          use. We help give that information structure, then build tools around
+          the people who need it.
         </p>
-        <p className="mt-4">
-          Our published work spans product design, workplace ergonomics,
+        <p className="mt-5">
+          Our published work spans materials, workplace ergonomics,
           construction, and agriculture.
         </p>
+        <Link
+          href="/about"
+          className="border-accent text-accent mt-7 inline-block border-b-2 pb-1 text-base font-semibold"
+        >
+          About Hypercliq ↗
+        </Link>
       </div>
     </section>
   )

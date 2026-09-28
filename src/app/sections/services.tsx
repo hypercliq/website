@@ -1,27 +1,20 @@
-import {
-  ChartBarIcon,
-  ChatBubbleLeftRightIcon,
-  CircleStackIcon,
-} from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
 const services = [
   {
-    title: 'Flexible Data Organization',
-    description:
-      'Experience seamless data management with our adaptable and efficient data structuring systems.',
-    icon: <CircleStackIcon className="h-12 w-12 text-primary" />,
+    number: '01',
+    title: 'Data platforms',
+    text: 'We structure and connect information so teams can find it, maintain it, and use it in their work.',
   },
   {
-    title: 'Data Visualization and Insight Extraction',
-    description:
-      'Turn data into insights with our advanced data visualization and knowledge extraction tools.',
-    icon: <ChartBarIcon className="h-12 w-12 text-primary" />,
+    number: '02',
+    title: 'Analysis and visualization',
+    text: 'We build interfaces and analysis tools that make complex data easier to examine and discuss.',
   },
   {
-    title: 'Professional IT Consulting',
-    description:
-      'Transform your business with our expert IT consulting services.',
-    icon: <ChatBubbleLeftRightIcon className="h-12 w-12 text-primary" />,
+    number: '03',
+    title: 'Applied AI and research software',
+    text: 'We develop software for research projects, including machine learning workflows and domain specific tools.',
   },
 ]
 
@@ -29,32 +22,49 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="m-auto flex max-w-7xl flex-col py-10 md:py-16"
+      className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28"
+      aria-labelledby="services-title"
     >
-      <h2 className="mt-2 px-4 text-center text-4xl font-bold tracking-tight sm:text-5xl md:px-8">
-        Empowering Innovation
-      </h2>
-
-      <p className="mx-auto mt-5 max-w-2xl px-4 text-center text-lg leading-8 text-foreground/75">
-        From organizing complex information to finding useful patterns, we build
-        practical tools around each partner&apos;s needs.
-      </p>
-
-      <div className="mt-8 grid grid-cols-1 gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 md:px-8 lg:grid-cols-3">
+      <div className="grid gap-10 md:grid-cols-2">
+        <div>
+          <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
+            What we do
+          </p>
+          <h2
+            id="services-title"
+            className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl"
+          >
+            From data to working software.
+          </h2>
+        </div>
+        <p className="text-foreground/75 max-w-lg text-lg leading-8">
+          We work with partners from the first questions through to a usable
+          system. Our projects often bring together data engineering, design,
+          and research.
+        </p>
+      </div>
+      <div className="border-foreground/15 mt-14 grid border-t md:grid-cols-3">
         {services.map((service) => (
           <div
-            key={service.title}
-            className="border border-foreground/10 bg-surface p-6"
+            key={service.number}
+            className="border-foreground/15 border-b py-8 md:pr-10"
           >
-            <div className="flex items-center justify-center">
-              {service.icon}
-            </div>
-
-            <h4 className="mt-6 text-2xl font-bold">{service.title}</h4>
-            <p className="mt-4 text-xl">{service.description}</p>
+            <p className="text-accent text-sm font-semibold">
+              {service.number}
+            </p>
+            <h3 className="mt-5 text-2xl font-semibold tracking-tight">
+              {service.title}
+            </h3>
+            <p className="text-foreground/75 mt-4 leading-7">{service.text}</p>
           </div>
         ))}
       </div>
+      <Link
+        href="/services"
+        className="border-accent text-accent mt-10 inline-block border-b-2 pb-1 font-semibold"
+      >
+        More about our services ↗
+      </Link>
     </section>
   )
 }
