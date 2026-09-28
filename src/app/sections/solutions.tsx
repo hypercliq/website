@@ -1,3 +1,4 @@
+import FeaturedLuminous from '@/app/components/FeaturedLuminous'
 import ProjectCard from '@/app/components/ProjectCard'
 import { projects } from '@/app/data/projects'
 import Link from 'next/link'
@@ -28,6 +29,7 @@ export default function Solutions() {
             All projects ↗
           </Link>
         </div>
+        <FeaturedLuminous />
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {projects.slice(0, 3).map((project) => (
             <ProjectCard key={project.slug} project={project} />

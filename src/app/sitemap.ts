@@ -68,11 +68,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
   return [
     ...pages,
-    ...projects.map((project) => ({
-      url: `https://hypercliq.com/solutions/${project.slug}`,
-      lastModified: '2026-09-28',
-      changeFrequency: 'yearly' as const,
-      priority: 0.6,
-    })),
+    ...projects
+      .filter((project) => project.slug !== 'splat-viewer')
+      .map((project) => ({
+        url: `https://hypercliq.com/solutions/${project.slug}`,
+        lastModified: '2026-09-28',
+        changeFrequency: 'yearly' as const,
+        priority: 0.6,
+      })),
   ]
 }

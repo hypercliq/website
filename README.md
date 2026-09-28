@@ -26,4 +26,4 @@ npm audit
 
 ## Content
 
-The current project text describes work already represented in this repository. New 3DGS examples and videos can be added when the approved material is ready. Review company facts and legal text before publishing a release.
+The current project text describes work already represented in this repository. The LUMINOUS and Splat Viewer pages use silent, click-to-play videos in `public/luminous/` and `public/splat-viewer/`; their poster and video paths are in `src/app/data/media.ts`. The pages are set to `noindex` while they are reviewed locally. Remove that setting when the content is approved for publication. Review company facts and legal text before publishing a release.

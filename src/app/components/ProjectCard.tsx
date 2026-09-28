@@ -12,7 +12,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         <Image
           src={project.images[0]}
           alt=""
-          className="h-full w-full object-cover"
+          className={`h-full w-full ${project.slug === 'splat-viewer' ? 'object-contain' : 'object-cover'}`}
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
         />
       </div>

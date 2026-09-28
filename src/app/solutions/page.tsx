@@ -1,3 +1,4 @@
+import FeaturedLuminous from '@/app/components/FeaturedLuminous'
 import ProjectCard from '@/app/components/ProjectCard'
 import { projects } from '@/app/data/projects'
 import type { Metadata } from 'next'
@@ -29,7 +30,12 @@ export default function Solutions() {
         className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24"
         aria-label="Projects"
       >
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <h2 className="text-3xl font-semibold tracking-tight">Featured work</h2>
+        <FeaturedLuminous />
+        <h2 className="mt-20 text-3xl font-semibold tracking-tight">
+          More projects
+        </h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}
