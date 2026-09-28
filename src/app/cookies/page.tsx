@@ -22,11 +22,6 @@ export default function Cookies() {
           content:
             'The contact page links to OpenStreetMap. Its website opens only if you follow that link; it is not embedded here.',
         },
-        {
-          title: 'Changes',
-          content:
-            'We will update this page if the site starts using other cookies or browser storage.',
-        },
       ]}
       lastUpdated="28 Sep 2026"
     />

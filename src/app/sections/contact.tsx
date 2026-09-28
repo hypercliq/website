@@ -12,7 +12,7 @@ export default function Contact() {
             A problem worth working through?
           </h2>
           <p className="mt-5 max-w-xl text-lg leading-8 opacity-85">
-            Tell us a little about it. We will take it from there.
+            Tell us about the work and the questions behind it.
           </p>
         </div>
         <Link

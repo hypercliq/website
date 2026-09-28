@@ -9,6 +9,8 @@ const pages = [
   '/domains',
   '/services',
   '/solutions',
+  '/solutions/luminous',
+  '/solutions/splat-viewer',
   '/about',
   '/careers',
   '/contact',

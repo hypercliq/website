@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   title: 'Splat Viewer',
   description:
     'A Hypercliq tool for exploring Gaussian splats and LiDAR scans on desktop or in VR, measuring spaces, and extracting building structure.',
-  robots: { index: false, follow: false },
 }
 
 const features = [
@@ -45,17 +44,24 @@ export default function SplatViewer() {
             ← All projects
           </Link>
           <p className="text-accent mt-14 text-xs font-semibold tracking-[0.18em] uppercase">
-            Current work · 3DGS and LiDAR
+            3DGS and LiDAR
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl leading-tight font-semibold tracking-tight sm:text-5xl lg:text-6xl">
             Splat Viewer
           </h1>
           <p className="text-foreground/75 mt-7 max-w-3xl text-xl leading-8">
-            A viewer we are building for 3D Gaussian splats and large LiDAR
-            scans. You can inspect a captured space on a desktop or, with an
-            OpenXR runtime and headset, in VR. The work began in LUMINOUS’s
-            architectural design review pilot and is continuing beyond it.
+            Splat Viewer opens 3D Gaussian splats and large LiDAR scans on
+            desktop and, with an OpenXR runtime and headset, in VR. It provides
+            tools for inspection, measurement, annotation, and extracting
+            building geometry. We developed its scan processing workflow for
+            LUMINOUS’s architectural design review pilot.
           </p>
+          <Link
+            href="/solutions/luminous"
+            className="border-accent text-accent mt-8 inline-block border-b-2 pb-1 font-semibold"
+          >
+            Explore the LUMINOUS work ↗
+          </Link>
         </div>
       </header>
 
@@ -91,7 +97,7 @@ export default function SplatViewer() {
           <div className="border-foreground/15 bg-surface border">
             <div className="px-6 py-8 sm:px-8">
               <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
-                Current build
+                Capabilities
               </p>
               <h2
                 id="features-title"
@@ -142,29 +148,6 @@ export default function SplatViewer() {
             media={splatViewerMedia}
             caption="5 min 22 sec · Feature walkthrough"
           />
-        </section>
-
-        <section className="border-foreground/15 mt-20 grid gap-8 border-t pt-10 md:grid-cols-[1fr_2fr]">
-          <h2 className="text-3xl font-semibold tracking-tight">
-            In development
-          </h2>
-          <div className="max-w-2xl space-y-5 text-lg leading-8">
-            <p>
-              The current build can export detected building geometry as an IFC4
-              model. Viewing existing BIM models directly in the tool is planned
-              work.
-            </p>
-            <p>
-              The Ricoh E57 scan was part of our work for LUMINOUS. The viewer
-              itself is also growing beyond that project.
-            </p>
-            <Link
-              href="/solutions/luminous"
-              className="border-accent text-accent inline-block border-b-2 pb-1 text-base font-semibold"
-            >
-              Explore the LUMINOUS work ↗
-            </Link>
-          </div>
         </section>
       </div>
     </main>

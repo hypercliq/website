@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   title: 'Spatial tools for LUMINOUS',
   description:
     'Hypercliq’s work on LUMINOUS, from platform architecture to viewing and processing a Ricoh E57 scan for architectural design review.',
-  robots: { index: false, follow: false },
 }
 
 const contributions = [
@@ -19,12 +18,12 @@ const contributions = [
   {
     number: '02',
     title: 'System integration',
-    text: 'We have worked on bringing the voice, knowledge, and interaction layers together across the platform.',
+    text: 'We worked on connecting the voice, knowledge, and interaction layers across the platform.',
   },
   {
     number: '03',
     title: 'Spatial tools',
-    text: 'For the architectural design review pilot, we are developing a viewer that can inspect captured spaces and extract useful structure from scans.',
+    text: 'For the architectural design review pilot, we developed Splat Viewer to inspect captured spaces and extract building structure from suitable scans.',
   },
 ]
 
@@ -49,8 +48,9 @@ export default function Luminous() {
             LUMINOUS is a Horizon Europe project building XR systems people can
             use through natural language. Hypercliq authored its system
             architecture and helps connect the voice, knowledge, and interaction
-            layers. For the architectural design review pilot, we are also
-            developing tools to inspect captured spaces.
+            layers. For the architectural design review pilot, we developed
+            Splat Viewer to inspect captured spaces and extract building
+            structure from suitable scans.
           </p>
         </div>
       </header>

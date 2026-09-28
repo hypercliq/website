@@ -40,7 +40,7 @@ export interface CaseStudyProject extends ProjectSummary {
 export const splatViewerProject: ProjectSummary = {
   slug: 'splat-viewer',
   title: 'Splat Viewer',
-  field: 'Current work · 3DGS and LiDAR',
+  field: '3DGS · LiDAR',
   summary:
     'A desktop viewer for Gaussian splats and large LiDAR scans, with tools to inspect, measure, and extract structure from spaces.',
   images: [SplatViewerPoster],
