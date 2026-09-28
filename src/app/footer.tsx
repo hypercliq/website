@@ -1,5 +1,4 @@
 import LogoSVG, { LogoMode } from '@/app/components/LogoSVG'
-import RandomQuote from '@/app/components/RandomQuote'
 import ThemeSwitcher from '@/app/components/ThemeSwitcher'
 import Link from 'next/link'
 import GitHubIcon from './components/GitHubIcon'
@@ -56,12 +55,12 @@ const Footer = () => {
       <div className="mx-auto max-w-7xl px-4 pb-4 pt-16 md:px-8 md:pb-8 lg:pt-32">
         <div className="flex flex-col lg:flex-row">
           <div className="w-full sm:w-1/2 lg:w-1/3">
-            {/* First container */}
             <div className="flex h-12 w-12 justify-start">
               <LogoSVG mode={LogoMode.GraphicOnly} />
             </div>
-            {/* <p className="mb-4">Empowering Innovation Through Data: Unleashing Potential, Overcoming Challenges</p> */}
-            <RandomQuote />
+            <p className="mt-6 max-w-xs text-sm leading-6 text-foreground/75">
+              Data systems, applied AI, and research software built with care.
+            </p>
             <div className="mt-8 flex space-x-4">
               <Link
                 href="https://x.com/hypercliq"

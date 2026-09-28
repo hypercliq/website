@@ -3,7 +3,6 @@ import {
   ChatBubbleLeftRightIcon,
   CircleStackIcon,
 } from '@heroicons/react/24/outline'
-import TextCarousel from '@/app/components/TextCarousel'
 
 const services = [
   {
@@ -26,14 +25,6 @@ const services = [
   },
 ]
 
-const sentences = [
-  'Your Domain, Our Expertise',
-  'Data Mastery, Domain Expertise',
-  'Your Vision, Our Innovation',
-  'Transforming Domains with Data',
-  'Strategic Solutions, Diverse Domains',
-]
-
 export default function Services() {
   return (
     <section
@@ -44,18 +35,17 @@ export default function Services() {
         Empowering Innovation
       </h2>
 
-      <TextCarousel
-        textArray={sentences}
-        fromDirection="top"
-        toDirection="bottom"
-        className="mt-2 h-10 text-2xl font-bold tracking-tight text-accent sm:text-3xl"
-        innerClassName="px-4 md:px-8 text-center"
-        tag={'h3'}
-      />
+      <p className="mx-auto mt-5 max-w-2xl px-4 text-center text-lg leading-8 text-foreground/75">
+        From organizing complex information to finding useful patterns, we build
+        practical tools around each partner&apos;s needs.
+      </p>
 
       <div className="mt-8 grid grid-cols-1 gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 md:px-8 lg:grid-cols-3">
         {services.map((service) => (
-          <div key={service.title} className="bg-surface p-4 shadow-md">
+          <div
+            key={service.title}
+            className="border border-foreground/10 bg-surface p-6"
+          >
             <div className="flex items-center justify-center">
               {service.icon}
             </div>
@@ -64,13 +54,6 @@ export default function Services() {
             <p className="mt-4 text-xl">{service.description}</p>
           </div>
         ))}
-      </div>
-      <div className="mt-4 px-4 md:px-8">
-        <p className="bg-gradient-to-r from-[#af21f6] to-[#21f6af] p-4 text-center text-xl font-semibold leading-8 tracking-normal text-white shadow-md">
-          Unleashing the power of data with our cutting-edge Machine Learning
-          and AI technologies, we work closely with you, leveraging your domain
-          expertise with our data proficiency to create tailored strategies.
-        </p>
       </div>
     </section>
   )

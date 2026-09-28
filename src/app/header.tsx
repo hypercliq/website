@@ -1,16 +1,11 @@
 'use client'
 
 import LogoSVG, { LogoMode } from '@/app/components/LogoSVG'
-import {
-  Dialog,
-  DialogPanel,
-  Transition,
-  TransitionChild,
-} from '@headlessui/react'
+import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { forwardRef, useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const links = [
   {
@@ -29,36 +24,10 @@ const links = [
   { text: 'Contact', href: '/contact', description: 'Get in touch with us' },
 ]
 
-// eslint-disable-next-line react/display-name
-let MyDialogPanel = forwardRef<HTMLDivElement, any>(function (props, ref) {
-  return (
-    <DialogPanel
-      className="easy-in-out fixed inset-y-0 right-0 z-[1000] w-full overflow-y-auto bg-surface px-6 py-6 duration-300 data-[closed]:translate-x-full sm:max-w-sm sm:ring-1 sm:ring-foreground"
-      ref={ref}
-      {...props}
-    />
-  )
-})
-
 export default function Header() {
   const pathname = usePathname()
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  // get the width of the window using useEffect hook
-  const [width, setWidth] = useState(0)
-  useEffect(() => {
-    setWidth(window.innerWidth)
-  }, [])
-
-  // add a resize event listener
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth)
-    window.addEventListener('resize', handleResize)
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
 
   return (
     <header className="relative z-10 bg-background">
@@ -69,10 +38,11 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">hypercliq</span>
-            <div className="h-8 w-auto">
-              <LogoSVG
-                mode={width > 640 ? LogoMode.FullLogo : LogoMode.GraphicOnly}
-              />
+            <div className="h-8 w-8 sm:hidden">
+              <LogoSVG mode={LogoMode.GraphicOnly} />
+            </div>
+            <div className="hidden h-8 w-44 sm:block">
+              <LogoSVG mode={LogoMode.FullLogo} />
             </div>
           </Link>
         </div>
@@ -95,23 +65,23 @@ export default function Header() {
                 pathname === link.href
                   ? 'cursor-default text-primary'
                   : 'text-foreground/75 hover:text-foreground'
-              } text-sm font-semibold leading-6 transition-colors duration-200`}
+              } text-sm font-semibold leading-6`}
             >
               {link.text}
             </Link>
           ))}
         </div>
       </nav>
-      <Transition
-        as={Dialog}
+      <Dialog
         className="lg:hidden"
-        show={mobileMenuOpen}
+        open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
-        <TransitionChild>
-          <div className="fixed inset-0 z-[900] backdrop-brightness-[.25] duration-75 ease-linear data-[closed]:opacity-0" />
-        </TransitionChild>
-        <TransitionChild as={MyDialogPanel}>
+        <div
+          className="fixed inset-0 z-[900] bg-foreground/50"
+          aria-hidden="true"
+        />
+        <DialogPanel className="fixed inset-y-0 right-0 z-[1000] w-full overflow-y-auto bg-surface px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-foreground">
           <div className="flex items-center justify-between">
             <Link
               href="/"
@@ -144,7 +114,7 @@ export default function Header() {
                       pathname === link.href
                         ? 'cursor-default text-primary'
                         : 'text-foreground/75 hover:text-foreground'
-                    } -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition-colors duration-200`}
+                    } -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7`}
                   >
                     {link.text}
                   </Link>
@@ -152,8 +122,8 @@ export default function Header() {
               </div>
             </div>
           </div>
-        </TransitionChild>
-      </Transition>
+        </DialogPanel>
+      </Dialog>
     </header>
   )
 }

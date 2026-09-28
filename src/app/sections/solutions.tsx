@@ -1,5 +1,5 @@
-import CheckList from '@/app/components/Checklist'
-import SolutionsCarousel from '@/app/components/SolutionsCarousel'
+import Image from 'next/image'
+import Link from 'next/link'
 import SportInfinity from '@/app/assets/images/sport-infinity_1.avif'
 import Bionic from '@/app/assets/images/bionic_1.avif'
 import HumanTech from '@/app/assets/images/human-tech_1.avif'
@@ -7,16 +7,6 @@ import EurofitApp from '@/app/assets/images/eurofit-app_1.avif'
 import EasyImp from '@/app/assets/images/easy-imp_1.avif'
 import AdidasConsulting from '@/app/assets/images/adidas-consulting_1.avif'
 import Hydac from '@/app/assets/images/hydac_1.avif'
-
-const sentences = [
-  { id: 1, text: 'Specializing in delivering data-driven solutions.' },
-  { id: 2, text: 'Empowering businesses to unlock their full potential.' },
-  { id: 3, text: 'Strong presence in European research.' },
-  {
-    id: 4,
-    text: 'Partnering with leading institutions and companies to overcome new challenges.',
-  },
-]
 
 const solutions = [
   {
@@ -85,17 +75,50 @@ export default function Solutions() {
       id="solutions"
       className="m-auto flex max-w-7xl flex-col py-10 md:py-16"
     >
-      <h2 className="mt-2 px-4 text-center text-4xl font-bold tracking-tight sm:text-5xl md:px-8">
-        Transforming Ideas into Reality
-      </h2>
+      <div className="px-4 md:px-8">
+        <p className="text-sm font-semibold uppercase tracking-widest text-accent">
+          Selected work
+        </p>
+        <h2 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
+          Work across research and industry
+        </h2>
+        <p className="mt-5 max-w-2xl text-lg leading-8 text-foreground/75">
+          A selection of platforms, analysis tools, and consulting projects
+          developed with our partners.
+        </p>
+      </div>
 
-      <CheckList sentences={sentences} />
-
-      <h2 className="mb-4 mt-8 text-center text-2xl font-semibold text-accent">
-        Explore our work and see how we&#39;re making a difference
-      </h2>
-
-      <SolutionsCarousel solutions={solutions} />
+      <div className="mt-10 grid gap-6 px-4 md:grid-cols-2 md:px-8 lg:grid-cols-3">
+        {solutions
+          .filter((solution) => [2, 3, 7].includes(solution.id))
+          .map((solution) => (
+            <article
+              key={solution.id}
+              className="overflow-hidden border border-foreground/10 bg-background"
+            >
+              <Image
+                src={solution.imageUrl}
+                alt=""
+                className="h-48 w-full object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold leading-snug">
+                  <Link href={solution.url} className="hover:text-accent">
+                    {solution.title}
+                  </Link>
+                </h3>
+                <p className="mt-3 line-clamp-3 text-sm leading-6 text-foreground/75">
+                  {solution.description}
+                </p>
+              </div>
+            </article>
+          ))}
+      </div>
+      <div className="mt-10 px-4 md:px-8">
+        <Link href="/solutions" className="font-semibold text-accent underline">
+          View all case studies
+        </Link>
+      </div>
     </section>
   )
 }

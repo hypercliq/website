@@ -21,7 +21,6 @@ type PathClasses = {
 
 interface SvgComponentProps {
   mode?: LogoMode
-  animate?: boolean
   pathClasses?: PathClasses
 }
 
@@ -61,7 +60,6 @@ const textPaths = {
 
 const renderPaths = (
   paths: Record<string, string>,
-  animate: boolean,
   pathClasses: PathClasses,
 ) => (
   <>
@@ -70,19 +68,17 @@ const renderPaths = (
         <path
           key={key}
           id={key}
-          className={`${
+          className={
             pathClasses[key as keyof PathClasses] ??
             'fill-foreground stroke-foreground'
-          } ${animate ? 'animate-logo' : ''}`}
+          }
           d={paths[key as keyof PathClasses]}
         />
       ) : (
         <path
           key={key}
           id={key}
-          className={`${pathClasses[key] ?? 'fill-primary stroke-primary'} ${
-            animate ? 'animate-logo' : ''
-          }`}
+          className={pathClasses[key] ?? 'fill-primary stroke-primary'}
           d={paths[key]}
         />
       ),
@@ -92,7 +88,6 @@ const renderPaths = (
 
 const LogoSVG: FC<SvgComponentProps> = ({
   mode = LogoMode.FullLogo,
-  animate = false,
   pathClasses = {},
 }) => (
   <svg
@@ -101,8 +96,8 @@ const LogoSVG: FC<SvgComponentProps> = ({
     className="h-full w-full"
   >
     <g strokeWidth="2" fill="none">
-      {mode !== 'textOnly' && renderPaths(graphicPaths, animate, pathClasses)}
-      {mode !== 'graphicOnly' && renderPaths(textPaths, animate, pathClasses)}
+      {mode !== 'textOnly' && renderPaths(graphicPaths, pathClasses)}
+      {mode !== 'graphicOnly' && renderPaths(textPaths, pathClasses)}
     </g>
   </svg>
 )

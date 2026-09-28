@@ -78,7 +78,7 @@ const ThemeSwitcher = () => {
     <div className="mb-4 max-w-max rounded-full border-2 border-surface p-1">
       <div className="relative h-9 w-[6.75rem]">
         <div
-          className={`absolute ${switchPosition} h-full w-1/3 rounded-full bg-surface transition-all`}
+          className={`absolute ${switchPosition} h-full w-1/3 rounded-full bg-surface`}
         ></div>
         <div className="block h-full w-full">
           <ThemeButton
