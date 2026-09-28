@@ -9,7 +9,7 @@
     "clean": "rm -rf .next out",
     "dev": "next dev",
     "build": "next build",
-    "start": "npx serve@latest out",
+    "start": "serve out",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
@@ -31,6 +31,7 @@
     "postcss": "^8.5.28",
     "prettier": "^3.9.9",
     "prettier-plugin-tailwindcss": "^0.8.1",
+    "serve": "14.2.6",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3"
   },

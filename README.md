@@ -25,6 +25,8 @@ npm audit
 
 `npm run build` writes a static export to `out/`. Pull requests run formatting, lint, typecheck, and build checks. The release workflow builds and deploys `out/` when a GitHub release is published or the workflow is run manually. Merging a pull request does not publish the site.
 
+Use `npm run start` after a build to preview the exported site locally.
+
 ## Content
 
 The current project text describes work already represented in this repository. The LUMINOUS and Splat Viewer pages use silent, click-to-play videos in `public/luminous/` and `public/splat-viewer/`; their poster and video paths are in `src/app/data/media.ts`. The renovation clip edits together separate viewer recordings, with each scan loaded individually. The pages are set to `noindex` while they are reviewed locally. Remove that setting when the content is approved for publication. Review company facts and legal text before publishing a release.
