@@ -78,7 +78,9 @@ const renderPaths = (
         <path
           key={key}
           id={key}
-          className={pathClasses[key] ?? 'fill-primary stroke-primary'}
+          className={
+            pathClasses[key] ?? 'fill-brand-orange stroke-brand-orange'
+          }
           d={paths[key]}
         />
       ),

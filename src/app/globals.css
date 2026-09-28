@@ -8,7 +8,7 @@
   --color-surface: var(--site-surface);
   --color-accent: var(--site-accent);
   --color-onAccent: var(--site-on-accent);
-  --color-primary: var(--site-accent);
+  --color-brand-orange: #f6b221;
 }
 
 :root {
