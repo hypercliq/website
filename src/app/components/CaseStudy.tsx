@@ -45,14 +45,14 @@ export default function CaseStudy({ project }: { project: CaseStudyProject }) {
           </div>
         </div>
         <div className="mt-20 grid gap-6 sm:grid-cols-2">
-          {project.images.map((image, index) => (
+          {project.images.map(({ image, alt }) => (
             <div
               key={image.src}
               className="border-foreground/10 bg-surface border p-3"
             >
               <Image
                 src={image}
-                alt={`${project.title} project image ${index + 1}`}
+                alt={alt}
                 className="h-auto w-full"
                 sizes="(min-width: 640px) 50vw, 100vw"
               />
