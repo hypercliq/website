@@ -32,10 +32,10 @@ export default function Hero() {
         </div>
         <div className="border-foreground/25 hidden border-t pt-5 md:block">
           <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
-            Our focus
+            Recent work
           </p>
           <p className="mt-4 text-lg leading-8">
-            Clear structures. Useful interfaces. Careful implementation.
+            LiDAR scans, Gaussian splats, and construction site data.
           </p>
         </div>
       </div>

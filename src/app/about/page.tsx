@@ -59,16 +59,15 @@ export default function About() {
           <h2 className="text-3xl font-semibold tracking-tight">How we work</h2>
           <div className="text-foreground/75 max-w-2xl space-y-5 text-lg leading-8">
             <p>
-              We bring software engineering, data work, and research experience
-              into the same conversation. Our role changes with the project:
-              sometimes we help define the technical approach; sometimes we
-              build the tools.
+              We work on both system architecture and software implementation.
+              For LUMINOUS, we authored the platform architecture and developed
+              a viewer for 3D scans. For HumanTech, we designed an architecture
+              for combining construction site data from wearables, scans, and
+              vision systems.
             </p>
             <p>
-              We collaborate with specialists in other fields when a project
-              calls for it. Recent work includes spatial tools and construction
-              technology, alongside earlier projects in workplace health and
-              product design.
+              Earlier work includes movement analysis for BIONIC, body shape
+              tools for EUROFIT, and materials data for Sport Infinity.
             </p>
           </div>
         </div>

@@ -8,7 +8,7 @@ export default function About() {
     >
       <div>
         <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
-          Our approach
+          About Hypercliq
         </p>
         <h2
           id="about-title"
@@ -19,13 +19,13 @@ export default function About() {
       </div>
       <div className="text-foreground/75 max-w-xl text-lg leading-8">
         <p>
-          Research and product teams often have more information than they can
-          use. We help give that information structure, then build tools around
-          the people who need it.
+          Research and product teams work with very different kinds of data. Our
+          projects range from viewers for captured spaces to analysis tools for
+          movement data and platforms for product records.
         </p>
         <p className="mt-5">
-          Our recent work includes 3D scans, XR, and construction technology.
-          Earlier projects cover workplace health and product design.
+          Founded in 2011, Hypercliq is based in Athens and works with research
+          partners across Europe.
         </p>
         <Link
           href="/about"
