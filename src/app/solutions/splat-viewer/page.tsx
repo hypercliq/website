@@ -40,11 +40,15 @@ const features = [
 const recognitionDemos = [
   {
     title: 'Construction site',
+    description:
+      'YOLO-World marks backpacks and bottles in the rendered view. Splat Viewer places the detections in coloured 3D boxes.',
     media: constructionRecognitionMedia,
     caption: '1 min 2 sec · Backpacks and bottles',
   },
   {
     title: 'Apartment renovation',
+    description:
+      'The viewer marks candidate pipes and shows their positions in the apartment scan.',
     media: apartmentRecognitionMedia,
     caption: '56 sec · Plumbing pipes',
   },
@@ -157,18 +161,20 @@ export default function SplatViewer() {
               Find objects in captured spaces
             </h2>
             <p className="text-foreground/75 mt-5 text-lg leading-8">
-              These short demos show YOLO-World detecting backpacks and bottles
-              at a construction site and pipes in an apartment under renovation.
-              Splat Viewer projects the detections into coloured 3D boxes and
-              marks their positions on the scan overview.
+              These short demos show how YOLO-World detections appear in Splat
+              Viewer, with coloured 3D boxes and matching positions on the scan
+              overview.
             </p>
           </div>
           <div className="grid gap-8 lg:grid-cols-2">
             {recognitionDemos.map((demo) => (
               <article key={demo.title} className="min-w-0">
-                <h3 className="mb-5 text-2xl font-semibold tracking-tight">
+                <h3 className="text-2xl font-semibold tracking-tight">
                   {demo.title}
                 </h3>
+                <p className="text-foreground/75 mt-3 mb-5 leading-7">
+                  {demo.description}
+                </p>
                 <ProjectVideo media={demo.media} caption={demo.caption} />
               </article>
             ))}
