@@ -1,5 +1,10 @@
 import ProjectVideo from '@/app/components/ProjectVideo'
-import { renovationMedia, splatViewerMedia } from '@/app/data/media'
+import {
+  apartmentRecognitionMedia,
+  constructionRecognitionMedia,
+  renovationMedia,
+  splatViewerMedia,
+} from '@/app/data/media'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
@@ -29,6 +34,19 @@ const features = [
     number: '04',
     title: 'Capture and create',
     text: 'Export a 360° panorama PNG from the current viewpoint, or train a Gaussian splat from a LiDAR scan and reference photos.',
+  },
+]
+
+const recognitionDemos = [
+  {
+    title: 'Construction site',
+    media: constructionRecognitionMedia,
+    caption: '1 min 2 sec · Backpacks and bottles',
+  },
+  {
+    title: 'Apartment renovation',
+    media: apartmentRecognitionMedia,
+    caption: '56 sec · Plumbing pipes',
   },
 ]
 
@@ -126,6 +144,39 @@ export default function SplatViewer() {
 
         <section
           className="border-foreground/15 mt-20 border-t pt-10"
+          aria-labelledby="object-recognition-title"
+        >
+          <div className="mb-8 max-w-3xl">
+            <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
+              Object recognition
+            </p>
+            <h2
+              id="object-recognition-title"
+              className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl"
+            >
+              Find objects in captured spaces
+            </h2>
+            <p className="text-foreground/75 mt-5 text-lg leading-8">
+              These short demos show YOLO-World detecting backpacks and bottles
+              at a construction site and pipes in an apartment under renovation.
+              Splat Viewer projects the detections into coloured 3D boxes and
+              marks their positions on the scan overview.
+            </p>
+          </div>
+          <div className="grid gap-8 lg:grid-cols-2">
+            {recognitionDemos.map((demo) => (
+              <article key={demo.title} className="min-w-0">
+                <h3 className="mb-5 text-2xl font-semibold tracking-tight">
+                  {demo.title}
+                </h3>
+                <ProjectVideo media={demo.media} caption={demo.caption} />
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section
+          className="border-foreground/15 mt-20 border-t pt-10"
           aria-labelledby="walkthrough-title"
         >
           <div className="mb-8 max-w-3xl">
@@ -140,16 +191,22 @@ export default function SplatViewer() {
             </h2>
             <p className="text-foreground/75 mt-5 text-lg leading-8">
               This longer walkthrough moves from a Gaussian splat to large point
-              clouds, room detection, measurements, and export. It ends with an
-              E57 example.
+              clouds, room detection, measurements, and export. It ends with a
+              splat trained from a scan and photos.
             </p>
           </div>
           <div className="max-w-5xl">
             <ProjectVideo
               media={splatViewerMedia}
-              caption="5 min 22 sec · Feature walkthrough"
+              caption="4 min 42 sec · Feature walkthrough"
             />
           </div>
+          <Link
+            href="/solutions/luminous"
+            className="border-accent text-accent mt-6 inline-block border-b-2 pb-1 font-semibold"
+          >
+            Watch the Ricoh E57 example in LUMINOUS ↗
+          </Link>
         </section>
       </div>
     </main>
