@@ -32,6 +32,8 @@ Use `npm run start` after a build to preview the exported site locally.
 
 Standard case studies live in `src/app/data/projects.ts`. Adding one there creates its card, detail route, and sitemap entry. Bespoke projects have their own pages and explicit sitemap entries. Company contact details live in `src/app/data/company.ts`.
 
+The social share image source is `design/share-preview.svg`. Its logo paths mirror `src/app/components/LogoSVG.tsx`. After editing it, render a 1200 × 630 PNG with `rsvg-convert` to `src/app/opengraph-image.png`, then copy that PNG to `src/app/twitter-image.png`.
+
 The LUMINOUS and Splat Viewer pages use silent, click-to-play videos in `public/luminous/` and `public/splat-viewer/`; their poster and video paths are in `src/app/data/media.ts`. Each video has a text description. The renovation clip edits together separate viewer recordings, with each scan loaded individually. The compressed MP4s and posters are part of the static export.
 
 The Splat Viewer object recognition clips are excerpts from `gsplat_backpack_bottle_demo.mp4` (2:15–3:17) and `gsplat_pipe_detection_demo_improved.mp4` (2:15–3:11). They show the YOLO-World segment only; the full source recordings are not included in the site.

@@ -8,6 +8,7 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hypercliq.com'),
   title: {
     default: 'Hypercliq — Spatial tools and data systems',
     template: '%s — Hypercliq',
