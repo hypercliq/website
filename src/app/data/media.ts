@@ -42,3 +42,27 @@ export const renovationMedia: ProjectMedia = {
     'The final capture shows the finished bathroom and shower. Each scan was loaded into the viewer separately; the recordings were edited into one video.',
   ],
 }
+
+export const constructionRecognitionMedia: ProjectMedia = {
+  src: '/splat-viewer/object-recognition-construction.mp4',
+  poster: '/splat-viewer/object-recognition-construction-poster.jpg',
+  label:
+    'Silent video of YOLO-World detecting backpacks and bottles at a construction site in Splat Viewer',
+  aspectRatio: '64 / 45',
+  description: [
+    'YOLO-World detects backpacks and bottles in a view of the captured construction site.',
+    'Splat Viewer shows the detections as coloured 3D boxes, with matching markers on the scan overview.',
+  ],
+}
+
+export const apartmentRecognitionMedia: ProjectMedia = {
+  src: '/splat-viewer/object-recognition-apartment.mp4',
+  poster: '/splat-viewer/object-recognition-apartment-poster.jpg',
+  label:
+    'Silent video of YOLO-World detecting pipes in a renovation scan in Splat Viewer',
+  aspectRatio: '64 / 45',
+  description: [
+    'YOLO-World searches for pipes in a view of an apartment under renovation.',
+    'Splat Viewer places the detections in coloured 3D boxes and marks their positions on the scan overview.',
+  ],
+}
