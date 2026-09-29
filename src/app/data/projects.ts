@@ -1,7 +1,6 @@
 import { staticImage } from '@/app/data/image'
 import type { StaticImageData } from 'next/image'
 
-const Adidas = staticImage('adidas-consulting_1', 1200, 678)
 const Bionic1 = staticImage('bionic_1', 1200, 733)
 const Bionic2 = staticImage('bionic_2', 1200, 850)
 const Bionic3 = staticImage('bionic_3', 1200, 733)
@@ -90,7 +89,7 @@ export const caseStudyProjects: CaseStudyProject[] = [
     summary:
       'A platform for finding and comparing material, process, and sustainability data during product development.',
     contribution:
-      'We developed a cloud based knowledge platform linking product samples, engineering properties, manufacturing processes, and sustainability measures. Search and analysis tools help design teams work across these connected records.',
+      'We developed a cloud based knowledge platform linking product samples, engineering properties, manufacturing processes, and sustainability measures. Search and analysis tools help design teams work across these connected records. We investigated materials and production approaches, helped shape the project concept, and contributed to its funding application.',
     context:
       'The work was part of Sport Infinity, a Horizon 2020 project led by Adidas that explored customizable sporting goods and recyclable materials.',
     images: [
@@ -109,23 +108,6 @@ export const caseStudyProjects: CaseStudyProject[] = [
       {
         image: Sport4,
         alt: 'Early shoe configurator interface with design controls',
-      },
-    ],
-  },
-  {
-    slug: 'innovation-concept-consulting',
-    title: 'Research concept and funding support',
-    field: 'Research strategy · Sport Infinity',
-    summary:
-      'Research, concept development, and application support for collaborative projects.',
-    contribution:
-      'Our work included investigating materials and production approaches, shaping project concepts, assembling interdisciplinary consortia, and preparing research funding applications.',
-    context:
-      'Sport Infinity is one example: the project examined recyclable materials and production methods for customizable sporting goods.',
-    images: [
-      {
-        image: Adidas,
-        alt: 'Adidas shoe surrounded by a digital network of components',
       },
     ],
   },
