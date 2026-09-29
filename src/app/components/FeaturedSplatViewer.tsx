@@ -1,19 +1,14 @@
+import ProjectVideo from '@/app/components/ProjectVideo'
 import { renovationMedia } from '@/app/data/media'
-import Image from 'next/image'
 import Link from 'next/link'
 
 export default function FeaturedSplatViewer() {
   return (
     <article className="border-foreground/15 bg-background mt-12 grid overflow-hidden border lg:grid-cols-[1.3fr_1fr]">
-      <div className="bg-surface relative min-h-64 lg:min-h-96">
-        <Image
-          src={renovationMedia.poster}
-          alt="An apartment renovation scan open in Splat Viewer"
-          fill
-          className="object-cover"
-          sizes="(min-width: 1024px) 55vw, 100vw"
-        />
-      </div>
+      <ProjectVideo
+        media={renovationMedia}
+        caption="1 min · Apartment renovation stages"
+      />
       <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
         <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
           3D Gaussian splats · LiDAR
