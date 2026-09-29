@@ -10,19 +10,19 @@ export const metadata: Metadata = {
 const services = [
   {
     title: 'Spatial data and visualization',
-    body: 'We build tools for inspecting captured spaces. Splat Viewer opens Gaussian splats and LiDAR scans for measurement and building geometry extraction.',
+    body: 'We build tools to inspect 3D scans, Gaussian splats, and other complex data. Our current work includes viewing captured spaces, measuring them, and extracting building geometry.',
   },
   {
     title: 'Data platforms',
-    body: 'We design platforms for collecting and connecting research data. For Sport Infinity, we linked product samples, engineering properties, manufacturing processes, and sustainability measures. We also built a repository for agricultural field images.',
+    body: 'We design the structure behind complex information: how it is collected, connected, searched, and kept useful. The result may be a repository, a research platform, or a product data system.',
   },
   {
     title: 'Research software and applied AI',
-    body: 'Our research software ranges from wearable movement analysis to object detection in 3D scans. BIONIC supported ergonomic assessment; Splat Viewer places YOLO-World detections in captured spaces.',
+    body: 'We develop software for research projects, including machine learning workflows when the task calls for them. We pay attention to the data, the task, and how people review the output.',
   },
   {
     title: 'Research and technical consulting',
-    body: 'We help shape system architectures and collaborative research proposals. This includes LUMINOUS’s platform architecture, HumanTech’s construction site data architecture, and Sport Infinity’s research concept and funding application.',
+    body: 'We help shape technical approaches, system architectures, and collaborative research proposals. Our portfolio includes work in European research programmes.',
   },
 ]
 

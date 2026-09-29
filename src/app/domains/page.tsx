@@ -17,7 +17,7 @@ const domains = [
   {
     name: 'Construction',
     detail:
-      'System architecture for combining site sensors, wearables, robotics, and digital models.',
+      'Spatial review tools and system architecture connecting site data, workers, and automated equipment.',
     link: '/solutions/luminous',
   },
   {
@@ -46,8 +46,8 @@ export default function Domains() {
             Different fields. Similar questions about data.
           </h1>
           <p className="text-foreground/75 mt-7 max-w-2xl text-xl leading-8">
-            Projects cover LiDAR scans, construction site data, wearable
-            movement records, and product design information.
+            Our methods travel across sectors. The details come from working
+            closely with people who know each field.
           </p>
         </div>
       </header>

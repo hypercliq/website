@@ -22,8 +22,8 @@ export default function Solutions() {
             Built around real problems.
           </h1>
           <p className="text-foreground/75 mt-7 max-w-2xl text-xl leading-8">
-            Current work in spatial data and XR, followed by earlier platforms
-            for movement, materials, and product data.
+            Our current work in spatial data and XR, followed by earlier data
+            platforms, research tools, and system designs.
           </p>
         </div>
       </header>
