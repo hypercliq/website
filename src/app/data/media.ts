@@ -26,7 +26,7 @@ export const splatViewerMedia: ProjectMedia = {
     'A large LiDAR point cloud is opened and explored. The viewer shows how much of the scan is visible and lets the user adjust its GPU memory budget.',
     'The tool detects and colours walls, floors, and ceilings. It shows doors, windows, rooms, and a floor plan derived from the scan.',
     'A laser tool measures distances and areas. The walkthrough also shows the detected geometry being prepared for DXF and IFC export.',
-    'A Gaussian splat is trained from a scan and reference photos, then opened in the viewer. The final example opens an E57 scan directly from a scanner export.',
+    'A Gaussian splat is trained from a scan and reference photos, then opened in the viewer.',
   ],
 }
 

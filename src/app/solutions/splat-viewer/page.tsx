@@ -191,16 +191,22 @@ export default function SplatViewer() {
             </h2>
             <p className="text-foreground/75 mt-5 text-lg leading-8">
               This longer walkthrough moves from a Gaussian splat to large point
-              clouds, room detection, measurements, and export. It ends with an
-              E57 example.
+              clouds, room detection, measurements, and export. It ends with a
+              splat trained from a scan and photos.
             </p>
           </div>
           <div className="max-w-5xl">
             <ProjectVideo
               media={splatViewerMedia}
-              caption="5 min 22 sec · Feature walkthrough"
+              caption="4 min 42 sec · Feature walkthrough"
             />
           </div>
+          <Link
+            href="/solutions/luminous"
+            className="border-accent text-accent mt-6 inline-block border-b-2 pb-1 font-semibold"
+          >
+            Watch the Ricoh E57 example in LUMINOUS ↗
+          </Link>
         </section>
       </div>
     </main>
