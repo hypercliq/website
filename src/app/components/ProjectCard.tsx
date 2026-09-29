@@ -18,7 +18,7 @@ export default function ProjectCard({
     >
       <div className="bg-surface aspect-[3/2] overflow-hidden">
         <Image
-          src={project.images[0]}
+          src={project.images[0].image}
           alt=""
           className="h-full w-full object-cover"
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"

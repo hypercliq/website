@@ -1,7 +1,6 @@
 import { staticImage } from '@/app/data/image'
 import type { StaticImageData } from 'next/image'
 
-const Adidas = staticImage('adidas-consulting_1', 1200, 678)
 const Bionic1 = staticImage('bionic_1', 1200, 733)
 const Bionic2 = staticImage('bionic_2', 1200, 850)
 const Bionic3 = staticImage('bionic_3', 1200, 733)
@@ -23,7 +22,12 @@ export interface ProjectSummary {
   title: string
   field: string
   summary: string
-  images: [StaticImageData, ...StaticImageData[]]
+  images: [ProjectImage, ...ProjectImage[]]
+}
+
+export interface ProjectImage {
+  image: StaticImageData
+  alt: string
 }
 
 export interface CaseStudyProject extends ProjectSummary {
@@ -42,7 +46,20 @@ export const caseStudyProjects: CaseStudyProject[] = [
       'The platform brings kinetic and kinematic data into one place for ergonomic assessment. It supports analysis of movement against methods such as OWAS and makes the results available for review.',
     context:
       'Developed with DFKI in the EU funded BIONIC research project, which studied musculoskeletal health in the workplace.',
-    images: [Bionic1, Bionic2, Bionic3],
+    images: [
+      {
+        image: Bionic1,
+        alt: 'BIONIC dashboard with movement assessment charts and results',
+      },
+      {
+        image: Bionic2,
+        alt: 'Worker beside a movement analysis display in an industrial setting',
+      },
+      {
+        image: Bionic3,
+        alt: 'BIONIC analysis dashboard showing a 3D figure and movement charts',
+      },
+    ],
   },
   {
     slug: 'system-architecture-design-for-construction-automation',
@@ -54,7 +71,16 @@ export const caseStudyProjects: CaseStudyProject[] = [
       'We designed an architecture for bringing data from wearables, scanning devices, and vision systems into dynamic semantic digital twins of construction sites.',
     context:
       'This work belongs to HumanTech, a Horizon Europe research project on digital tools and automation for construction.',
-    images: [Human1, Human2],
+    images: [
+      {
+        image: Human1,
+        alt: 'Digital building model rising from architectural plans',
+      },
+      {
+        image: Human2,
+        alt: 'HumanTech project banner about technology for construction',
+      },
+    ],
   },
   {
     slug: 'sustainable-design-data-management-platform',
@@ -63,22 +89,27 @@ export const caseStudyProjects: CaseStudyProject[] = [
     summary:
       'A platform for finding and comparing material, process, and sustainability data during product development.',
     contribution:
-      'We developed a cloud based knowledge platform linking product samples, engineering properties, manufacturing processes, and sustainability measures. Search and analysis tools help design teams work across these connected records.',
+      'We developed a cloud based knowledge platform linking product samples, engineering properties, manufacturing processes, and sustainability measures. Search and analysis tools help design teams work across these connected records. We investigated materials and production approaches, helped shape the project concept, and contributed to its funding application.',
     context:
       'The work was part of Sport Infinity, a Horizon 2020 project led by Adidas that explored customizable sporting goods and recyclable materials.',
-    images: [Sport1, Sport2, Sport3, Sport4],
-  },
-  {
-    slug: 'innovation-concept-consulting',
-    title: 'Research concept and funding support',
-    field: 'Research strategy · Sport Infinity',
-    summary:
-      'Research, concept development, and application support for collaborative projects.',
-    contribution:
-      'Our work included investigating materials and production approaches, shaping project concepts, assembling interdisciplinary consortia, and preparing research funding applications.',
-    context:
-      'Sport Infinity is one example: the project examined recyclable materials and production methods for customizable sporting goods.',
-    images: [Adidas],
+    images: [
+      {
+        image: Sport1,
+        alt: 'Sport Infinity product data page showing a shoe and its components',
+      },
+      {
+        image: Sport2,
+        alt: 'Sport Infinity graphic showing Adidas footwear design concepts',
+      },
+      {
+        image: Sport3,
+        alt: 'Shoe configuration page with colour and material options',
+      },
+      {
+        image: Sport4,
+        alt: 'Early shoe configurator interface with design controls',
+      },
+    ],
   },
   {
     slug: 'product-configuration-engine',
@@ -90,7 +121,20 @@ export const caseStudyProjects: CaseStudyProject[] = [
       'The engine connects consumer preferences with possible sensor and garment configurations. It was designed to support choices without requiring users to understand every component.',
     context:
       'Developed in EASY-IMP, a European Commission funded research project on personalized smart garments and connected products.',
-    images: [Easy1, Easy2, Easy3],
+    images: [
+      {
+        image: Easy1,
+        alt: 'EASY-IMP website homepage showing a runner wearing a sensor',
+      },
+      {
+        image: Easy2,
+        alt: 'EASY-IMP website page describing the project and its products',
+      },
+      {
+        image: Easy3,
+        alt: 'EASY-IMP graphic connecting garments, sensors, apps, and a shop',
+      },
+    ],
   },
   {
     slug: 'anthropometric-3d-shape-analysis',
@@ -102,7 +146,16 @@ export const caseStudyProjects: CaseStudyProject[] = [
       'We built analysis and visualization tools for digital anthropometric data, giving designers a way to explore body shapes and measurements for products where fit matters.',
     context:
       'The tools were developed through EUROFIT, a European Commission funded project on the use of digital anthropometric resources.',
-    images: [Eurofit1, Eurofit2],
+    images: [
+      {
+        image: Eurofit1,
+        alt: 'EUROFIT interface with two body models and measurement controls',
+      },
+      {
+        image: Eurofit2,
+        alt: 'EUROFIT analysis interface with a body model and measurement charts',
+      },
+    ],
   },
   {
     slug: 'visual-repository-for-agricultural-rd-innovation',
@@ -113,7 +166,16 @@ export const caseStudyProjects: CaseStudyProject[] = [
     contribution:
       'The platform stores and processes images, with views and access tailored to different research roles. It supports the path from field collection to datasets used in deep learning work.',
     context: 'Built for an agricultural research and development initiative.',
-    images: [Hydac1, Hydac2],
+    images: [
+      {
+        image: Hydac1,
+        alt: 'Rows of young crops in a field',
+      },
+      {
+        image: Hydac2,
+        alt: 'Tractor driving through rows of crops in a field',
+      },
+    ],
   },
 ]
 
