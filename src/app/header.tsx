@@ -1,5 +1,8 @@
+'use client'
+
 import LogoSVG from '@/app/components/LogoSVG'
 import Link from 'next/link'
+import { useRef } from 'react'
 
 const links = [
   { label: 'Work', href: '/solutions' },
@@ -11,6 +14,8 @@ const links = [
 ]
 
 export default function Header() {
+  const mobileMenuRef = useRef<HTMLDetailsElement>(null)
+
   return (
     <header className="border-foreground/15 bg-background relative z-10 border-b">
       <nav
@@ -35,7 +40,7 @@ export default function Header() {
             </Link>
           ))}
         </div>
-        <details className="group relative lg:hidden">
+        <details ref={mobileMenuRef} className="group relative lg:hidden">
           <summary className="border-foreground/25 focus-visible:outline-accent cursor-pointer list-none border px-4 py-2 text-sm font-semibold focus-visible:outline-2">
             Menu <span aria-hidden="true">☰</span>
           </summary>
@@ -44,6 +49,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={() => mobileMenuRef.current?.removeAttribute('open')}
                 className="hover:bg-surface focus-visible:outline-accent block px-3 py-2 text-base font-medium focus-visible:outline-2"
               >
                 {link.label}
