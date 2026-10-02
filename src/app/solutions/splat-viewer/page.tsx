@@ -1,4 +1,5 @@
 import ContentLink from '@/app/components/ContentLink'
+import ContactCTA from '@/app/components/ContactCTA'
 import ProjectVideo from '@/app/components/ProjectVideo'
 import {
   apartmentRecognitionMedia,
@@ -189,6 +190,7 @@ export default function SplatViewer() {
           </ContentLink>
         </section>
       </div>
+      <ContactCTA />
     </main>
   )
 }

@@ -1,4 +1,5 @@
 import ContentLink from '@/app/components/ContentLink'
+import ContactCTA from '@/app/components/ContactCTA'
 import ProjectVideo from '@/app/components/ProjectVideo'
 import { luminousMedia } from '@/app/data/media'
 import type { Metadata } from 'next'
@@ -114,6 +115,7 @@ export default function Luminous() {
           </div>
         </section>
       </div>
+      <ContactCTA />
     </main>
   )
 }
