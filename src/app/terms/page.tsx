@@ -1,6 +1,6 @@
+import ContentLink from '@/app/components/ContentLink'
 import PageTemplate from '@/app/components/PageTemplate'
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Website terms',
@@ -28,9 +28,9 @@ export default function Terms() {
           content: (
             <>
               Our{' '}
-              <Link href="/privacy" className="text-accent underline">
+              <ContentLink href="/privacy" className="" variant="inline">
                 privacy policy
-              </Link>{' '}
+              </ContentLink>{' '}
               explains how information related to the site is handled.
             </>
           ),

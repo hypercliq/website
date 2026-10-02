@@ -1,23 +1,18 @@
-import Link from 'next/link'
+import ContentLink from '@/app/components/ContentLink'
 
 export default function About() {
   return (
     <section
-      className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-2 md:px-8 md:py-28"
+      className="site-container section-generous grid gap-10 md:grid-cols-2"
       aria-labelledby="about-title"
     >
       <div>
-        <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
-          Our approach
-        </p>
-        <h2
-          id="about-title"
-          className="mt-4 max-w-xl text-4xl font-semibold tracking-tight sm:text-5xl"
-        >
+        <p className="text-accent eyebrow">Our approach</p>
+        <h2 id="about-title" className="heading-section mt-4 max-w-xl">
           The work starts with understanding the problem.
         </h2>
       </div>
-      <div className="text-foreground/75 max-w-xl text-lg leading-8">
+      <div className="text-foreground/75 type-body max-w-xl">
         <p>
           Research and product teams often have more information than they can
           use. We help give that information structure, then build tools around
@@ -27,12 +22,13 @@ export default function About() {
           Our recent work includes 3D scans, XR, and construction technology.
           Earlier projects cover workplace health and product design.
         </p>
-        <Link
+        <ContentLink
           href="/about"
-          className="border-accent text-accent mt-7 inline-block border-b-2 pb-1 text-base font-semibold"
+          className="mt-7 inline-block text-base"
+          variant="action"
         >
-          About Hypercliq ↗
-        </Link>
+          About Hypercliq
+        </ContentLink>
       </div>
     </section>
   )

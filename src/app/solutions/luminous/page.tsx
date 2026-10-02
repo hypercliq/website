@@ -1,7 +1,7 @@
+import ContentLink from '@/app/components/ContentLink'
 import ProjectVideo from '@/app/components/ProjectVideo'
 import { luminousMedia } from '@/app/data/media'
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Spatial tools for LUMINOUS',
@@ -30,21 +30,16 @@ const contributions = [
 export default function Luminous() {
   return (
     <main>
-      <header className="border-foreground/15 bg-surface border-b">
-        <div className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24">
-          <Link
-            href="/solutions"
-            className="text-accent text-sm font-semibold hover:underline"
-          >
-            ← All projects
-          </Link>
-          <p className="text-accent mt-14 text-xs font-semibold tracking-[0.18em] uppercase">
-            Horizon Europe · LUMINOUS
-          </p>
-          <h1 className="mt-4 max-w-4xl text-4xl leading-tight font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+      <header className="border-divider bg-surface border-b">
+        <div className="site-container section-standard">
+          <ContentLink href="/solutions" variant="back">
+            All projects
+          </ContentLink>
+          <p className="text-accent eyebrow mt-14">Horizon Europe · LUMINOUS</p>
+          <h1 className="heading-project mt-4 max-w-4xl">
             Spatial tools for architectural review
           </h1>
-          <p className="text-foreground/75 mt-7 max-w-3xl text-xl leading-8">
+          <p className="text-foreground/75 type-intro mt-7 max-w-3xl">
             LUMINOUS is a Horizon Europe project building XR systems people can
             use through natural language. Hypercliq authored its system
             architecture and helps connect the voice, knowledge, and interaction
@@ -55,15 +50,13 @@ export default function Luminous() {
         </div>
       </header>
 
-      <div className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24">
+      <div className="site-container section-standard">
         <div className="mb-8 max-w-3xl">
-          <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
-            Use Case 3 · Ricoh capture
-          </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+          <p className="text-accent eyebrow">Use Case 3 · Ricoh capture</p>
+          <h2 className="heading-section-compact mt-3">
             From an E57 scan to a room model
           </h2>
-          <p className="text-foreground/75 mt-5 text-lg leading-8">
+          <p className="text-foreground/75 type-body mt-5">
             Ricoh captured the space. In this short video, our Splat Viewer
             opens the E57 file, lets us move through the scan, and identifies
             walls, floors, doors, windows, and rooms.
@@ -77,13 +70,10 @@ export default function Luminous() {
         </div>
 
         <section
-          className="border-foreground/15 mt-20 border-t pt-10"
+          className="border-divider mt-20 border-t pt-10"
           aria-labelledby="contributions-title"
         >
-          <h2
-            id="contributions-title"
-            className="text-3xl font-semibold tracking-tight"
-          >
+          <h2 id="contributions-title" className="heading-subsection">
             Hypercliq’s role
           </h2>
           <div className="mt-10 grid gap-10 md:grid-cols-3">
@@ -92,42 +82,34 @@ export default function Luminous() {
                 <p className="text-accent text-sm font-semibold">
                   {item.number}
                 </p>
-                <h3 className="mt-4 text-2xl font-semibold tracking-tight">
-                  {item.title}
-                </h3>
-                <p className="text-foreground/75 mt-4 leading-7">{item.text}</p>
+                <h3 className="heading-item mt-4">{item.title}</h3>
+                <p className="text-foreground/75 type-prose mt-4">
+                  {item.text}
+                </p>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="border-foreground/15 mt-20 grid gap-8 border-t pt-10 md:grid-cols-[1fr_2fr]">
-          <h2 className="text-3xl font-semibold tracking-tight">
-            About LUMINOUS
-          </h2>
-          <div className="max-w-2xl space-y-5 text-lg leading-8">
+        <section className="border-divider mt-20 grid gap-8 border-t pt-10 md:grid-cols-[1fr_2fr]">
+          <h2 className="heading-subsection">About LUMINOUS</h2>
+          <div className="type-body max-w-2xl space-y-5">
             <p>
               The project brings together partners to develop language-augmented
               XR systems. Its three pilots cover neurorehabilitation, safety
               training, and architectural design review.
             </p>
-            <p className="text-foreground/70 text-base leading-7">
+            <p className="text-foreground/70 type-prose text-base">
               LUMINOUS is funded by the European Union’s Horizon Europe
               programme under grant agreement 101135724.
             </p>
             <div className="flex flex-wrap gap-x-8 gap-y-3 text-base font-semibold">
-              <a
-                href="https://luminous-horizon.eu/"
-                className="border-accent text-accent border-b-2 pb-1"
-              >
-                LUMINOUS project ↗
-              </a>
-              <Link
-                href="/solutions/splat-viewer"
-                className="border-accent text-accent border-b-2 pb-1"
-              >
-                Explore Splat Viewer ↗
-              </Link>
+              <ContentLink href="https://luminous-horizon.eu/" variant="action">
+                LUMINOUS project
+              </ContentLink>
+              <ContentLink href="/solutions/splat-viewer" variant="action">
+                Explore Splat Viewer
+              </ContentLink>
             </div>
           </div>
         </section>

@@ -10,7 +10,7 @@ export default function ProjectVideo({
   compact?: boolean
 }) {
   return (
-    <figure className="bg-[#1b2a27]">
+    <figure className="media-panel">
       <video
         className="w-full object-contain"
         style={{
@@ -25,12 +25,12 @@ export default function ProjectVideo({
         <source src={media.src} type="video/mp4" />
         Your browser does not support HTML video.
       </video>
-      <figcaption className="px-5 py-3 text-sm leading-6 text-[#eff5ef]/80">
+      <figcaption className="media-muted px-5 py-3 text-sm leading-6">
         {caption}
       </figcaption>
       {!compact && (
-        <details className="border-t border-white/20 px-5 py-3 text-sm leading-6 text-[#eff5ef]/80">
-          <summary className="cursor-pointer font-semibold text-[#eff5ef]">
+        <details className="media-divider media-muted border-t px-5 py-3 text-sm leading-6">
+          <summary className="media-foreground cursor-pointer font-semibold">
             What the video shows
           </summary>
           <ol className="mt-4 list-decimal space-y-3 pl-5">

@@ -1,40 +1,40 @@
-import Link from 'next/link'
+import ContentLink from '@/app/components/ContentLink'
 
 export default function Hero() {
   return (
-    <section className="border-foreground/15 bg-surface border-b">
-      <div className="mx-auto grid max-w-7xl items-end gap-12 px-6 py-20 md:min-h-[40rem] md:grid-cols-[2fr_1fr] md:px-8 md:py-28">
+    <section className="border-divider bg-surface border-b">
+      <div className="site-container section-generous grid items-end gap-12 md:min-h-[40rem] md:grid-cols-[2fr_1fr]">
         <div>
-          <p className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">
+          <p className="text-accent eyebrow-brand">
             Hypercliq · Athens, Greece
           </p>
           <h1 className="mt-7 max-w-4xl text-5xl leading-[1.08] font-semibold tracking-tight sm:text-6xl lg:text-7xl">
             Thoughtful software for difficult data.
           </h1>
-          <p className="text-foreground/75 mt-8 max-w-2xl text-xl leading-8">
+          <p className="text-foreground/75 type-intro mt-8 max-w-2xl">
             We build spatial tools, data platforms, and research software with
             partners across Europe.
           </p>
           <div className="mt-10 flex flex-wrap gap-5">
-            <Link
+            <ContentLink
               href="/solutions"
-              className="bg-accent text-onAccent focus-visible:outline-accent inline-flex items-center px-6 py-3 font-semibold focus-visible:outline-2 focus-visible:outline-offset-4"
+              className="inline-flex items-center px-6 py-3"
+              variant="primary"
             >
-              See our work ↗
-            </Link>
-            <Link
+              See our work
+            </ContentLink>
+            <ContentLink
               href="/contact"
-              className="border-accent text-accent inline-flex items-center border-b-2 font-semibold"
+              className="inline-flex items-center"
+              variant="action"
             >
-              Get in touch ↗
-            </Link>
+              Get in touch
+            </ContentLink>
           </div>
         </div>
-        <div className="border-foreground/25 hidden border-t pt-5 md:block">
-          <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
-            Our focus
-          </p>
-          <p className="mt-4 text-lg leading-8">
+        <div className="border-control hidden border-t pt-5 md:block">
+          <p className="text-accent eyebrow">Our focus</p>
+          <p className="type-body mt-4">
             Clear structures. Useful interfaces. Careful implementation.
           </p>
         </div>

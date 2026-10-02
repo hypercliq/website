@@ -1,5 +1,5 @@
+import ContentLink from '@/app/components/ContentLink'
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 const sportInfinityPath =
   '/solutions/sustainable-design-data-management-platform'
@@ -13,20 +13,21 @@ export const metadata: Metadata = {
 
 export default function ResearchStrategyMoved() {
   return (
-    <main className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
-      <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
+    <main className="site-container section-generous">
+      <h1 className="heading-section max-w-3xl">
         Research strategy in Sport Infinity
       </h1>
-      <p className="text-foreground/75 mt-7 max-w-2xl text-lg leading-8">
+      <p className="text-foreground/75 type-body mt-7 max-w-2xl">
         Our research concept work is now described alongside the materials data
         platform we built for Sport Infinity.
       </p>
-      <Link
+      <ContentLink
         href={sportInfinityPath}
-        className="border-accent text-accent mt-8 inline-block border-b-2 pb-1 font-semibold"
+        className="mt-8 inline-block"
+        variant="action"
       >
-        Read the Sport Infinity case study ↗
-      </Link>
+        Read the Sport Infinity case study
+      </ContentLink>
     </main>
   )
 }

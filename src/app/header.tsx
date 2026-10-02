@@ -22,14 +22,14 @@ export default function Header() {
   )?.href
 
   return (
-    <header className="border-foreground/15 bg-background relative z-10 border-b">
+    <header className="border-divider bg-background relative z-10 border-b">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between gap-8 px-6 py-5 md:px-8"
+        className="site-container flex items-center justify-between gap-8 py-5"
         aria-label="Main navigation"
       >
         <Link
           href="/"
-          className="focus-visible:outline-accent block h-8 w-40 shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4"
+          className="block h-8 w-40 shrink-0"
           aria-label="Hypercliq home"
         >
           <LogoSVG />
@@ -49,7 +49,7 @@ export default function Header() {
                       ? 'location'
                       : undefined
                 }
-                className={`focus-visible:outline-accent text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-4 ${isActive ? 'text-accent underline decoration-2 underline-offset-8' : 'text-foreground/75 hover:text-accent'}`}
+                className={`nav-link hover:text-accent text-sm font-medium ${isActive ? 'nav-link-active text-accent' : 'text-foreground/75'}`}
               >
                 {link.label}
               </Link>
@@ -57,10 +57,10 @@ export default function Header() {
           })}
         </div>
         <details ref={mobileMenuRef} className="group relative lg:hidden">
-          <summary className="border-foreground/25 focus-visible:outline-accent cursor-pointer list-none border px-4 py-2 text-sm font-semibold focus-visible:outline-2">
+          <summary className="border-control cursor-pointer list-none border px-4 py-2 text-sm font-semibold">
             Menu <span aria-hidden="true">☰</span>
           </summary>
-          <div className="border-foreground/20 bg-background absolute top-full right-0 mt-3 w-56 border p-3 shadow-lg">
+          <div className="border-boundary bg-background absolute top-full right-0 mt-3 w-56 border p-3 shadow-lg">
             {links.map((link) => {
               const isActive = currentSection === link.href
 
@@ -76,7 +76,7 @@ export default function Header() {
                         : undefined
                   }
                   onClick={() => mobileMenuRef.current?.removeAttribute('open')}
-                  className={`focus-visible:outline-accent block px-3 py-2 text-base font-medium focus-visible:outline-2 ${isActive ? 'bg-surface text-accent' : 'hover:bg-surface'}`}
+                  className={`nav-link hover:text-accent block px-3 py-2 text-base font-medium ${isActive ? 'bg-surface text-accent' : 'hover:bg-surface'}`}
                 >
                   {link.label}
                 </Link>

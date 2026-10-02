@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import ContentLink from '@/app/components/ContentLink'
 
 const services = [
   {
@@ -22,49 +22,43 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28"
+      className="site-container section-generous"
       aria-labelledby="services-title"
     >
       <div className="grid gap-10 md:grid-cols-2">
         <div>
-          <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
-            What we do
-          </p>
-          <h2
-            id="services-title"
-            className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl"
-          >
+          <p className="text-accent eyebrow">What we do</p>
+          <h2 id="services-title" className="heading-section mt-4">
             From data to working software.
           </h2>
         </div>
-        <p className="text-foreground/75 max-w-lg text-lg leading-8">
+        <p className="text-foreground/75 type-body max-w-lg">
           We work with partners from the first questions through to a usable
           system. Our projects often bring together data engineering, design,
           and research.
         </p>
       </div>
-      <div className="border-foreground/15 mt-14 grid border-t md:grid-cols-3">
+      <div className="border-divider mt-14 grid border-t md:grid-cols-3">
         {services.map((service) => (
           <div
             key={service.number}
-            className="border-foreground/15 border-b py-8 md:pr-10"
+            className="border-divider border-b py-8 md:pr-10"
           >
             <p className="text-accent text-sm font-semibold">
               {service.number}
             </p>
-            <h3 className="mt-5 text-2xl font-semibold tracking-tight">
-              {service.title}
-            </h3>
-            <p className="text-foreground/75 mt-4 leading-7">{service.text}</p>
+            <h3 className="heading-item mt-5">{service.title}</h3>
+            <p className="text-foreground/75 type-prose mt-4">{service.text}</p>
           </div>
         ))}
       </div>
-      <Link
+      <ContentLink
         href="/services"
-        className="border-accent text-accent mt-10 inline-block border-b-2 pb-1 font-semibold"
+        className="mt-10 inline-block"
+        variant="action"
       >
-        More about our services ↗
-      </Link>
+        More about our services
+      </ContentLink>
     </section>
   )
 }

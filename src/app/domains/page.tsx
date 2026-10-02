@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import ContentLink from '@/app/components/ContentLink'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -37,45 +37,42 @@ const domains = [
 export default function Domains() {
   return (
     <main>
-      <header className="border-foreground/15 bg-surface border-b">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
-          <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
-            Areas of work
-          </p>
-          <h1 className="mt-4 max-w-4xl text-5xl font-semibold tracking-tight sm:text-6xl">
+      <header className="border-divider bg-surface border-b">
+        <div className="site-container section-generous">
+          <p className="text-accent eyebrow">Areas of work</p>
+          <h1 className="heading-page mt-4 max-w-4xl">
             Different fields. Similar questions about data.
           </h1>
-          <p className="text-foreground/75 mt-7 max-w-2xl text-xl leading-8">
+          <p className="text-foreground/75 type-intro mt-7 max-w-2xl">
             Our methods travel across sectors. The details come from working
             closely with people who know each field.
           </p>
         </div>
       </header>
       <section
-        className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24"
+        className="site-container section-standard"
         aria-label="Areas of work"
       >
         <div className="grid gap-x-16 md:grid-cols-2">
           {domains.map((domain, index) => (
             <article
               key={domain.name}
-              className="border-foreground/20 border-t py-8 md:py-10"
+              className="border-boundary border-t py-8 md:py-10"
             >
               <span className="text-accent text-sm font-semibold">
                 0{index + 1}
               </span>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight">
-                {domain.name}
-              </h2>
-              <p className="text-foreground/75 mt-4 max-w-lg leading-7">
+              <h2 className="heading-subsection mt-4">{domain.name}</h2>
+              <p className="text-foreground/75 type-prose mt-4 max-w-lg">
                 {domain.detail}
               </p>
-              <Link
+              <ContentLink
                 href={domain.link}
-                className="border-accent text-accent mt-6 inline-block border-b pb-1 font-semibold"
+                className="mt-6 inline-block"
+                variant="action"
               >
-                See related work ↗
-              </Link>
+                See related work
+              </ContentLink>
             </article>
           ))}
         </div>

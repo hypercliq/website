@@ -1,5 +1,5 @@
+import ContentLink from '@/app/components/ContentLink'
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import PageTemplate from '@/app/components/PageTemplate'
 import { company } from '@/app/data/company'
 
@@ -20,19 +20,19 @@ export default function Privacy() {
             <>
               We do not run analytics or advertising trackers on this site. It
               is hosted on GitHub Pages, which{' '}
-              <a
-                className="text-accent underline"
+              <ContentLink
                 href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages"
+                variant="inline"
               >
                 logs visitors&apos; IP addresses for security
-              </a>
+              </ContentLink>
               . GitHub describes its handling of that information in its{' '}
-              <a
-                className="text-accent underline"
+              <ContentLink
                 href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+                variant="inline"
               >
                 privacy statement
-              </a>
+              </ContentLink>
               .
             </>
           ),
@@ -47,9 +47,9 @@ export default function Privacy() {
           content: (
             <>
               The theme control stores your choice in your browser. See our{' '}
-              <Link href="/cookies" className="text-accent underline">
+              <ContentLink href="/cookies" className="" variant="inline">
                 cookie policy
-              </Link>{' '}
+              </ContentLink>{' '}
               for details.
             </>
           ),
