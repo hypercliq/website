@@ -1,5 +1,6 @@
 import FeaturedLuminous from '@/app/components/FeaturedLuminous'
 import FeaturedSplatViewer from '@/app/components/FeaturedSplatViewer'
+import ContentLink from '@/app/components/ContentLink'
 import ProjectCard from '@/app/components/ProjectCard'
 import { caseStudyProjects } from '@/app/data/projects'
 import type { Metadata } from 'next'
@@ -38,6 +39,9 @@ export default function Solutions() {
             <ProjectCard key={project.slug} project={project} />
           ))}
         </div>
+        <ContentLink href="/contact" variant="action" className="mt-8 w-fit">
+          Discuss a project
+        </ContentLink>
       </section>
     </main>
   )
