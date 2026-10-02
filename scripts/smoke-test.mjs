@@ -35,6 +35,7 @@ if (htmlFiles.length === 0)
 for (const route of [
   '/',
   '/solutions',
+  '/solutions/innovation-concept-consulting',
   '/solutions/luminous',
   '/solutions/splat-viewer',
 ]) {
