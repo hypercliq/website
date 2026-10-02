@@ -40,7 +40,7 @@ const people = [
 
 export default function About() {
   return (
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <header className="border-divider bg-surface border-b">
         <div className="site-container section-generous">
           <p className="text-accent eyebrow">About Hypercliq</p>

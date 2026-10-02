@@ -57,7 +57,7 @@ const recognitionDemos = [
 
 export default function SplatViewer() {
   return (
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <header className="border-divider bg-surface border-b">
         <div className="site-container section-standard">
           <ContentLink href="/solutions" variant="back">

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <main className="min-h-[65vh]">
+    <main id="main-content" tabIndex={-1} className="min-h-[65vh]">
       <header className="border-divider bg-surface border-b">
         <div className="site-container section-generous">
           <p className="text-accent eyebrow">Contact</p>

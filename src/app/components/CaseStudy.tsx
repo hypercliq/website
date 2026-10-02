@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function CaseStudy({ project }: { project: CaseStudyProject }) {
   return (
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <div className="border-divider bg-surface border-b">
         <div className="site-container section-standard">
           <ContentLink href="/solutions" variant="back">

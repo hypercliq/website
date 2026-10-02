@@ -13,7 +13,11 @@ export const metadata: Metadata = {
 
 export default function ResearchStrategyMoved() {
   return (
-    <main className="site-container section-generous">
+    <main
+      id="main-content"
+      tabIndex={-1}
+      className="site-container section-generous"
+    >
       <h1 className="heading-section max-w-3xl">
         Research strategy in Sport Infinity
       </h1>

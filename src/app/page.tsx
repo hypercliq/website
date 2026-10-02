@@ -6,7 +6,7 @@ import Solutions from '@/app/sections/solutions'
 
 export default function Home() {
   return (
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <Hero />
       <About />
       <Services />
