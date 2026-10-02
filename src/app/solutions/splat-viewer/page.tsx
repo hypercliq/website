@@ -72,13 +72,17 @@ export default function SplatViewer() {
             building geometry. We developed its scan processing workflow for
             LUMINOUS’s architectural design review pilot.
           </p>
-          <ContentLink
-            href="/solutions/luminous"
-            className="mt-8 inline-block"
-            variant="action"
-          >
-            Explore the LUMINOUS work
-          </ContentLink>
+          <p className="text-foreground/75 type-body mt-5 max-w-3xl">
+            Splat Viewer is actively evolving and used internally and in
+            projects, including our work on{' '}
+            <ContentLink href="/solutions/luminous" variant="inline">
+              LUMINOUS
+            </ContentLink>
+            . It isn’t generally available yet. Curious about the tool?{' '}
+            <ContentLink href="/contact" variant="inline">
+              Get in touch
+            </ContentLink>
+          </p>
         </div>
       </header>
 
