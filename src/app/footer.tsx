@@ -34,7 +34,7 @@ const groups = [
 export default function Footer() {
   return (
     <footer className="border-divider bg-background border-t">
-      <div className="site-container py-16 md:py-20">
+      <div className="site-container pt-16 pb-[max(5rem,calc(3rem+env(safe-area-inset-bottom)))] md:pt-20">
         <div className="grid gap-12 md:grid-cols-[2fr_3fr]">
           <div>
             <Link

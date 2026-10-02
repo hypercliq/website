@@ -29,6 +29,7 @@ export default function Header() {
       >
         <Link
           href="/"
+          data-site-top-link
           className="block h-8 w-40 shrink-0"
           aria-label="Hypercliq home"
         >

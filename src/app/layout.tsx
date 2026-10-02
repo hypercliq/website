@@ -1,3 +1,4 @@
+import BackToTop from '@/app/components/BackToTop'
 import ContentLink from '@/app/components/ContentLink'
 import ThemeProvider from '@/app/components/ThemeProvider'
 import Footer from '@/app/footer'
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <Header />
           {children}
           <Footer />
+          <BackToTop />
         </ThemeProvider>
       </body>
     </html>

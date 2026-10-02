@@ -57,7 +57,7 @@ body {
 }
 
 @layer base {
-  :where(a, summary, select):focus-visible {
+  :where(a, summary, select, .floating-control):focus-visible {
     outline: 2px solid var(--focus-color);
     outline-offset: 4px;
   }
@@ -73,6 +73,21 @@ body {
   }
   .skip-link:focus {
     transform: none;
+  }
+
+  .floating-control {
+    position: fixed;
+    z-index: 20;
+    inset-inline-end: max(1rem, env(safe-area-inset-right));
+    inset-block-end: max(1rem, env(safe-area-inset-bottom));
+    display: grid;
+    inline-size: 3rem;
+    block-size: 3rem;
+    place-items: center;
+    border: 0;
+    border-radius: 9999px;
+    background: var(--site-accent);
+    cursor: pointer;
   }
 
   .site-container {
