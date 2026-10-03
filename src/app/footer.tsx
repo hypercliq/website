@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
         <div className="border-divider text-foreground/65 mt-16 flex flex-col gap-6 border-t pt-7 text-sm sm:flex-row sm:items-center sm:justify-between">
           <p>© Hypercliq</p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-6">
             <ContentLink
               href="https://www.linkedin.com/company/hypercliq"
               target="_blank"
