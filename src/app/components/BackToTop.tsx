@@ -15,9 +15,16 @@ function focusSiteTop() {
   })
 }
 
-export default function BackToTop() {
-  const pathname = usePathname()
-  return <BackToTopControl key={pathname} />
+function handleClick() {
+  const reducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)',
+  ).matches
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: reducedMotion ? 'auto' : 'smooth',
+  })
+  focusSiteTop()
 }
 
 function BackToTopControl() {
@@ -78,13 +85,6 @@ function BackToTopControl() {
     }
   }, [updateVisibility])
 
-  function handleClick() {
-    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
-    focusSiteTop()
-    visibleRef.current = false
-    setVisible(false)
-  }
-
   if (!visible) return null
 
   return (
@@ -110,4 +110,9 @@ function BackToTopControl() {
       </svg>
     </button>
   )
+}
+
+export default function BackToTop() {
+  const pathname = usePathname()
+  return <BackToTopControl key={pathname} />
 }
