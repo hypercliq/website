@@ -14,6 +14,7 @@ const pages = [
   '/about',
   '/careers',
   '/contact',
+  '/site-map',
   '/privacy',
   '/terms',
   '/cookies',

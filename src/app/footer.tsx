@@ -24,6 +24,7 @@ const groups = [
   {
     label: 'Information',
     links: [
+      ['Site map', '/site-map'],
       ['Privacy', '/privacy'],
       ['Cookies', '/cookies'],
       ['Terms', '/terms'],
