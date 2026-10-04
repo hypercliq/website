@@ -8,9 +8,9 @@ const groups = [
   {
     label: 'Explore',
     links: [
-      ['Work', '/solutions'],
+      ['Work', '/work'],
       ['Services', '/services'],
-      ['Fields', '/domains'],
+      ['Fields', '/fields'],
     ],
   },
   {

@@ -13,7 +13,7 @@ export default function ProjectCard({
 
   return (
     <Link
-      href={`/solutions/${project.slug}`}
+      href={`/work/${project.slug}`}
       className="project-card border-divider bg-background block border"
     >
       <div className="bg-surface aspect-[3/2] overflow-hidden">

@@ -17,7 +17,7 @@ export default function Hero() {
           </p>
           <div className="mt-10 flex flex-wrap gap-5">
             <ContentLink
-              href="/solutions"
+              href="/work"
               className="inline-flex items-center px-6 py-3"
               variant="primary"
             >

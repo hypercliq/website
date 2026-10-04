@@ -8,7 +8,7 @@ export default function CaseStudy({ project }: { project: CaseStudyProject }) {
     <main id="main-content" tabIndex={-1}>
       <div className="border-divider bg-surface border-b">
         <div className="site-container section-standard">
-          <ContentLink href="/solutions" variant="back">
+          <ContentLink href="/work" variant="back">
             All projects
           </ContentLink>
           <p className="text-accent eyebrow mt-14">{project.field}</p>

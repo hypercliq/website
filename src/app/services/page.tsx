@@ -12,7 +12,7 @@ const services = [
     title: 'Spatial data and visualization',
     body: 'We build tools to inspect 3D scans, Gaussian splats, and other complex data. Our current work includes viewing captured spaces, measuring them, and extracting building geometry.',
     example: {
-      href: '/solutions/splat-viewer',
+      href: '/work/splat-viewer',
       label: 'See Splat Viewer',
     },
   },
@@ -20,7 +20,7 @@ const services = [
     title: 'Data platforms',
     body: 'We design the structure behind complex information: how it is collected, connected, searched, and kept useful. The result may be a repository, a research platform, or a product data system.',
     example: {
-      href: '/solutions/sustainable-design-data-management-platform',
+      href: '/work/sustainable-design-data-management-platform',
       label: 'See the Sport Infinity platform',
     },
   },
@@ -28,7 +28,7 @@ const services = [
     title: 'Research software and applied AI',
     body: 'We develop software for research projects, including machine learning workflows when the task calls for them. We pay attention to the data, the task, and how people review the output.',
     example: {
-      href: '/solutions/visual-repository-for-agricultural-rd-innovation',
+      href: '/work/visual-repository-for-agricultural-rd-innovation',
       label: 'See the agricultural research repository',
     },
   },
@@ -36,7 +36,7 @@ const services = [
     title: 'Research and technical consulting',
     body: 'We help shape technical approaches, system architectures, and collaborative research proposals. Our portfolio includes work in European research programmes.',
     example: {
-      href: '/solutions/system-architecture-design-for-construction-automation',
+      href: '/work/system-architecture-design-for-construction-automation',
       label: 'See the HumanTech architecture work',
     },
   },

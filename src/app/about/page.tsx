@@ -69,7 +69,7 @@ export default function About() {
               technology, alongside earlier projects in workplace health and
               product design.
             </p>
-            <ContentLink href="/solutions" variant="action">
+            <ContentLink href="/work" variant="action">
               See our work
             </ContentLink>
           </div>

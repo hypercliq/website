@@ -1,8 +1,7 @@
 import ContentLink from '@/app/components/ContentLink'
 import type { Metadata } from 'next'
 
-const sportInfinityPath =
-  '/solutions/sustainable-design-data-management-platform'
+const sportInfinityPath = '/work/sustainable-design-data-management-platform'
 
 export const metadata: Metadata = {
   title: 'Research concept and funding support',

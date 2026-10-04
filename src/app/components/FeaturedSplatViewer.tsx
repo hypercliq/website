@@ -20,7 +20,7 @@ export default function FeaturedSplatViewer() {
           LUMINOUS Pilot 3 and continue to extend it for other 3DGS work.
         </p>
         <ContentLink
-          href="/solutions/splat-viewer"
+          href="/work/splat-viewer"
           className="mt-8 w-fit"
           variant="action"
         >

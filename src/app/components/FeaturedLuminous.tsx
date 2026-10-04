@@ -20,7 +20,7 @@ export default function FeaturedLuminous() {
           video shows the viewer processing a scan captured by Ricoh.
         </p>
         <ContentLink
-          href="/solutions/luminous"
+          href="/work/luminous"
           className="mt-8 w-fit"
           variant="action"
         >

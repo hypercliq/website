@@ -6,9 +6,9 @@ import { usePathname } from 'next/navigation'
 import { useRef } from 'react'
 
 const links = [
-  { label: 'Work', href: '/solutions' },
+  { label: 'Work', href: '/work' },
   { label: 'Services', href: '/services' },
-  { label: 'Fields', href: '/domains' },
+  { label: 'Fields', href: '/fields' },
   { label: 'About', href: '/about' },
   { label: 'Careers', href: '/careers' },
   { label: 'Contact', href: '/contact' },

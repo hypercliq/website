@@ -8,7 +8,7 @@ const featuredProjects = [
     category: '3D Gaussian splats · LiDAR',
     description:
       'Explore captured spaces and follow an apartment through renovation.',
-    href: '/solutions/splat-viewer',
+    href: '/work/splat-viewer',
     linkLabel: 'Explore Splat Viewer',
     media: renovationMedia,
     caption: '1 min · Apartment renovation stages',
@@ -18,7 +18,7 @@ const featuredProjects = [
     category: 'LUMINOUS · Pilot 3',
     description:
       'See an E57 scan become a room model for architectural review.',
-    href: '/solutions/luminous',
+    href: '/work/luminous',
     linkLabel: 'Explore the LUMINOUS work',
     media: luminousMedia,
     caption: '44 sec · Scan captured by Ricoh',
@@ -39,7 +39,7 @@ export default function Solutions() {
               Work you can look through.
             </h2>
           </div>
-          <ContentLink href="/solutions" className="w-fit" variant="action">
+          <ContentLink href="/work" className="w-fit" variant="action">
             All projects
           </ContentLink>
         </div>
