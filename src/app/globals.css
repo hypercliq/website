@@ -43,6 +43,8 @@ body {
 
 :root {
   /* Em offsets scale with Inter and large contact details. */
+  --link-inline-thickness: 1px;
+  --link-inline-offset: 0.2em;
   --link-card-title-thickness: 1px;
   --link-card-title-offset: 0.2em;
   --link-action-thickness: 2px;
@@ -162,6 +164,9 @@ body {
   }
   .content-link-inline {
     font-weight: inherit;
+    text-decoration-line: underline;
+    text-decoration-thickness: var(--link-inline-thickness);
+    text-underline-offset: var(--link-inline-offset);
   }
   .content-link-action,
   .content-link-back {
