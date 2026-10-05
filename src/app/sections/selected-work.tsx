@@ -25,7 +25,7 @@ const featuredProjects = [
   },
 ]
 
-export default function Solutions() {
+export default function SelectedWork() {
   return (
     <section
       className="border-divider bg-surface section-generous border-t"
