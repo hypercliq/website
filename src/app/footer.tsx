@@ -1,3 +1,4 @@
+import ContentLink from '@/app/components/ContentLink'
 import LogoSVG from '@/app/components/LogoSVG'
 import ThemeSwitcher from '@/app/components/ThemeSwitcher'
 import { company } from '@/app/data/company'
@@ -7,9 +8,9 @@ const groups = [
   {
     label: 'Explore',
     links: [
-      ['Work', '/solutions'],
+      ['Work', '/work'],
       ['Services', '/services'],
-      ['Fields', '/domains'],
+      ['Fields', '/fields'],
     ],
   },
   {
@@ -23,6 +24,7 @@ const groups = [
   {
     label: 'Information',
     links: [
+      ['Site map', '/site-map'],
       ['Privacy', '/privacy'],
       ['Cookies', '/cookies'],
       ['Terms', '/terms'],
@@ -32,8 +34,8 @@ const groups = [
 
 export default function Footer() {
   return (
-    <footer className="border-foreground/15 bg-background border-t">
-      <div className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-20">
+    <footer className="border-divider bg-background border-t">
+      <div className="site-container pt-16 pb-[max(5rem,calc(3rem+env(safe-area-inset-bottom)))] md:pt-20">
         <div className="grid gap-12 md:grid-cols-[2fr_3fr]">
           <div>
             <Link
@@ -43,32 +45,32 @@ export default function Footer() {
             >
               <LogoSVG />
             </Link>
-            <p className="text-foreground/75 mt-6 max-w-xs leading-7">
+            <p className="text-foreground/75 type-prose mt-6 max-w-xs">
               Spatial tools, data systems, and research software. Based in
               Athens, working across Europe.
             </p>
-            <a
+            <ContentLink
               href={`mailto:${company.email}`}
-              className="border-accent text-accent mt-5 inline-block border-b pb-1 font-semibold"
+              className="mt-5 inline-block font-semibold"
+              variant="action"
             >
               {company.email}
-            </a>
+            </ContentLink>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
             {groups.map((group) => (
               <div key={group.label}>
-                <h2 className="text-accent text-xs font-semibold tracking-[0.16em] uppercase">
-                  {group.label}
-                </h2>
+                <h2 className="text-accent eyebrow-compact">{group.label}</h2>
                 <ul className="mt-5 space-y-3">
                   {group.links.map(([label, href]) => (
                     <li key={href}>
-                      <Link
+                      <ContentLink
                         href={href}
-                        className="text-foreground/75 hover:text-foreground text-sm hover:underline"
+                        className="text-foreground/75 hover:text-accent text-sm"
+                        variant="nav"
                       >
                         {label}
-                      </Link>
+                      </ContentLink>
                     </li>
                   ))}
                 </ul>
@@ -76,25 +78,25 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="border-foreground/15 text-foreground/65 mt-16 flex flex-col gap-6 border-t pt-7 text-sm sm:flex-row sm:items-center sm:justify-between">
+        <div className="border-divider text-foreground/65 mt-16 flex flex-col gap-6 border-t pt-7 text-sm sm:flex-row sm:items-center sm:justify-between">
           <p>© Hypercliq</p>
-          <div className="flex items-center gap-6">
-            <a
+          <div className="flex flex-wrap items-center gap-6">
+            <ContentLink
               href="https://www.linkedin.com/company/hypercliq"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-foreground"
+              variant="nav"
             >
-              LinkedIn ↗
-            </a>
-            <a
+              LinkedIn
+            </ContentLink>
+            <ContentLink
               href="https://github.com/hypercliq"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-foreground"
+              variant="nav"
             >
-              GitHub ↗
-            </a>
+              GitHub
+            </ContentLink>
             <ThemeSwitcher />
           </div>
         </div>

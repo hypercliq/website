@@ -1,3 +1,5 @@
+import BackToTop from '@/app/components/BackToTop'
+import ContentLink from '@/app/components/ContentLink'
 import ThemeProvider from '@/app/components/ThemeProvider'
 import Footer from '@/app/footer'
 import '@/app/globals.css'
@@ -26,9 +28,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider>
+          <ContentLink
+            href="#main-content"
+            variant="nav"
+            className="skip-link bg-surface px-6 py-3 font-semibold"
+          >
+            Skip to content
+          </ContentLink>
           <Header />
           {children}
           <Footer />
+          <BackToTop />
         </ThemeProvider>
       </body>
     </html>

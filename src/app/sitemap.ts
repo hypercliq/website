@@ -6,14 +6,15 @@ export const dynamic = 'force-static'
 const siteUrl = 'https://hypercliq.com'
 const pages = [
   '/',
-  '/domains',
+  '/fields',
   '/services',
-  '/solutions',
-  '/solutions/luminous',
-  '/solutions/splat-viewer',
+  '/work',
+  '/work/luminous',
+  '/work/splat-viewer',
   '/about',
   '/careers',
   '/contact',
+  '/site-map',
   '/privacy',
   '/terms',
   '/cookies',
@@ -23,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...pages.map((path) => ({ url: `${siteUrl}${path}` })),
     ...caseStudyProjects.map((project) => ({
-      url: `${siteUrl}/solutions/${project.slug}`,
+      url: `${siteUrl}/work/${project.slug}`,
     })),
   ]
 }

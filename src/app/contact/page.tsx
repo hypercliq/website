@@ -1,3 +1,4 @@
+import ContentLink from '@/app/components/ContentLink'
 import { company } from '@/app/data/company'
 import type { Metadata } from 'next'
 
@@ -8,62 +9,60 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <main className="min-h-[65vh]">
-      <header className="border-foreground/15 bg-surface border-b">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
-          <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
-            Contact
-          </p>
-          <h1 className="mt-4 max-w-4xl text-5xl font-semibold tracking-tight sm:text-6xl">
+    <main id="main-content" tabIndex={-1} className="min-h-[65vh]">
+      <header className="border-divider bg-surface border-b">
+        <div className="site-container section-generous">
+          <p className="text-accent eyebrow">Contact</p>
+          <h1 className="heading-page mt-4 max-w-4xl">
             Tell us what you are working on.
           </h1>
-          <p className="text-foreground/75 mt-7 max-w-2xl text-xl leading-8">
+          <p className="text-foreground/75 type-intro mt-7 max-w-2xl">
             A short email is enough to start a conversation. We read messages
             about projects, research collaborations, and technical questions.
           </p>
         </div>
       </header>
       <section
-        className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24"
+        className="site-container section-standard"
         aria-label="Contact details"
       >
-        <div className="border-foreground/20 grid border-t md:grid-cols-2">
+        <div className="border-boundary grid border-t md:grid-cols-2">
           <div className="py-8 md:py-10">
-            <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
-              Email
-            </p>
-            <a
+            <p className="text-accent eyebrow">Email</p>
+            <ContentLink
               href={`mailto:${company.email}`}
-              className="decoration-accent mt-4 inline-block text-2xl font-semibold tracking-tight underline underline-offset-8"
+              className="mt-4 inline-block text-2xl font-semibold tracking-tight"
+              variant="action"
             >
               {company.email}
-            </a>
-            <p className="text-accent mt-8 text-xs font-semibold tracking-[0.18em] uppercase">
-              Phone
-            </p>
-            <a href={company.phoneHref} className="mt-4 inline-block text-xl">
+            </ContentLink>
+            <p className="text-accent eyebrow mt-8">Phone</p>
+            <ContentLink
+              href={company.phoneHref}
+              className="mt-4 inline-block text-xl"
+              variant="action"
+            >
               {company.phone}
-            </a>
+            </ContentLink>
           </div>
-          <div className="border-foreground/20 border-t py-8 md:border-t-0 md:border-l md:py-10 md:pl-12">
-            <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
-              Office
-            </p>
-            <address className="mt-4 text-xl leading-8 not-italic">
+          <div className="border-boundary border-t py-8 md:border-t-0 md:border-l md:py-10 md:pl-12">
+            <p className="text-accent eyebrow">Office</p>
+            <address className="type-intro mt-4 not-italic">
               {company.addressLines.map((line) => (
                 <span key={line} className="block">
                   {line}
                 </span>
               ))}
             </address>
-            <a
-              className="border-accent text-accent mt-7 inline-block border-b pb-1 font-semibold"
+            <ContentLink
+              className="mt-7 inline-block"
               href="https://www.openstreetmap.org/?mlat=37.99805&mlon=23.77473#map=17/37.99805/23.77473"
               target="_blank"
               rel="noopener noreferrer"
+              variant="action"
             >
-              View on OpenStreetMap ↗
-            </a>
+              View on OpenStreetMap
+            </ContentLink>
           </div>
         </div>
       </section>

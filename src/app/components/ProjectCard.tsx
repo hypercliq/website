@@ -13,8 +13,8 @@ export default function ProjectCard({
 
   return (
     <Link
-      href={`/solutions/${project.slug}`}
-      className="group border-foreground/15 bg-background focus-visible:outline-accent block border focus-visible:outline-2 focus-visible:outline-offset-4"
+      href={`/work/${project.slug}`}
+      className="project-card border-divider bg-background block border"
     >
       <div className="bg-surface aspect-[3/2] overflow-hidden">
         <Image
@@ -25,15 +25,16 @@ export default function ProjectCard({
         />
       </div>
       <div className="p-6 md:p-8">
-        <p className="text-accent text-xs font-semibold tracking-[0.16em] uppercase">
-          {project.field}
-        </p>
-        <Heading className="mt-3 text-2xl leading-tight font-semibold tracking-tight group-hover:underline group-hover:underline-offset-4">
+        <p className="text-accent eyebrow-compact">{project.field}</p>
+        <Heading className="project-card-title mt-3 text-2xl leading-tight font-semibold tracking-tight">
           {project.title}
         </Heading>
-        <p className="text-foreground/75 mt-3 leading-7">{project.summary}</p>
+        <p className="text-foreground/75 type-prose mt-3">{project.summary}</p>
         <span className="text-accent mt-6 inline-block text-sm font-semibold">
-          View project <span aria-hidden="true">↗</span>
+          View{' '}
+          <span className="link-ending">
+            project<span aria-hidden="true">&nbsp;→</span>
+          </span>
         </span>
       </div>
     </Link>

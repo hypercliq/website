@@ -1,3 +1,4 @@
+import ContentLink from '@/app/components/ContentLink'
 import { staticImage } from '@/app/data/image'
 import type { Metadata } from 'next'
 import Image from 'next/image'
@@ -39,25 +40,23 @@ const people = [
 
 export default function About() {
   return (
-    <main>
-      <header className="border-foreground/15 bg-surface border-b">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
-          <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
-            About Hypercliq
-          </p>
-          <h1 className="mt-4 max-w-4xl text-5xl font-semibold tracking-tight sm:text-6xl">
+    <main id="main-content" tabIndex={-1}>
+      <header className="border-divider bg-surface border-b">
+        <div className="site-container section-generous">
+          <p className="text-accent eyebrow">About Hypercliq</p>
+          <h1 className="heading-page mt-4 max-w-4xl">
             A small team for complex work.
           </h1>
-          <p className="text-foreground/75 mt-7 max-w-2xl text-xl leading-8">
+          <p className="text-foreground/75 type-intro mt-7 max-w-2xl">
             Founded in 2011, Hypercliq designs data systems and research
             software. We work from Athens with partners across Europe.
           </p>
         </div>
       </header>
-      <section className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24">
+      <section className="site-container section-standard">
         <div className="grid gap-12 md:grid-cols-[1fr_2fr]">
-          <h2 className="text-3xl font-semibold tracking-tight">How we work</h2>
-          <div className="text-foreground/75 max-w-2xl space-y-5 text-lg leading-8">
+          <h2 className="heading-subsection">How we work</h2>
+          <div className="text-foreground/75 type-body max-w-2xl space-y-5">
             <p>
               We bring software engineering, data work, and research experience
               into the same conversation. Our role changes with the project:
@@ -70,14 +69,15 @@ export default function About() {
               technology, alongside earlier projects in workplace health and
               product design.
             </p>
+            <ContentLink href="/work" variant="action">
+              See our work
+            </ContentLink>
           </div>
         </div>
       </section>
-      <section className="border-foreground/15 bg-surface border-t">
-        <div className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24">
-          <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
-            People
-          </p>
+      <section className="border-divider bg-surface border-t">
+        <div className="site-container section-standard">
+          <p className="text-accent eyebrow">People</p>
           <h2 className="mt-4 text-4xl font-semibold tracking-tight">
             The founders
           </h2>
@@ -85,7 +85,7 @@ export default function About() {
             {people.map((person) => (
               <article
                 key={person.name}
-                className="border-foreground/20 border-t pt-6"
+                className="border-boundary border-t pt-6"
               >
                 <Image
                   src={person.image}
@@ -93,23 +93,22 @@ export default function About() {
                   className="h-40 w-40 rounded-full object-cover grayscale"
                   sizes="160px"
                 />
-                <p className="text-accent mt-6 text-xs font-semibold tracking-[0.16em] uppercase">
+                <p className="text-accent eyebrow-compact mt-6">
                   {person.role}
                 </p>
-                <h3 className="mt-2 text-2xl font-semibold tracking-tight">
-                  {person.name}
-                </h3>
-                <p className="text-foreground/75 mt-3 leading-7">
+                <h3 className="heading-item mt-2">{person.name}</h3>
+                <p className="text-foreground/75 type-prose mt-3">
                   {person.detail}
                 </p>
-                <a
+                <ContentLink
                   href={person.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-accent text-accent mt-5 inline-block border-b pb-1 font-semibold"
+                  className="mt-5 inline-block"
+                  variant="action"
                 >
-                  LinkedIn ↗
-                </a>
+                  LinkedIn
+                </ContentLink>
               </article>
             ))}
           </div>

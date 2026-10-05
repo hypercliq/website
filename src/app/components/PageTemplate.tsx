@@ -1,5 +1,5 @@
+import ContentLink from '@/app/components/ContentLink'
 import { company } from '@/app/data/company'
-import Link from 'next/link'
 
 interface Section {
   title: string
@@ -20,21 +20,15 @@ export default function PageTemplate({
   lastUpdated,
 }: PageProps) {
   return (
-    <main>
-      <header className="border-foreground/15 bg-surface border-b">
-        <div className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24">
-          <p className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
-            Information
-          </p>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-            {title}
-          </h1>
-          <p className="text-foreground/75 mt-6 max-w-2xl text-lg leading-8">
-            {intro}
-          </p>
+    <main id="main-content" tabIndex={-1}>
+      <header className="border-divider bg-surface border-b">
+        <div className="site-container section-standard">
+          <p className="text-accent eyebrow">Information</p>
+          <h1 className="heading-section mt-4">{title}</h1>
+          <p className="text-foreground/75 type-body mt-6 max-w-2xl">{intro}</p>
         </div>
       </header>
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1fr_2fr] md:px-8 md:py-24">
+      <div className="site-container section-standard grid gap-12 md:grid-cols-[1fr_2fr]">
         <div>
           <p className="text-foreground/65 text-sm">Updated {lastUpdated}</p>
         </div>
@@ -42,26 +36,21 @@ export default function PageTemplate({
           {sections.map((section) => (
             <section
               key={section.title}
-              className="border-foreground/15 border-t py-7 first:pt-0"
+              className="border-divider border-t py-7 first:border-t-0 first:pt-0"
             >
-              <h2 className="text-2xl font-semibold tracking-tight">
-                {section.title}
-              </h2>
-              <div className="text-foreground/75 mt-4 leading-7">
+              <h2 className="heading-item">{section.title}</h2>
+              <div className="text-foreground/75 type-prose mt-4">
                 {section.content}
               </div>
             </section>
           ))}
-          <div className="border-foreground/15 border-t pt-8">
-            <h2 className="text-2xl font-semibold tracking-tight">Contact</h2>
-            <p className="text-foreground/75 mt-4 leading-7">
+          <div className="border-divider border-t pt-8">
+            <h2 className="heading-item">Contact</h2>
+            <p className="text-foreground/75 type-prose mt-4">
               Questions about this page can be sent to{' '}
-              <a
-                href={`mailto:${company.email}`}
-                className="text-accent underline"
-              >
+              <ContentLink href={`mailto:${company.email}`} variant="inline">
                 {company.email}
-              </a>
+              </ContentLink>
               .
             </p>
             <address className="text-foreground/75 mt-4 not-italic">
@@ -69,12 +58,13 @@ export default function PageTemplate({
               <br />
               {company.addressLines.join(', ')}
             </address>
-            <Link
+            <ContentLink
               href="/contact"
-              className="border-accent text-accent mt-6 inline-block border-b pb-1 font-semibold"
+              className="mt-6 inline-block"
+              variant="action"
             >
-              Contact details ↗
-            </Link>
+              Contact details
+            </ContentLink>
           </div>
         </div>
       </div>
