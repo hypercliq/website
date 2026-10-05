@@ -58,8 +58,21 @@ export default function Header() {
           })}
         </div>
         <details ref={mobileMenuRef} className="group relative lg:hidden">
-          <summary className="border-control cursor-pointer list-none border px-4 py-2 text-sm font-semibold">
-            Menu <span aria-hidden="true">☰</span>
+          <summary className="border-control flex cursor-pointer list-none items-center gap-2 border px-4 py-2 text-sm font-semibold">
+            Menu
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
           </summary>
           <div className="border-boundary bg-background absolute top-full right-0 mt-3 w-56 border p-3 shadow-lg">
             {links.map((link) => {

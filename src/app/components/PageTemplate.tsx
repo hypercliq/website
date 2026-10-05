@@ -36,7 +36,7 @@ export default function PageTemplate({
           {sections.map((section) => (
             <section
               key={section.title}
-              className="border-divider border-t py-7 first:pt-0"
+              className="border-divider border-t py-7 first:border-t-0 first:pt-0"
             >
               <h2 className="heading-item">{section.title}</h2>
               <div className="text-foreground/75 type-prose mt-4">
