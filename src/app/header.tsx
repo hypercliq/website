@@ -3,7 +3,7 @@
 import LogoSVG from '@/app/components/LogoSVG'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 const links = [
   { label: 'Work', href: '/work' },
@@ -17,6 +17,18 @@ const links = [
 export default function Header() {
   const mobileMenuRef = useRef<HTMLDetailsElement>(null)
   const pathname = usePathname()
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      const menu = mobileMenuRef.current
+      if (menu?.open && event.target instanceof Node && !menu.contains(event.target)) {
+        menu.removeAttribute('open')
+      }
+    }
+
+    document.addEventListener('click', handleOutsideClick)
+    return () => document.removeEventListener('click', handleOutsideClick)
+  }, [])
+
   const currentSection = links.find(
     ({ href }) => pathname === href || pathname.startsWith(`${href}/`),
   )?.href
