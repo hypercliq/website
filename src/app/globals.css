@@ -92,11 +92,11 @@ body {
     box-shadow: 0 2px 8px rgb(0 0 0 / 18%);
     cursor: pointer;
   }
-  .floating-control:focus-visible { 
+  .floating-control:focus-visible {
     outline: 2px solid var(--site-foreground);
     outline-offset: 2px;
     box-shadow:
-      0 0 0 2px var(--site-background), 
+      0 0 0 2px var(--site-background),
       0 0 0 6px var(--site-background);
   }
 

@@ -20,7 +20,11 @@ export default function Header() {
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
       const menu = mobileMenuRef.current
-      if (menu?.open && event.target instanceof Node && !menu.contains(event.target)) {
+      if (
+        menu?.open &&
+        event.target instanceof Node &&
+        !menu.contains(event.target)
+      ) {
         menu.removeAttribute('open')
       }
     }
