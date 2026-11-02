@@ -32,6 +32,18 @@ Production builds require network access to Google Fonts for the configured Inte
 
 Use `npm run start` after a build to preview the exported site locally.
 
+## Release versions
+
+Use calendar versions in the form `YY.M.N`: two-digit year, month without a leading zero, and a release counter starting at zero each month. For example, `26.11.0` is the first November 2026 release, `26.11.1` is the second, and `27.1.0` is the first January 2027 release.
+
+Update the package version and lockfile without creating a commit or tag:
+
+```sh
+npm version 26.11.0 --no-git-tag-version
+```
+
+Merge the version update before publishing the GitHub release that deploys Pages.
+
 ## Dependency upgrades
 
 Use the [official Next.js upgrade command](https://nextjs.org/docs/app/getting-started/upgrading) to update Next.js, React, and the Next.js ESLint configuration:
