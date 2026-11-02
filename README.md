@@ -30,6 +30,18 @@ Production builds require network access to Google Fonts for the configured Inte
 
 Use `npm run start` after a build to preview the exported site locally.
 
+## Dependency upgrades
+
+Use the [official Next.js upgrade command](https://nextjs.org/docs/app/getting-started/upgrading) to update Next.js, React, and the Next.js ESLint configuration:
+
+```sh
+npx next upgrade --revision latest
+```
+
+Then update other dependencies and run all checks above. Keep `@types/node` on the Node 24 major used by development and CI. TypeScript 6 is the newest major supported by the current TypeScript ESLint parser; Next's React, import, and accessibility ESLint plugins still require ESLint 9. Recheck their peer dependencies before upgrading either major.
+
+The scoped `serve` override updates its pinned `compression` dependency to the security-patched 1.8.2 or later. Remove it when `serve` includes that fix. The remaining `minimatch` audit advisory affects development tooling; its fix requires a major version outside current upstream ranges.
+
 ## Shared styles
 
 Reuse `ContentLink`, shared layout and typography tokens, and existing components. Preserve accessible focus states and native media controls.
