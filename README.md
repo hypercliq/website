@@ -24,7 +24,9 @@ npm run smoke
 npm audit
 ```
 
-`npm run build` writes a static export to `out/`. The smoke test checks that sitemap routes and local links and assets in the export resolve. Pull requests and releases run formatting, lint, typecheck, build, and smoke checks. The release workflow deploys `out/` when a GitHub release is published or the workflow is run manually. Merging a pull request does not publish the site.
+`npm run build` writes a static export to `out/`. The smoke test checks that sitemap routes and local links and assets in the export resolve. Pull requests and releases run formatting, lint, typecheck, build, and smoke checks. On pushes to `main`, a lightweight API check reuses successful PR validation when the pushed commit is the PR's merge commit and the latest PR check run for its exact head commit succeeded. Direct pushes, missing or unsuccessful PR checks, and API failures run the full checks. This supports merge, squash, and rebase merges without relying on commit messages. Keep the required `check` status and up-to-date PR requirement enabled in branch protection; admins can bypass protection for emergency direct pushes.
+
+The release workflow deploys `out/` when a GitHub release is published or the workflow is run manually. Merging a pull request does not publish the site.
 
 Production builds require network access to Google Fonts for the configured Inter font.
 
