@@ -6,7 +6,7 @@ import Image from 'next/image'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Hypercliq is an Athens based team building spatial tools, data systems, and research software.',
+    'Hypercliq is a team based in Athens building spatial tools, data systems, and research software.',
 }
 
 const Florendia = staticImage('Florendia_r', 180, 180)
@@ -48,8 +48,9 @@ export default function About() {
             A small team for complex work.
           </h1>
           <p className="text-foreground/75 type-intro mt-7 max-w-2xl">
-            Founded in 2011, Hypercliq designs data systems and research
-            software. We work from Athens with partners across Europe.
+            Founded in 2011, Hypercliq builds spatial tools, data systems, and
+            research software. We are based in Athens and work with partners
+            across Europe.
           </p>
         </div>
       </header>
@@ -58,16 +59,15 @@ export default function About() {
           <h2 className="heading-subsection">How we work</h2>
           <div className="text-foreground/75 type-body max-w-2xl space-y-5">
             <p>
-              We bring software engineering, data work, and research experience
-              into the same conversation. Our role changes with the project:
-              sometimes we help define the technical approach; sometimes we
-              build the tools.
+              We combine software engineering, data expertise, and research
+              experience. Depending on the project, we help define the technical
+              approach, design the architecture, or build and connect the tools.
             </p>
             <p>
-              We collaborate with specialists in other fields when a project
-              calls for it. Recent work includes spatial tools and construction
-              technology, alongside earlier projects in workplace health and
-              product design.
+              We work with specialists in other fields to understand the context
+              and requirements of each project. Recent work includes spatial
+              tools and construction technology, alongside earlier projects in
+              workplace health and product design.
             </p>
             <ContentLink href="/work" variant="action">
               See our work

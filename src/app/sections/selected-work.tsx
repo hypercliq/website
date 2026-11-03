@@ -7,7 +7,7 @@ const featuredProjects = [
     name: 'Splat Viewer',
     category: '3D Gaussian splats · LiDAR',
     description:
-      'Explore captured spaces and follow an apartment through renovation.',
+      'Inspect 3D captures, measure spaces, and see an apartment at different stages of renovation.',
     href: '/work/splat-viewer',
     linkLabel: 'Explore Splat Viewer',
     media: renovationMedia,
@@ -19,7 +19,7 @@ const featuredProjects = [
     description:
       'See an E57 scan become a room model for architectural review.',
     href: '/work/luminous',
-    linkLabel: 'Explore the LUMINOUS work',
+    linkLabel: 'Explore our LUMINOUS work',
     media: luminousMedia,
     caption: '44 sec · Scan captured by Ricoh',
   },
@@ -36,7 +36,7 @@ export default function SelectedWork() {
           <div>
             <p className="text-accent eyebrow">Selected work</p>
             <h2 id="work-title" className="heading-section mt-4 max-w-2xl">
-              Work you can look through.
+              See the tools in use.
             </h2>
           </div>
           <ContentLink href="/work" className="w-fit" variant="action">

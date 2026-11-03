@@ -15,9 +15,10 @@ export default function FeaturedSplatViewer() {
           Splat Viewer
         </h3>
         <p className="text-foreground/75 type-body mt-5 max-w-lg">
-          We use Splat Viewer to inspect Gaussian splats and LiDAR scans,
-          measure spaces, and extract building geometry. We developed it for
-          LUMINOUS Pilot 3 and continue to extend it for other 3DGS work.
+          Splat Viewer brings inspection, measurement, and building geometry
+          extraction to Gaussian splats and LiDAR scans. Developed for LUMINOUS
+          Pilot 3, it continues to evolve through our wider work with 3D
+          Gaussian splats.
         </p>
         <ContentLink
           href="/work/splat-viewer"

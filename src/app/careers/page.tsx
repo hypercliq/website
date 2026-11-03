@@ -16,9 +16,9 @@ export default function Careers() {
           <p className="text-accent eyebrow">Careers</p>
           <h1 className="heading-page mt-4 max-w-3xl">Work with us.</h1>
           <p className="text-foreground/75 type-intro mt-8 max-w-2xl">
-            We bring together software engineering, data, and applied research.
-            We like curious people who enjoy turning difficult questions into
-            useful work.
+            We work across software engineering, data, and applied research.
+            We’re interested in people who enjoy understanding difficult
+            problems and building useful tools.
           </p>
         </div>
       </header>
@@ -28,14 +28,13 @@ export default function Careers() {
       >
         <div className="border-divider border-t pt-8">
           <h2 id="jobs" className="text-2xl font-semibold">
-            Jobs
+            Opportunities
           </h2>
           <p className="text-foreground/75 type-prose mt-4 max-w-xl">
-            We’re a small team working with partners across Europe, often on
-            projects where the path isn’t obvious at the start. We help shape
-            the ideas, make the case for them, develop the systems, and bring
-            the pieces together. There’s room for people who enjoy both the
-            technical detail and the bigger picture.
+            We’re a small team working with partners across Europe. Our work
+            spans research concepts, technical proposals, software development,
+            and system integration. It suits people who enjoy both the technical
+            detail and the wider purpose of a project.
           </p>
           <p className="text-foreground/75 type-prose mt-4 max-w-xl">
             We don’t have any open positions at the moment, but we’re always
@@ -51,7 +50,7 @@ export default function Careers() {
             You’re welcome to include a CV, portfolio, or examples of your work.
           </p>
           <p className="text-foreground/75 type-prose mt-4 max-w-xl">
-            If we see a possible fit, we may get back to you for a conversation.
+            We may contact you if your experience matches a future opportunity.
           </p>
         </div>
       </section>

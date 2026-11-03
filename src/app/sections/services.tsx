@@ -4,17 +4,17 @@ const services = [
   {
     number: '01',
     title: 'Spatial data and visualization',
-    text: 'We build tools for inspecting 3D scans, Gaussian splats, and other complex data.',
+    text: 'Explore 3D scans and Gaussian splats, measure spaces, and inspect captured environments.',
   },
   {
     number: '02',
     title: 'Data platforms',
-    text: 'We structure and connect information so teams can find it, maintain it, and use it in their work.',
+    text: 'Connect information so teams can find, maintain, and use it in their daily work.',
   },
   {
     number: '03',
-    title: 'Applied AI and research software',
-    text: 'We develop software for research projects, including machine learning workflows and domain specific tools.',
+    title: 'Research software and applied AI',
+    text: 'Build research tools and machine learning workflows around the needs of each project.',
   },
 ]
 
@@ -33,9 +33,9 @@ export default function Services() {
           </h2>
         </div>
         <p className="text-foreground/75 type-body max-w-lg">
-          We work with partners from the first questions through to a usable
-          system. Our projects often bring together data engineering, design,
-          and research.
+          We help define the technical approach, structure the data, and build
+          the system. Our projects bring together software engineering,
+          interface design, and applied research.
         </p>
       </div>
       <div className="border-divider mt-14 grid border-t md:grid-cols-3">

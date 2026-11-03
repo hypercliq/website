@@ -14,11 +14,12 @@ export default function Contact() {
         <div className="site-container section-generous">
           <p className="text-accent eyebrow">Contact</p>
           <h1 className="heading-page mt-4 max-w-4xl">
-            Tell us what you are working on.
+            Tell us about your project.
           </h1>
           <p className="text-foreground/75 type-intro mt-7 max-w-2xl">
-            A short email is enough to start a conversation. We read messages
-            about projects, research collaborations, and technical questions.
+            Have a project, a research collaboration, or a technical question in
+            mind? Send us a short email with the context and what you would like
+            to explore.
           </p>
         </div>
       </header>
