@@ -74,14 +74,15 @@ export default function SplatViewer() {
             LUMINOUS’s architectural design review pilot.
           </p>
           <p className="text-foreground/75 type-body mt-5 max-w-3xl">
-            Splat Viewer is actively evolving and used internally and in
-            projects, including our work on{' '}
+            We continue to develop Splat Viewer through internal use and project
+            work, including{' '}
             <ContentLink href="/work/luminous" variant="inline">
               LUMINOUS
             </ContentLink>
-            . It isn’t generally available yet. Curious about the tool?{' '}
+            . It is not yet generally available. To discuss the tool and your
+            project,{' '}
             <ContentLink href="/contact" variant="inline">
-              Get in touch
+              get in touch
             </ContentLink>
           </p>
         </div>
@@ -92,14 +93,14 @@ export default function SplatViewer() {
           <div className="mb-8 max-w-3xl">
             <p className="text-accent eyebrow">Renovation example</p>
             <h2 id="renovation-title" className="heading-section-compact mt-3">
-              An apartment through renovation
+              An apartment at different stages of renovation
             </h2>
             <p className="text-foreground/75 type-body mt-5">
-              The apartment was scanned at several stages of a renovation, and
-              each capture was turned into a Gaussian splat. This edit joins
-              separate Splat Viewer recordings, from the original rooms through
-              exposed surfaces to the finished bathroom. In the viewer, each
-              stage is loaded and explored on its own.
+              Separate scans capture the apartment at different stages of
+              renovation. Each was turned into a Gaussian splat and explored in
+              Splat Viewer. This video combines recordings of those stages, from
+              the original rooms and exposed surfaces to the finished bathroom.
+              Each stage is loaded separately in the viewer.
             </p>
           </div>
           <div className="max-w-4xl">

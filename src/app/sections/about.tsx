@@ -9,18 +9,19 @@ export default function About() {
       <div>
         <p className="text-accent eyebrow">Our approach</p>
         <h2 id="about-title" className="heading-section mt-4 max-w-xl">
-          The work starts with understanding the problem.
+          Understand the problem. Build around the people.
         </h2>
       </div>
       <div className="text-foreground/75 type-body max-w-xl">
         <p>
-          Research and product teams often have more information than they can
-          use. We help give that information structure, then build tools around
-          the people who need it.
+          Research and product teams need ways to make sense of complex
+          information. We help structure their data and build tools for the
+          people who collect, explore, and use it.
         </p>
         <p className="mt-5">
-          Our recent work includes 3D scans, XR, and construction technology.
-          Earlier projects cover workplace health and product design.
+          Our work spans 3D scans, extended reality (XR), and construction
+          technology, alongside earlier projects in workplace health and product
+          design.
         </p>
         <ContentLink
           href="/about"

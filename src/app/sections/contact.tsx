@@ -7,10 +7,11 @@ export default function Contact() {
         <div>
           <p className="eyebrow opacity-85">Get in touch</p>
           <h2 className="heading-section mt-4 max-w-3xl">
-            A problem worth working through?
+            What are you working on?
           </h2>
           <p className="type-body mt-5 max-w-xl opacity-85">
-            Tell us about the work and the questions behind it.
+            Tell us about your project, your data, and the questions you need to
+            answer.
           </p>
         </div>
         <ContentLink

@@ -12,7 +12,8 @@ export default function Hero() {
             Thoughtful software for difficult data.
           </h1>
           <p className="text-foreground/75 type-intro mt-8 max-w-2xl">
-            We build spatial tools, data platforms, and research software with
+            We help teams explore spatial data, connect complex information, and
+            turn research into working software. Based in Athens, we work with
             partners across Europe.
           </p>
           <div className="mt-10 flex flex-wrap gap-5">
@@ -35,7 +36,7 @@ export default function Hero() {
         <div className="border-control hidden border-t pt-5 md:block">
           <p className="text-accent eyebrow">Our focus</p>
           <p className="type-body mt-4">
-            Clear structures. Useful interfaces. Careful implementation.
+            Data people can explore. Tools they can use.
           </p>
         </div>
       </div>

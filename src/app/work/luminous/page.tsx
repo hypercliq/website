@@ -15,7 +15,7 @@ const contributions = [
   {
     number: '01',
     title: 'Platform architecture',
-    text: 'We authored the main system architecture deliverable, D1.2, for the language-augmented XR platform.',
+    text: 'We authored D1.2, the main system architecture deliverable for the XR platform and its natural-language interaction capabilities.',
   },
   {
     number: '02',
@@ -42,12 +42,12 @@ export default function Luminous() {
             Spatial tools for architectural review
           </h1>
           <p className="text-foreground/75 type-intro mt-7 max-w-3xl">
-            LUMINOUS is a Horizon Europe project building XR systems people can
-            use through natural language. Hypercliq authored its system
-            architecture and helps connect the voice, knowledge, and interaction
-            layers. For the architectural design review pilot, we developed
-            Splat Viewer to inspect captured spaces and extract building
-            structure from suitable scans.
+            LUMINOUS is a Horizon Europe project developing extended reality
+            (XR) systems that people can interact with through natural language.
+            Hypercliq authored its system architecture and helps connect the
+            voice, knowledge, and interaction layers. For the architectural
+            design review pilot, we developed Splat Viewer to inspect captured
+            spaces and extract building structure from suitable scans.
           </p>
         </div>
       </header>
@@ -59,9 +59,9 @@ export default function Luminous() {
             From an E57 scan to a room model
           </h2>
           <p className="text-foreground/75 type-body mt-5">
-            Ricoh captured the space. In this short video, our Splat Viewer
-            opens the E57 file, lets us move through the scan, and identifies
-            walls, floors, doors, windows, and rooms.
+            This video shows Splat Viewer opening a Ricoh E57 scan, navigating
+            the captured rooms, and identifying walls, floors, doors, windows,
+            and rooms.
           </p>
         </div>
         <div className="max-w-5xl">
@@ -97,9 +97,9 @@ export default function Luminous() {
           <h2 className="heading-subsection">About LUMINOUS</h2>
           <div className="type-body max-w-2xl space-y-5">
             <p>
-              The project brings together partners to develop language-augmented
-              XR systems. Its three pilots cover neurorehabilitation, safety
-              training, and architectural design review.
+              The project’s three pilots explore natural-language interaction in
+              XR for neurorehabilitation, safety training, and architectural
+              design review.
             </p>
             <p className="text-foreground/70 type-prose text-base">
               LUMINOUS is funded by the European Union’s Horizon Europe

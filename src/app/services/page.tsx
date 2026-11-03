@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const services = [
   {
     title: 'Spatial data and visualization',
-    body: 'We build tools to inspect 3D scans, Gaussian splats, and other complex data. Our current work includes viewing captured spaces, measuring them, and extracting building geometry.',
+    body: 'We build tools for exploring 3D scans and Gaussian splats. Our current work supports inspection, measurement, and the extraction of building geometry from captured spaces.',
     example: {
       href: '/work/splat-viewer',
       label: 'See Splat Viewer',
@@ -18,7 +18,7 @@ const services = [
   },
   {
     title: 'Data platforms',
-    body: 'We design the structure behind complex information: how it is collected, connected, searched, and kept useful. The result may be a repository, a research platform, or a product data system.',
+    body: 'We design how information is collected, connected, searched, and maintained. Our work includes research repositories and product data platforms that help teams use related records together.',
     example: {
       href: '/work/sustainable-design-data-management-platform',
       label: 'See the Sport Infinity platform',
@@ -26,7 +26,7 @@ const services = [
   },
   {
     title: 'Research software and applied AI',
-    body: 'We develop software for research projects, including machine learning workflows when the task calls for them. We pay attention to the data, the task, and how people review the output.',
+    body: 'We develop tools for collecting, processing, and reviewing research data, including machine learning workflows where they suit the task. We design around the data available and the people who need to interpret the results.',
     example: {
       href: '/work/visual-repository-for-agricultural-rd-innovation',
       label: 'See the agricultural research repository',
@@ -34,7 +34,7 @@ const services = [
   },
   {
     title: 'Research and technical consulting',
-    body: 'We help shape technical approaches, system architectures, and collaborative research proposals. Our portfolio includes work in European research programmes.',
+    body: 'We help teams develop technical approaches, design system architectures, and shape collaborative research proposals. Our experience includes European research programmes.',
     example: {
       href: '/work/system-architecture-design-for-construction-automation',
       label: 'See the HumanTech architecture work',
@@ -49,11 +49,11 @@ export default function Services() {
         <div className="site-container section-generous">
           <p className="text-accent eyebrow">Services</p>
           <h1 className="heading-page mt-4 max-w-4xl">
-            Useful systems for complicated work.
+            Software built around your data.
           </h1>
           <p className="text-foreground/75 type-intro mt-7 max-w-2xl">
-            Our work ranges from 3D viewers and analysis tools to data platforms
-            and research software.
+            We design and build spatial tools, data platforms, and research
+            software, and help teams define the technical approach behind them.
           </p>
         </div>
       </header>
@@ -86,8 +86,8 @@ export default function Services() {
         </div>
         <div className="border-divider mt-12 border-t pt-10">
           <p className="type-body max-w-xl">
-            The scope depends on the problem. We can discuss an early idea or an
-            existing system that needs work.
+            Whether you have an early idea or an existing system that needs
+            work, tell us what you want to achieve and where you need help.
           </p>
           <ContentLink
             href="/contact"

@@ -19,11 +19,11 @@ export default function Solutions() {
         <div className="site-container section-generous">
           <p className="text-accent eyebrow">Selected work</p>
           <h1 className="heading-page mt-4 max-w-4xl">
-            Built around real problems.
+            Spatial tools, data platforms, and research in practice.
           </h1>
           <p className="text-foreground/75 type-intro mt-7 max-w-2xl">
-            Our current work in spatial data and XR, followed by earlier data
-            platforms, research tools, and system designs.
+            Explore our current spatial data and XR work, then browse earlier
+            projects in data platforms, research software, and system design.
           </p>
         </div>
       </header>

@@ -42,11 +42,11 @@ export default function Domains() {
         <div className="site-container section-generous">
           <p className="text-accent eyebrow">Areas of work</p>
           <h1 className="heading-page mt-4 max-w-4xl">
-            Different fields. Similar questions about data.
+            Complex data across different fields.
           </h1>
           <p className="text-foreground/75 type-intro mt-7 max-w-2xl">
-            Our methods travel across sectors. The details come from working
-            closely with people who know each field.
+            We bring software and data expertise to each project, working with
+            specialists to understand the requirements of their field.
           </p>
         </div>
       </header>

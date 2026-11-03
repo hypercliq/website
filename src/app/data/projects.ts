@@ -45,7 +45,7 @@ export const caseStudyProjects: CaseStudyProject[] = [
     contribution:
       'The platform brings kinetic and kinematic data into one place for ergonomic assessment. It supports analysis of movement against methods such as OWAS and makes the results available for review.',
     context:
-      'Developed with DFKI in the EU funded BIONIC research project, which studied musculoskeletal health in the workplace.',
+      'Developed with DFKI in the EU-funded BIONIC research project, which studied musculoskeletal health in the workplace.',
     images: [
       {
         image: Bionic1,
@@ -89,7 +89,7 @@ export const caseStudyProjects: CaseStudyProject[] = [
     summary:
       'A platform for finding and comparing material, process, and sustainability data during product development.',
     contribution:
-      'We developed a cloud based knowledge platform linking product samples, engineering properties, manufacturing processes, and sustainability measures. Search and analysis tools help design teams work across these connected records. We investigated materials and production approaches, helped shape the project concept, and contributed to its funding application.',
+      'We developed a cloud-based knowledge platform linking product samples, engineering properties, manufacturing processes, and sustainability measures. Search and analysis tools help design teams work across these connected records. We investigated materials and production approaches, helped shape the project concept, and contributed to its funding application.',
     context:
       'The work was part of Sport Infinity, a Horizon 2020 project led by Adidas that explored customizable sporting goods and recyclable materials.',
     images: [
@@ -120,7 +120,7 @@ export const caseStudyProjects: CaseStudyProject[] = [
     contribution:
       'The engine connects consumer preferences with possible sensor and garment configurations. It was designed to support choices without requiring users to understand every component.',
     context:
-      'Developed in EASY-IMP, a European Commission funded research project on personalized smart garments and connected products.',
+      'Developed in EASY-IMP, a European Commission-funded research project on personalized smart garments and connected products.',
     images: [
       {
         image: Easy1,
@@ -141,11 +141,11 @@ export const caseStudyProjects: CaseStudyProject[] = [
     title: '3D body shape analysis',
     field: 'Product fit · EUROFIT',
     summary:
-      'Tools to examine and visualize body shape data for product design.',
+      'Tools for exploring and visualizing body shape data to inform product design.',
     contribution:
       'We built analysis and visualization tools for digital anthropometric data, giving designers a way to explore body shapes and measurements for products where fit matters.',
     context:
-      'The tools were developed through EUROFIT, a European Commission funded project on the use of digital anthropometric resources.',
+      'The tools were developed through EUROFIT, a European Commission-funded project on the use of digital anthropometric resources.',
     images: [
       {
         image: Eurofit1,
@@ -162,9 +162,9 @@ export const caseStudyProjects: CaseStudyProject[] = [
     title: 'Visual data for agricultural research',
     field: 'Agriculture · Research software',
     summary:
-      'A web based repository for organizing visual data collected during agricultural research.',
+      'A web-based repository for organizing visual data collected during agricultural research.',
     contribution:
-      'The platform stores and processes images, with views and access tailored to different research roles. It supports the path from field collection to datasets used in deep learning work.',
+      'The platform stores and processes images, with views and access tailored to different research roles. It helps researchers organize field images into datasets for deep learning.',
     context: 'Built for an agricultural research and development initiative.',
     images: [
       {
